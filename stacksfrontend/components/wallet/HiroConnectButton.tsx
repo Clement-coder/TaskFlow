@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { openContractCall, showConnect } from "@stacks/connect";
 
 export function HiroConnectButton() {
   const [connecting, setConnecting] = useState(false);
@@ -11,6 +10,8 @@ export function HiroConnectButton() {
     setConnecting(true);
 
     try {
+      const { showConnect } = await import("@stacks/connect");
+
       showConnect({
         appDetails: {
           name: "TaskFlow",
@@ -28,7 +29,7 @@ export function HiroConnectButton() {
   }
 
   return (
-    <Button onClick={handleConnect} variant="accent" size="lg" className="w-full md:w-auto">
+    <Button onClick={handleConnect} variant="secondary" size="lg" className="w-full md:w-auto">
       {connecting ? "Connecting…" : "Connect with Hiro Wallet"}
     </Button>
   );

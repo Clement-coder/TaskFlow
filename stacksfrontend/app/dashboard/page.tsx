@@ -1,6 +1,8 @@
+"use client";
+
 import { Sidebar } from "@/components/navigation/Sidebar";
 import { AnalyticsOverview } from "@/components/dashboard/AnalyticsOverview";
-import HiroConnectButton from "@/components/wallet/HiroConnectButton";
+import { HiroConnectButton } from "@/components/wallet/HiroConnectButton";
 
 export default function DashboardPage() {
   return (

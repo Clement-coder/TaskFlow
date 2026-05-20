@@ -8,35 +8,40 @@ function Icon({ name }: { name: IconName }) {
   switch (name) {
     case "start":
       return (
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <title>Start Workspace Icon</title>
           <rect width="24" height="24" rx="6" fill="#0ea5e9" />
           <path d="M8 12l6-4v8l-6-4z" fill="white" />
         </svg>
       );
     case "roadmap":
       return (
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <title>Product Roadmap Icon</title>
           <rect width="24" height="24" rx="6" fill="#7c3aed" />
           <path d="M6 12h12M9 8v8M15 8v8" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       );
     case "pricing":
       return (
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <title>Pricing Plans Icon</title>
           <rect width="24" height="24" rx="6" fill="#06b6d4" />
           <path d="M12 7v10M8 11h8" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       );
     case "product":
       return (
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <title>Product Details Icon</title>
           <rect width="24" height="24" rx="6" fill="#1e293b" />
           <path d="M4 7h16M4 12h16M4 17h16" stroke="#60a5fa" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       );
     case "docs":
       return (
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <title>Documentation Icon</title>
           <rect width="24" height="24" rx="6" fill="#64748b" />
           <path d="M7 8h10M7 12h10M7 16h6" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>

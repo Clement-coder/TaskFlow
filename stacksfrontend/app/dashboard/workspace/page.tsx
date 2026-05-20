@@ -64,7 +64,8 @@ export default function WorkspacePage() {
             className="fixed top-24 right-8 z-50 rounded-2xl bg-slate-900 border border-emerald-500/30 p-4 shadow-2xl flex items-center gap-3 backdrop-blur-xl"
           >
             <div className="rounded-full bg-emerald-500/20 p-2 text-emerald-400">
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+                <title>Success Check Icon</title>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
@@ -102,7 +103,8 @@ export default function WorkspacePage() {
               {!walletConnected ? (
                 <div className="rounded-2xl border border-amber-500/20 bg-amber-500/5 p-4 flex gap-3 items-start">
                   <div className="rounded-full bg-amber-500/10 p-2 text-amber-400">
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                      <title>Warning Alert Icon</title>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
                   </div>

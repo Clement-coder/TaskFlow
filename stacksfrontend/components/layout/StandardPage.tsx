@@ -62,7 +62,7 @@ export default function StandardPage({
       <header className="border-b border-white/5">
         <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 py-5 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <Image src="/Taskflow_logo.png" alt="TaskFlow" width={64} height={64} className="rounded-md" />
+            <Image src="/Taskflowlogo.png" alt="TaskFlow" width={64} height={64} className="rounded-md" />
             <div>
               <h1 className="text-2xl font-semibold">{title}</h1>
               {description && <p className="text-sm text-slate-400">{description}</p>}

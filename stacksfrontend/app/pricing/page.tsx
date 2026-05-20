@@ -137,7 +137,8 @@ export default function PricingPage() {
                 <ul className="space-y-3">
                   {plan.features.map((feat) => (
                     <li key={feat} className="flex gap-2 text-xs text-slate-300 items-start">
-                      <svg className="w-4 h-4 text-sky-400 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                      <svg className="w-4 h-4 text-sky-400 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3} aria-hidden="true">
+                        <title>Checkmark Icon</title>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
                       <span>{feat}</span>
@@ -177,61 +178,66 @@ export default function PricingPage() {
               onClick={() => setShowCheckoutModal(false)}
               className="fixed inset-0 z-45 bg-slate-950/60 backdrop-blur-sm"
             />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="fixed inset-x-4 bottom-4 sm:inset-auto sm:top-[25%] sm:left-1/2 sm:-translate-x-1/2 z-50 w-full max-w-[420px] rounded-3xl border border-white/10 bg-slate-900/95 p-6 shadow-2xl backdrop-blur-xl"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-bold text-white">Subscribe to {selectedPlan}</h3>
-                <button
-                  onClick={() => setShowCheckoutModal(false)}
-                  className="rounded-full bg-white/5 p-1.5 text-slate-400 hover:text-white"
-                >
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-
-              {checkoutSuccess ? (
-                <div className="text-center py-6 space-y-4">
-                  <div className="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto">
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-white">Subscription Active!</h4>
-                    <p className="text-xs text-slate-500 mt-1">Simulating block confirmation...</p>
-                  </div>
-                </div>
-              ) : (
-                <form onSubmit={handleCheckoutSubmit} className="space-y-4">
-                  <p className="text-xs text-slate-400 leading-relaxed">
-                    You have selected the <strong className="text-white">{selectedPlan}</strong> plan (billed {billingCycle}). Enter your email below to start simulated setup.
-                  </p>
-                  <div className="space-y-1">
-                    <label className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500">Email Address</label>
-                    <input
-                      type="email"
-                      required
-                      placeholder="alex@company.com"
-                      value={checkoutEmail}
-                      onChange={(e) => setCheckoutEmail(e.target.value)}
-                      className="w-full rounded-2xl bg-slate-950 border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-sky-400 transition"
-                    />
-                  </div>
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                className="w-full max-w-[420px] rounded-3xl border border-white/10 bg-slate-900/95 p-6 shadow-2xl backdrop-blur-xl pointer-events-auto"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-lg font-bold text-white">Subscribe to {selectedPlan}</h3>
                   <button
-                    type="submit"
-                    className="w-full rounded-2xl bg-sky-500 hover:bg-sky-400 py-3 text-xs font-bold text-white shadow-lg transition"
+                    onClick={() => setShowCheckoutModal(false)}
+                    aria-label="Close checkout modal"
+                    className="rounded-full bg-white/5 p-1.5 text-slate-400 hover:text-white"
                   >
-                    Confirm Subscription
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                      <title>Close Modal Icon</title>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
                   </button>
-                </form>
-              )}
-            </motion.div>
+                </div>
+
+                {checkoutSuccess ? (
+                  <div className="text-center py-6 space-y-4">
+                    <div className="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto">
+                      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3} aria-hidden="true">
+                        <title>Checkout Success Icon</title>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-bold text-white">Subscription Active!</h4>
+                      <p className="text-xs text-slate-500 mt-1">Simulating block confirmation...</p>
+                    </div>
+                  </div>
+                ) : (
+                  <form onSubmit={handleCheckoutSubmit} className="space-y-4">
+                    <p className="text-xs text-slate-400 leading-relaxed">
+                      You have selected the <strong className="text-white">{selectedPlan}</strong> plan (billed {billingCycle}). Enter your email below to start simulated setup.
+                    </p>
+                    <div className="space-y-1">
+                      <label className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500">Email Address</label>
+                      <input
+                        type="email"
+                        required
+                        placeholder="alex@company.com"
+                        value={checkoutEmail}
+                        onChange={(e) => setCheckoutEmail(e.target.value)}
+                        className="w-full rounded-2xl bg-slate-950 border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-sky-400 transition"
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      className="w-full rounded-2xl bg-sky-500 hover:bg-sky-400 py-3 text-xs font-bold text-white shadow-lg transition"
+                    >
+                      Confirm Subscription
+                    </button>
+                  </form>
+                )}
+              </motion.div>
+            </div>
           </>
         )}
       </AnimatePresence>

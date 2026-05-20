@@ -42,7 +42,8 @@ export default function ProjectsPage() {
           onClick={() => setModalOpen(true)}
           className="flex items-center gap-2 rounded-2xl bg-sky-500 hover:bg-sky-400 px-5 py-3 text-xs font-bold text-white shadow-lg shadow-sky-500/10 transition duration-200"
         >
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+            <title>New Project Icon</title>
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
           </svg>
           <span>New Project</span>
@@ -120,74 +121,78 @@ export default function ProjectsPage() {
               onClick={() => setModalOpen(false)}
               className="fixed inset-0 z-40 bg-slate-950/60 backdrop-blur-sm"
             />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="fixed inset-x-4 bottom-4 sm:inset-auto sm:top-[20%] sm:left-1/2 sm:-translate-x-1/2 z-50 w-full max-w-[480px] rounded-3xl border border-white/10 bg-slate-900/95 p-6 shadow-2xl backdrop-blur-xl"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-bold text-white">Initialize Project Module</h3>
-                <button
-                  onClick={() => setModalOpen(false)}
-                  className="rounded-full bg-white/5 p-1.5 text-slate-400 hover:text-white"
-                >
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="space-y-1">
-                  <label className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500">Project Name</label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="Enter project name..."
-                    value={projName}
-                    onChange={(e) => setProjName(e.target.value)}
-                    className="w-full rounded-2xl bg-slate-950 border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-sky-400 transition"
-                  />
-                </div>
-                <div className="space-y-1">
-                  <label className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500">Description</label>
-                  <textarea
-                    rows={3}
-                    placeholder="What is this sprint's scope of work?"
-                    value={projDesc}
-                    onChange={(e) => setProjDesc(e.target.value)}
-                    className="w-full rounded-2xl bg-slate-950 border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-sky-400 transition resize-none"
-                  />
-                </div>
-                <div className="space-y-1">
-                  <label className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500">Labels (comma-separated)</label>
-                  <input
-                    type="text"
-                    placeholder="e.g. DeFi, Clarity, Frontend"
-                    value={projLabels}
-                    onChange={(e) => setProjLabels(e.target.value)}
-                    className="w-full rounded-2xl bg-slate-950 border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-sky-400 transition"
-                  />
-                </div>
-
-                <div className="flex gap-3 pt-2">
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                className="w-full max-w-[480px] rounded-3xl border border-white/10 bg-slate-900/95 p-6 shadow-2xl backdrop-blur-xl pointer-events-auto"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-lg font-bold text-white">Initialize Project Module</h3>
                   <button
-                    type="button"
                     onClick={() => setModalOpen(false)}
-                    className="flex-1 rounded-2xl bg-white/5 hover:bg-white/10 py-3 text-xs font-bold text-slate-400"
+                    aria-label="Close modal"
+                    className="rounded-full bg-white/5 p-1.5 text-slate-400 hover:text-white"
                   >
-                    Cancel
-                  </button>
-                  <button
-                    type="submit"
-                    className="flex-1 rounded-2xl bg-sky-500 hover:bg-sky-400 py-3 text-xs font-bold text-white shadow-lg shadow-sky-500/10"
-                  >
-                    Initialize Sprint
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                      <title>Close Modal Icon</title>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
                   </button>
                 </div>
-              </form>
-            </motion.div>
+
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="space-y-1">
+                    <label className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500">Project Name</label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="Enter project name..."
+                      value={projName}
+                      onChange={(e) => setProjName(e.target.value)}
+                      className="w-full rounded-2xl bg-slate-950 border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-sky-400 transition"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500">Description</label>
+                    <textarea
+                      rows={3}
+                      placeholder="What is this sprint's scope of work?"
+                      value={projDesc}
+                      onChange={(e) => setProjDesc(e.target.value)}
+                      className="w-full rounded-2xl bg-slate-950 border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-sky-400 transition resize-none"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500">Labels (comma-separated)</label>
+                    <input
+                      type="text"
+                      placeholder="e.g. DeFi, Clarity, Frontend"
+                      value={projLabels}
+                      onChange={(e) => setProjLabels(e.target.value)}
+                      className="w-full rounded-2xl bg-slate-950 border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-sky-400 transition"
+                    />
+                  </div>
+
+                  <div className="flex gap-3 pt-2">
+                    <button
+                      type="button"
+                      onClick={() => setModalOpen(false)}
+                      className="flex-1 rounded-2xl bg-white/5 hover:bg-white/10 py-3 text-xs font-bold text-slate-400"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      type="submit"
+                      className="flex-1 rounded-2xl bg-sky-500 hover:bg-sky-400 py-3 text-xs font-bold text-white shadow-lg shadow-sky-500/10"
+                    >
+                      Initialize Sprint
+                    </button>
+                  </div>
+                </form>
+              </motion.div>
+            </div>
           </>
         )}
       </AnimatePresence>

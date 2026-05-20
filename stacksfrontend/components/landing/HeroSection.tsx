@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -19,8 +20,16 @@ export function HeroSection() {
               Manage your work with polished workflows, on-chain reputation, and wallet-native collaboration that feels modern, fast, and secure.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Button className="min-w-[170px]" size="lg">Start your workspace</Button>
-              <Button variant="secondary" className="min-w-[170px]" size="lg">View roadmap</Button>
+              <Link href="/start">
+                <Button className="min-w-[170px]" size="lg">
+                  Start your workspace
+                </Button>
+              </Link>
+              <Link href="/roadmap">
+                <Button variant="secondary" className="min-w-[170px]" size="lg">
+                  View roadmap
+                </Button>
+              </Link>
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }} className="relative w-full max-w-2xl">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
@@ -13,9 +14,12 @@ export function Sidebar({ className }: { className?: string }) {
   return (
     <aside className={cn("hidden w-[280px] flex-col gap-6 rounded-[32px] border border-white/10 bg-slate-950/80 p-6 shadow-2xl shadow-slate-950/40 xl:flex", className)}>
       <div className="space-y-3">
-        <div className="rounded-3xl bg-slate-900/80 p-4 shadow-inner shadow-slate-950/20">
-          <p className="text-sm uppercase tracking-[0.25em] text-slate-500">TaskFlow</p>
-          <h2 className="text-2xl font-semibold text-slate-100">Flow control</h2>
+        <div className="rounded-3xl bg-slate-900/80 p-4 shadow-inner shadow-slate-950/20 flex items-center gap-3">
+          <Image src="/Taskflow_logo.png" alt="TaskFlow" width={48} height={48} className="rounded-md" />
+          <div>
+            <p className="text-sm uppercase tracking-[0.25em] text-slate-500">TaskFlow</p>
+            <h2 className="text-2xl font-semibold text-slate-100">Flow control</h2>
+          </div>
         </div>
         <div className="space-y-3">
           {navItems.map((item) => (

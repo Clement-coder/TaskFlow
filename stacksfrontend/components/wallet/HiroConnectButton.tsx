@@ -14,7 +14,7 @@ export function HiroConnectButton() {
       showConnect({
         appDetails: {
           name: "TaskFlow",
-          icon: "https://taskflow.app/favicon.ico",
+          icon: "/Taskflow_logo.png",
         },
         onFinish: ({ userSession }) => {
           console.log("Hiro Wallet connected", userSession);

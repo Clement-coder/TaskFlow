@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const tiers = [
   {
@@ -47,9 +48,11 @@ export function PricingSection() {
                   <li key={feature} className="rounded-2xl bg-white/5 p-3">{feature}</li>
                 ))}
               </ul>
-              <Button variant={tier.highlight ? "default" : "secondary"} className="mt-8 w-full">
-                {tier.highlight ? "Get Pro" : "Learn More"}
-              </Button>
+              <Link href="/pricing">
+                <Button variant={tier.highlight ? "default" : "secondary"} className="mt-8 w-full">
+                  {tier.highlight ? "Get Pro" : "Learn More"}
+                </Button>
+              </Link>
             </div>
           ))}
         </div>

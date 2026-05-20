@@ -54,7 +54,8 @@ export default function StartPage() {
                 className="text-center py-12 space-y-4"
               >
                 <div className="w-12 h-12 rounded-full border border-sky-400/20 bg-sky-500/10 flex items-center justify-center mx-auto animate-spin">
-                  <svg className="w-6 h-6 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <svg className="w-6 h-6 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+                    <title>Workspace Deploying Spinner</title>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H17" />
                   </svg>
                 </div>

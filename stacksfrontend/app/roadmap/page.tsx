@@ -99,7 +99,8 @@ export default function RoadmapPage() {
                 onClick={() => upvoteMilestone(milestone.id)}
                 className="rounded-2xl border border-white/5 bg-slate-950 hover:bg-sky-500/10 hover:border-sky-500/30 p-3.5 flex flex-col items-center justify-center min-w-[64px] transition duration-200 group/btn"
               >
-                <svg className="w-5 h-5 text-slate-500 group-hover/btn:text-sky-400 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                <svg className="w-5 h-5 text-slate-500 group-hover/btn:text-sky-400 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3} aria-hidden="true">
+                  <title>Upvote Arrow</title>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
                 </svg>
                 <span className="text-xs font-black text-slate-300 mt-1.5">
@@ -120,7 +121,8 @@ export default function RoadmapPage() {
           {feedbackSuccess ? (
             <div className="text-center py-6 space-y-4">
               <div className="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto">
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3} aria-hidden="true">
+                  <title>Proposal Success Icon</title>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </div>

@@ -58,37 +58,69 @@ export default function StandardPage({
   children?: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
-      <header className="border-b border-white/5">
-        <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 py-5 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <Image src="/Taskflowlogo.png" alt="TaskFlow" width={64} height={64} className="rounded-md" />
-            <div>
-              <h1 className="text-2xl font-semibold">{title}</h1>
-              {description && <p className="text-sm text-slate-400">{description}</p>}
+    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between">
+      {/* Shared Landing Header */}
+      <header className="border-b border-white/5 py-4 sticky top-0 bg-slate-950/80 backdrop-blur-md z-40">
+        <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-sky-400 to-indigo-600 p-1.5 shadow-lg group-hover:scale-105 transition duration-300">
+                <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <span className="text-lg font-bold tracking-tight text-white group-hover:text-sky-300 transition duration-200">
+                TaskFlow
+              </span>
+            </Link>
+
+            <nav className="hidden gap-8 md:flex items-center">
+              <Link href="/product" className="text-sm font-medium text-slate-400 hover:text-white transition">Product</Link>
+              <Link href="/pricing" className="text-sm font-medium text-slate-400 hover:text-white transition">Pricing</Link>
+              <Link href="/docs" className="text-sm font-medium text-slate-400 hover:text-white transition">Docs</Link>
+              <Link href="/roadmap" className="text-sm font-medium text-slate-400 hover:text-white transition">Roadmap</Link>
+            </nav>
+
+            <div className="flex items-center gap-4">
+              <Link href="/dashboard" className="relative group overflow-hidden rounded-2xl bg-sky-500 hover:bg-sky-400 px-5 py-2.5 text-xs font-bold text-white shadow-lg shadow-sky-500/10 transition duration-200">
+                <span className="relative z-10">Launch App</span>
+                <span className="absolute inset-0 bg-gradient-to-r from-sky-400 to-indigo-500 opacity-0 group-hover:opacity-100 transition duration-300" />
+              </Link>
             </div>
           </div>
-          <nav className="hidden md:flex items-center gap-4">
-            <Link href="/" className="text-sm text-slate-300 hover:text-white">Home</Link>
-            <Link href="/docs" className="text-sm text-slate-300 hover:text-white">Docs</Link>
-            <Link href="/pricing" className="text-sm text-slate-300 hover:text-white">Pricing</Link>
-          </nav>
         </div>
       </header>
 
-      <main className="mx-auto max-w-5xl px-6 sm:px-10 lg:px-16 py-12">
-        <div className="mb-8 flex items-center gap-6">
-          <div className="rounded-2xl bg-white/5 p-3">
+      {/* Main Wrapper */}
+      <main className="flex-1 mx-auto max-w-5xl px-6 sm:px-10 lg:px-16 py-12 w-full">
+        <div className="mb-12 flex flex-col sm:flex-row sm:items-center gap-6 border-b border-white/5 pb-8">
+          <div className="rounded-2xl bg-white/5 p-3.5 w-fit border border-white/5 shadow-inner">
             <Icon name={icon} />
           </div>
           <div>
-            <h2 className="text-3xl font-semibold leading-tight">{title}</h2>
-            {description && <p className="mt-2 text-slate-400">{description}</p>}
+            <h2 className="text-3xl font-extrabold leading-tight text-white tracking-tight">{title}</h2>
+            {description && <p className="mt-2 text-slate-400 text-sm max-w-xl">{description}</p>}
           </div>
         </div>
 
-        <section className="space-y-6">{children}</section>
+        <section className="space-y-8">{children}</section>
       </main>
+
+      {/* Shared Landing Footer */}
+      <footer className="border-t border-white/5 py-8 bg-black/40 text-slate-500">
+        <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-bold text-slate-400">TaskFlow</span>
+            <span className="text-[10px] text-slate-600">•</span>
+            <span className="text-xs">© 2026 TaskFlow. All rights secured on Bitcoin L2.</span>
+          </div>
+          <div className="flex gap-6 text-xs">
+            <Link href="/docs" className="hover:text-slate-300 transition">API</Link>
+            <Link href="/roadmap" className="hover:text-slate-300 transition">Roadmap</Link>
+            <Link href="/pricing" className="hover:text-slate-300 transition">SaaS Plans</Link>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

@@ -53,7 +53,8 @@ export default function TasksPage() {
           >
             <div className="rounded-3xl border border-sky-400/20 bg-slate-900 p-8 shadow-2xl max-w-sm text-center space-y-4">
               <div className="w-16 h-16 rounded-full border border-sky-400/20 bg-sky-500/10 flex items-center justify-center mx-auto animate-spin">
-                <svg className="w-8 h-8 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <svg className="w-8 h-8 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+                  <title>Minting Spinner</title>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H17" />
                 </svg>
               </div>
@@ -76,7 +77,8 @@ export default function TasksPage() {
           onClick={() => setModalOpen(true)}
           className="flex items-center gap-2 rounded-2xl bg-sky-500 hover:bg-sky-400 px-5 py-3 text-xs font-bold text-white shadow-lg shadow-sky-500/10 transition duration-200"
         >
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+            <title>Create Task Icon</title>
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
           </svg>
           <span>Create Task</span>
@@ -147,7 +149,8 @@ export default function TasksPage() {
                               className="w-full flex items-center justify-center gap-1.5 rounded-xl bg-white/5 hover:bg-sky-500/10 hover:text-sky-300 py-2 text-[10px] font-bold text-slate-400 transition"
                             >
                               <span>Start Sprint</span>
-                              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+                                <title>Start Sprint Arrow</title>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                               </svg>
                             </button>
@@ -157,7 +160,8 @@ export default function TasksPage() {
                               onClick={() => handleComplete(t.id)}
                               className="w-full flex items-center justify-center gap-1.5 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-300 hover:bg-sky-500 hover:text-white py-2 text-[10px] font-bold transition shadow-lg shadow-sky-500/5"
                             >
-                              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+                                <title>Complete Icon</title>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
                               </svg>
                               <span>Complete & Mint</span>
@@ -168,7 +172,8 @@ export default function TasksPage() {
                               onClick={() => updateTaskStatus(t.id, "todo")}
                               className="w-full flex items-center justify-center gap-1.5 rounded-xl bg-white/5 hover:bg-rose-500/10 hover:text-rose-400 py-2 text-[10px] font-bold text-slate-400 transition"
                             >
-                              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+                                <title>Reopen Icon</title>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H17" />
                               </svg>
                               <span>Reopen task</span>
@@ -196,100 +201,104 @@ export default function TasksPage() {
               onClick={() => setModalOpen(false)}
               className="fixed inset-0 z-45 bg-slate-950/60 backdrop-blur-sm"
             />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="fixed inset-x-4 bottom-4 sm:inset-auto sm:top-[20%] sm:left-1/2 sm:-translate-x-1/2 z-50 w-full max-w-[480px] rounded-3xl border border-white/10 bg-slate-900/95 p-6 shadow-2xl backdrop-blur-xl"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-bold text-white">Create Sprint Task</h3>
-                <button
-                  onClick={() => setModalOpen(false)}
-                  className="rounded-full bg-white/5 p-1.5 text-slate-400 hover:text-white"
-                >
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="space-y-1">
-                  <label className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500">Task Title</label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="What task needs to be performed?"
-                    value={taskTitle}
-                    onChange={(e) => setTaskTitle(e.target.value)}
-                    className="w-full rounded-2xl bg-slate-950 border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-sky-400 transition"
-                  />
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                className="w-full max-w-[480px] rounded-3xl border border-white/10 bg-slate-900/95 p-6 shadow-2xl backdrop-blur-xl pointer-events-auto"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-lg font-bold text-white">Create Sprint Task</h3>
+                  <button
+                    onClick={() => setModalOpen(false)}
+                    aria-label="Close modal"
+                    className="rounded-full bg-white/5 p-1.5 text-slate-400 hover:text-white"
+                  >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                      <title>Close Modal Icon</title>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
                 </div>
-                
-                <div className="grid gap-4 sm:grid-cols-2">
+
+                <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="space-y-1">
-                    <label className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500">Associate Project</label>
-                    <select
-                      value={assocProj}
-                      onChange={(e) => setAssocProj(e.target.value)}
-                      className="w-full rounded-2xl bg-slate-950 border border-white/10 px-4 py-3 text-xs text-slate-300 focus:outline-none focus:border-sky-400 transition"
-                    >
-                      {projects.map((proj) => (
-                        <option key={proj.id} value={proj.name}>
-                          {proj.name}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="space-y-1">
-                    <label className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500">Due Date</label>
+                    <label className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500">Task Title</label>
                     <input
-                      type="date"
-                      value={taskDueDate}
-                      onChange={(e) => setTaskDueDate(e.target.value)}
-                      className="w-full rounded-2xl bg-slate-950 border border-white/10 px-4 py-3 text-xs text-slate-300 focus:outline-none focus:border-sky-400 transition"
+                      type="text"
+                      required
+                      placeholder="What task needs to be performed?"
+                      value={taskTitle}
+                      onChange={(e) => setTaskTitle(e.target.value)}
+                      className="w-full rounded-2xl bg-slate-950 border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-sky-400 transition"
                     />
                   </div>
-                </div>
-
-                <div className="space-y-1">
-                  <label className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500">Priority Level</label>
-                  <div className="flex gap-2">
-                    {(["low", "medium", "high"] as const).map((p) => (
-                      <button
-                        key={p}
-                        type="button"
-                        onClick={() => setTaskPriority(p)}
-                        className={`flex-1 rounded-xl py-2 text-xs font-bold capitalize border transition ${
-                          taskPriority === p
-                            ? "bg-sky-500/10 border-sky-400/50 text-sky-300"
-                            : "bg-slate-950 border-white/10 text-slate-500 hover:text-slate-300"
-                        }`}
+                  
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div className="space-y-1">
+                      <label className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500">Associate Project</label>
+                      <select
+                        value={assocProj}
+                        onChange={(e) => setAssocProj(e.target.value)}
+                        className="w-full rounded-2xl bg-slate-950 border border-white/10 px-4 py-3 text-xs text-slate-300 focus:outline-none focus:border-sky-400 transition"
                       >
-                        {p}
-                      </button>
-                    ))}
+                        {projects.map((proj) => (
+                          <option key={proj.id} value={proj.name}>
+                            {proj.name}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div className="space-y-1">
+                      <label className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500">Due Date</label>
+                      <input
+                        type="date"
+                        value={taskDueDate}
+                        onChange={(e) => setTaskDueDate(e.target.value)}
+                        className="w-full rounded-2xl bg-slate-950 border border-white/10 px-4 py-3 text-xs text-slate-300 focus:outline-none focus:border-sky-400 transition"
+                      />
+                    </div>
                   </div>
-                </div>
 
-                <div className="flex gap-3 pt-2">
-                  <button
-                    type="button"
-                    onClick={() => setModalOpen(false)}
-                    className="flex-1 rounded-2xl bg-white/5 hover:bg-white/10 py-3 text-xs font-bold text-slate-400"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    type="submit"
-                    className="flex-1 rounded-2xl bg-sky-500 hover:bg-sky-400 py-3 text-xs font-bold text-white shadow-lg shadow-sky-500/10"
-                  >
-                    Inject Task
-                  </button>
-                </div>
-              </form>
-            </motion.div>
+                  <div className="space-y-1">
+                    <label className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500">Priority Level</label>
+                    <div className="flex gap-2">
+                      {(["low", "medium", "high"] as const).map((p) => (
+                        <button
+                          key={p}
+                          type="button"
+                          onClick={() => setTaskPriority(p)}
+                          className={`flex-1 rounded-xl py-2 text-xs font-bold capitalize border transition ${
+                            taskPriority === p
+                              ? "bg-sky-500/10 border-sky-400/50 text-sky-300"
+                              : "bg-slate-950 border-white/10 text-slate-500 hover:text-slate-300"
+                          }`}
+                        >
+                          {p}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex gap-3 pt-2">
+                    <button
+                      type="button"
+                      onClick={() => setModalOpen(false)}
+                      className="flex-1 rounded-2xl bg-white/5 hover:bg-white/10 py-3 text-xs font-bold text-slate-400"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      type="submit"
+                      className="flex-1 rounded-2xl bg-sky-500 hover:bg-sky-400 py-3 text-xs font-bold text-white shadow-lg shadow-sky-500/10"
+                    >
+                      Inject Task
+                    </button>
+                  </div>
+                </form>
+              </motion.div>
+            </div>
           </>
         )}
       </AnimatePresence>

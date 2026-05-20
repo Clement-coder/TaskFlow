@@ -61,16 +61,14 @@ export function Sidebar({ className }: { className?: string }) {
     <aside className={cn("hidden w-[280px] flex-col gap-6 rounded-[32px] border border-white/10 bg-slate-900/60 p-6 shadow-2xl backdrop-blur-xl xl:flex", className)}>
       <div className="space-y-6">
         <Link href="/" className="flex items-center gap-3 px-2 group">
-          <div className="relative w-11 h-11 overflow-hidden rounded-2xl bg-gradient-to-br from-sky-400 to-indigo-600 p-0.5 shadow-lg shadow-sky-500/10 group-hover:scale-105 transition duration-300 flex items-center justify-center">
-            <Image
-              src="/Taskflowlogo.png"
-              alt="TaskFlow Logo"
-              width={40}
-              height={40}
-              className="rounded-xl object-contain"
-              priority
-            />
-          </div>
+          <Image
+            src="/Taskflowlogo.png"
+            alt="TaskFlow Logo"
+            width={44}
+            height={44}
+            className="group-hover:scale-105 transition duration-300 object-contain rounded-2xl"
+            priority
+          />
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-sky-400 font-bold">TaskFlow</p>
             <h2 className="text-lg font-bold text-slate-100 group-hover:text-sky-300 transition duration-200">Decentralized OS</h2>

@@ -58,4 +58,18 @@ contract TaskRegistry {
         require(tasks[id].id != 0, "Task not found");
         return tasks[id];
     }
+
+    function getTasksByStatus(address user, Status status) external view returns (uint256[] memory) {
+        uint256[] memory all = userTasks[user];
+        uint256 count;
+        for (uint256 i = 0; i < all.length; i++) {
+            if (tasks[all[i]].status == status) count++;
+        }
+        uint256[] memory result = new uint256[](count);
+        uint256 idx;
+        for (uint256 i = 0; i < all.length; i++) {
+            if (tasks[all[i]].status == status) result[idx++] = all[i];
+        }
+        return result;
+    }
 }

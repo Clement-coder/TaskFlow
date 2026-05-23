@@ -44,4 +44,13 @@ contract MilestoneTracker {
         m.completed = true;
         emit MilestoneCompleted(id);
     }
+
+    function getTopMilestone() external view returns (uint256 topId, uint256 topVotes) {
+        for (uint256 i = 1; i <= milestoneCount; i++) {
+            if (milestones[i].upvotes > topVotes) {
+                topVotes = milestones[i].upvotes;
+                topId    = i;
+            }
+        }
+    }
 }

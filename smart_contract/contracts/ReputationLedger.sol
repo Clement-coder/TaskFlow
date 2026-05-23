@@ -42,6 +42,14 @@ contract ReputationLedger {
         return reputation[user];
     }
 
+    function getLevel(address user) external view returns (string memory) {
+        uint256 rep = reputation[user];
+        if (rep >= 1200) return "Stellar";
+        if (rep >= 700)  return "Advanced";
+        if (rep >= 300)  return "Rising";
+        return "Foundational";
+    }
+
     function setTaskRegistry(address _taskRegistry) external {
         require(msg.sender == owner, "Not owner");
         taskRegistry = _taskRegistry;

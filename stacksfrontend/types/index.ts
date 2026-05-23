@@ -44,3 +44,26 @@ export interface Testimonial {
   quote: string;
   company: string;
 }
+
+export interface LeaderboardEntry {
+  rank: number;
+  name: string;
+  handle: string;
+  avatar: string;
+  totalScore: number;
+  github: {
+    stacksCommits: number;
+    otherCommits: number;
+  };
+  onchain: {
+    feesGeneratedMicroStx: number;
+    uniqueCallers: number;
+    contractDeployments: number;
+    transactions: number;
+  };
+  npm: {
+    packageDownloads: number;
+    packages: number;
+  };
+  isCurrentUser?: boolean;
+}

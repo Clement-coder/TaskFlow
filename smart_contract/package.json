@@ -2,15 +2,21 @@
   "name": "taskflow-celo-contracts",
   "version": "1.0.0",
   "type": "module",
-  "description": "TaskFlow smart contracts on Celo — task registry, reputation, and token gating",
+  "description": "TaskFlow smart contracts on Celo — task registry, reputation, token gating and more",
   "scripts": {
     "compile": "hardhat compile",
     "test": "hardhat test",
     "deploy:testnet": "hardhat run scripts/deploy.js --network alfajores",
     "deploy:mainnet": "hardhat run scripts/deploy.js --network celo",
     "deploy:factory:testnet": "hardhat run scripts/deployFactory.js --network alfajores",
-    "deploy:factory:mainnet": "hardhat run scripts/deployFactory.js --network celo"
+    "deploy:factory:mainnet": "hardhat run scripts/deployFactory.js --network celo",
+    "deploy:extended:testnet": "hardhat run scripts/deployExtended.js --network alfajores",
+    "deploy:extended:mainnet": "hardhat run scripts/deployExtended.js --network celo",
+    "balance": "hardhat run scripts/checkBalance.js --network celo",
+    "balance:testnet": "hardhat run scripts/checkBalance.js --network alfajores",
+    "seed:testnet": "hardhat run scripts/seedTasks.js --network alfajores",
+    "seed:mainnet": "hardhat run scripts/seedTasks.js --network celo"
   },
-  "keywords": ["celo", "blockchain", "taskflow", "reputation", "web3"],
+  "keywords": ["celo", "blockchain", "taskflow", "reputation", "web3", "smart-contracts"],
   "license": "MIT"
 }

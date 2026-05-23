@@ -22,6 +22,7 @@ contract TaskFlow {
     function completeTask(uint256 taskId) external {
         registry.updateStatus(taskId, TaskRegistry.Status.Done);
         TaskRegistry.Task memory t = registry.getTask(taskId);
+        require(t.owner == msg.sender, "Not task owner");
         uint8 priority = uint8(t.priority);
         ledger.mintForTask(msg.sender, priority);
         uint256 points = priority == 2 ? 70 : priority == 1 ? 50 : 30;

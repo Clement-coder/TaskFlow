@@ -20,6 +20,7 @@ contract TaskRegistry {
     uint256 public taskCount;
     mapping(uint256 => Task) public tasks;
     mapping(address => uint256[]) public userTasks;
+    mapping(address => uint256) public completedCount;
 
     event TaskCreated(uint256 indexed id, address indexed owner, string title, Priority priority);
     event TaskUpdated(uint256 indexed id, Status status);
@@ -42,7 +43,10 @@ contract TaskRegistry {
         require(t.owner == msg.sender, "Not owner");
         require(t.id != 0, "Task not found");
         t.status = status;
-        if (status == Status.Done) t.completedAt = block.timestamp;
+        if (status == Status.Done) {
+            t.completedAt = block.timestamp;
+            completedCount[t.owner]++;
+        }
         emit TaskUpdated(id, status);
     }
 

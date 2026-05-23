@@ -23,6 +23,7 @@ contract TaskRegistry {
 
     event TaskCreated(uint256 indexed id, address indexed owner, string title, Priority priority);
     event TaskUpdated(uint256 indexed id, Status status);
+    event TaskDeleted(uint256 indexed id);
 
     function createTask(
         string calldata title,
@@ -47,5 +48,10 @@ contract TaskRegistry {
 
     function getUserTasks(address user) external view returns (uint256[] memory) {
         return userTasks[user];
+    }
+
+    function getTask(uint256 id) external view returns (Task memory) {
+        require(tasks[id].id != 0, "Task not found");
+        return tasks[id];
     }
 }

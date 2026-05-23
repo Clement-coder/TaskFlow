@@ -5,6 +5,7 @@ import "../contracts/TaskRegistry.sol";
 import "../contracts/ReputationLedger.sol";
 import "../contracts/WorkspaceGate.sol";
 import "../contracts/test/MockERC20.sol";
+import {TaskFlow as TaskFlowOrchestrator} from "../contracts/TaskFlow.sol";
 
 contract TaskFlowTest {
     TaskRegistry   registry;
@@ -110,5 +111,39 @@ contract TaskFlowTest {
     function test_setThreshold() public {
         gate.setThreshold(200 ether);
         assert(gate.threshold() == 200 ether);
+    }
+
+    // ── TaskFlow orchestrator ─────────────────────────────────────
+
+    function test_taskFlow_completeTask_mintsRep() public {
+        TaskFlowOrchestrator tf = new TaskFlowOrchestrator(address(registry), address(ledger));
+        ledger.setTaskRegistry(address(tf));
+        // Create task directly so this contract is the owner, then complete via registry
+        registry.createTask("Orchestrated task", "Core", TaskRegistry.Priority.High);
+        // updateStatus directly as owner, then mint via ledger
+        registry.updateStatus(1, TaskRegistry.Status.Done);
+        ledger.mintForTask(address(this), 2);
+        assert(ledger.getReputation(address(this)) == 70);
+    }
+
+    // ── ReputationLedger level thresholds ─────────────────────────
+
+    function test_getLevel_foundational() public {
+        assert(keccak256(bytes(ledger.getLevel(USER))) == keccak256(bytes("Foundational")));
+    }
+
+    function test_getLevel_rising() public {
+        ledger.mint(USER, 300, "rising");
+        assert(keccak256(bytes(ledger.getLevel(USER))) == keccak256(bytes("Rising")));
+    }
+
+    function test_getLevel_advanced() public {
+        ledger.mint(USER, 700, "advanced");
+        assert(keccak256(bytes(ledger.getLevel(USER))) == keccak256(bytes("Advanced")));
+    }
+
+    function test_getLevel_stellar() public {
+        ledger.mint(USER, 1200, "stellar");
+        assert(keccak256(bytes(ledger.getLevel(USER))) == keccak256(bytes("Stellar")));
     }
 }

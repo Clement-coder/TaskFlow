@@ -56,4 +56,9 @@ contract TeamRegistry {
     function isMember(address wallet) external view returns (bool) {
         return members[wallet].active;
     }
+
+    function getMemberRole(address wallet) external view returns (Role) {
+        require(members[wallet].active, "Not a member");
+        return members[wallet].role;
+    }
 }

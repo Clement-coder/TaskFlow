@@ -12,6 +12,8 @@
     "deploy:factory:mainnet": "hardhat run scripts/deployFactory.js --network celo",
     "deploy:extended:testnet": "hardhat run scripts/deployExtended.js --network alfajores",
     "deploy:extended:mainnet": "hardhat run scripts/deployExtended.js --network celo",
+    "deploy:all:testnet": "hardhat run scripts/deployAll.js --network alfajores",
+    "deploy:all:mainnet": "hardhat run scripts/deployAll.js --network celo",
     "balance": "hardhat run scripts/checkBalance.js --network celo",
     "balance:testnet": "hardhat run scripts/checkBalance.js --network alfajores",
     "seed:testnet": "hardhat run scripts/seedTasks.js --network alfajores",

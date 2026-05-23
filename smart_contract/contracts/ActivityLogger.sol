@@ -29,4 +29,8 @@ contract ActivityLogger {
     function getActorLogs(address actor) external view returns (uint256[] memory) {
         return actorLogs[actor];
     }
+
+    function getLog(uint256 id) external view returns (Log memory) {
+        return logs[id];
+    }
 }

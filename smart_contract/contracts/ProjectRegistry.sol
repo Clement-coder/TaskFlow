@@ -45,4 +45,18 @@ contract ProjectRegistry {
     function getOwnerProjects(address owner) external view returns (uint256[] memory) {
         return ownerProjects[owner];
     }
+
+    function getActiveProjects(address owner) external view returns (uint256[] memory) {
+        uint256[] memory all = ownerProjects[owner];
+        uint256 count;
+        for (uint256 i = 0; i < all.length; i++) {
+            if (projects[all[i]].status == Status.Active) count++;
+        }
+        uint256[] memory result = new uint256[](count);
+        uint256 idx;
+        for (uint256 i = 0; i < all.length; i++) {
+            if (projects[all[i]].status == Status.Active) result[idx++] = all[i];
+        }
+        return result;
+    }
 }

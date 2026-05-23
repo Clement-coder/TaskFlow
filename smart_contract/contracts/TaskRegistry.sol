@@ -39,6 +39,7 @@ contract TaskRegistry {
     function updateStatus(uint256 id, Status status) external {
         Task storage t = tasks[id];
         require(t.owner == msg.sender, "Not owner");
+        require(t.id != 0, "Task not found");
         t.status = status;
         if (status == Status.Done) t.completedAt = block.timestamp;
         emit TaskUpdated(id, status);

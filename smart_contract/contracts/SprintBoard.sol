@@ -39,6 +39,20 @@ contract SprintBoard {
         emit SprintClosed(id);
     }
 
+    function getActiveSprints(address user) external view returns (uint256[] memory) {
+        uint256[] memory all = userSprints[user];
+        uint256 count;
+        for (uint256 i = 0; i < all.length; i++) {
+            if (sprints[all[i]].active) count++;
+        }
+        uint256[] memory result = new uint256[](count);
+        uint256 idx;
+        for (uint256 i = 0; i < all.length; i++) {
+            if (sprints[all[i]].active) result[idx++] = all[i];
+        }
+        return result;
+    }
+
     function incrementTaskCount(uint256 sprintId) external {
         require(sprints[sprintId].active, "Sprint not active");
         sprints[sprintId].taskCount++;

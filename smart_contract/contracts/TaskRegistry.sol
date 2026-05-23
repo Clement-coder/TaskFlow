@@ -72,4 +72,8 @@ contract TaskRegistry {
         }
         return result;
     }
+
+    function getTaskCount(address user) external view returns (uint256) {
+        return userTasks[user].length;
+    }
 }

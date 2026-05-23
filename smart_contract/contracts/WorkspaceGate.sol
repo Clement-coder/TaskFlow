@@ -27,6 +27,11 @@ contract WorkspaceGate {
         return overrides[user] || gateToken.balanceOf(user) >= threshold;
     }
 
+    /// @notice Returns the token balance of a user
+    function balanceOf(address user) external view returns (uint256) {
+        return gateToken.balanceOf(user);
+    }
+
     function setThreshold(uint256 _threshold) external {
         require(msg.sender == owner, "Not owner");
         threshold = _threshold;

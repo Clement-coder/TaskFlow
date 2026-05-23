@@ -50,6 +50,16 @@ contract ReputationLedger {
         return "Foundational";
     }
 
+    function getLeaderboard(address[] calldata users)
+        external view returns (address[] memory, uint256[] memory)
+    {
+        uint256[] memory scores = new uint256[](users.length);
+        for (uint256 i = 0; i < users.length; i++) {
+            scores[i] = reputation[users[i]];
+        }
+        return (users, scores);
+    }
+
     function setTaskRegistry(address _taskRegistry) external {
         require(msg.sender == owner, "Not owner");
         taskRegistry = _taskRegistry;

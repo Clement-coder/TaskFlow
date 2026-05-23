@@ -13,6 +13,7 @@ contract WorkspaceGate {
     mapping(address => bool) public overrides; // manual access grants
 
     event AccessGranted(address indexed user);
+    event AccessRevoked(address indexed user);
     event ThresholdUpdated(uint256 newThreshold);
 
     constructor(address _gateToken, uint256 _threshold) {
@@ -41,5 +42,6 @@ contract WorkspaceGate {
     function revokeOverride(address user) external {
         require(msg.sender == owner, "Not owner");
         overrides[user] = false;
+        emit AccessRevoked(user);
     }
 }

@@ -41,3 +41,7 @@ Full on-chain suite for the TaskFlow decentralized project management platform.
 
 - Mainnet: `0x765DE816845861e75A25fCA122bb6898B8B1282a`
 - Alfajores: `0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1`
+
+### Test Results
+
+54 passing Solidity tests across 4 test files: TaskFlow.t.sol, Extended.t.sol, Registry.t.sol, Feature.t.sol, Final.t.sol

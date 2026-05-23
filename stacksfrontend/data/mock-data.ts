@@ -1,4 +1,4 @@
-import { Project, Task, Testimonial, UserProfile, Workspace } from "@/types";
+import { Project, Task, Testimonial, UserProfile, Workspace, LeaderboardEntry } from "@/types";
 
 export const currentUser: UserProfile = {
   id: "user_01",
@@ -101,6 +101,80 @@ export const tasks: Task[] = [
     assignee: "Cleo",
     tags: ["db", "api"],
     progress: 100,
+  },
+];
+
+export const leaderboard: LeaderboardEntry[] = [
+  {
+    rank: 1,
+    name: "Zara Osei",
+    handle: "@zara_dev",
+    avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=256&q=80",
+    totalScore: 9840,
+    github: { stacksCommits: 142, otherCommits: 38 },
+    onchain: { feesGeneratedMicroStx: 4200000, uniqueCallers: 312, contractDeployments: 14, transactions: 890 },
+    npm: { packageDownloads: 48200, packages: 6 },
+  },
+  {
+    rank: 2,
+    name: "Marcus Veil",
+    handle: "@marcusveil",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=256&q=80",
+    totalScore: 8210,
+    github: { stacksCommits: 98, otherCommits: 55 },
+    onchain: { feesGeneratedMicroStx: 3100000, uniqueCallers: 240, contractDeployments: 9, transactions: 710 },
+    npm: { packageDownloads: 31500, packages: 4 },
+  },
+  {
+    rank: 3,
+    name: "Avery Quinn",
+    handle: "@avery",
+    avatar: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=256&q=80",
+    totalScore: 7450,
+    github: { stacksCommits: 87, otherCommits: 29 },
+    onchain: { feesGeneratedMicroStx: 2800000, uniqueCallers: 198, contractDeployments: 7, transactions: 620 },
+    npm: { packageDownloads: 22100, packages: 3 },
+    isCurrentUser: true,
+  },
+  {
+    rank: 4,
+    name: "Priya Nair",
+    handle: "@priya_stacks",
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=256&q=80",
+    totalScore: 6320,
+    github: { stacksCommits: 74, otherCommits: 21 },
+    onchain: { feesGeneratedMicroStx: 1950000, uniqueCallers: 155, contractDeployments: 5, transactions: 480 },
+    npm: { packageDownloads: 18400, packages: 2 },
+  },
+  {
+    rank: 5,
+    name: "Leo Tanaka",
+    handle: "@leotanaka",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=256&q=80",
+    totalScore: 5180,
+    github: { stacksCommits: 61, otherCommits: 18 },
+    onchain: { feesGeneratedMicroStx: 1400000, uniqueCallers: 112, contractDeployments: 4, transactions: 390 },
+    npm: { packageDownloads: 12700, packages: 2 },
+  },
+  {
+    rank: 6,
+    name: "Cleo Marsh",
+    handle: "@cleomarsh",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=256&q=80",
+    totalScore: 4020,
+    github: { stacksCommits: 45, otherCommits: 12 },
+    onchain: { feesGeneratedMicroStx: 980000, uniqueCallers: 88, contractDeployments: 3, transactions: 270 },
+    npm: { packageDownloads: 8900, packages: 1 },
+  },
+  {
+    rank: 7,
+    name: "Noah Reyes",
+    handle: "@noahreyes",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=256&q=80",
+    totalScore: 3110,
+    github: { stacksCommits: 32, otherCommits: 9 },
+    onchain: { feesGeneratedMicroStx: 620000, uniqueCallers: 64, contractDeployments: 2, transactions: 190 },
+    npm: { packageDownloads: 5400, packages: 1 },
   },
 ];
 

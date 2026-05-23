@@ -42,4 +42,9 @@ contract DAOProposal {
     function getProposal(uint256 id) external view returns (Proposal memory) {
         return proposals[id];
     }
+
+    function getVoteResult(uint256 id) external view returns (bool passed, uint256 upvotes, uint256 downvotes) {
+        Proposal memory p = proposals[id];
+        return (p.upvotes > p.downvotes, p.upvotes, p.downvotes);
+    }
 }

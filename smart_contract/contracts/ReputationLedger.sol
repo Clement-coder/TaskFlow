@@ -8,6 +8,7 @@ contract ReputationLedger {
 
     mapping(address => uint256) public reputation;
     mapping(address => uint256) public completedTasks;
+    mapping(address => uint256) public lastMintedAt;
 
     event ReputationMinted(address indexed user, uint256 points, string reason);
 
@@ -24,6 +25,7 @@ contract ReputationLedger {
     function mint(address user, uint256 points, string calldata reason) external onlyOwnerOrRegistry {
         reputation[user] += points;
         completedTasks[user] += 1;
+        lastMintedAt[user] = block.timestamp;
         emit ReputationMinted(user, points, reason);
     }
 
@@ -32,6 +34,7 @@ contract ReputationLedger {
         uint256 points = priority == 2 ? 70 : priority == 1 ? 50 : 30;
         reputation[user] += points;
         completedTasks[user] += 1;
+        lastMintedAt[user] = block.timestamp;
         emit ReputationMinted(user, points, "task_completed");
     }
 

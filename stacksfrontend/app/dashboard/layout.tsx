@@ -206,7 +206,7 @@ export default function DashboardLayout({
 
             {/* Stacks/Hiro wallet — always visible */}
             {walletConnected ? (
-              <div className="flex items-center gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/5 px-3 py-1.5 text-xs font-medium text-emerald-300">
+              <div className="flex items-center gap-1.5 sm:gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/5 px-2 sm:px-3 py-1.5 text-xs font-medium text-emerald-300">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
                 <span className="hidden sm:inline font-mono text-[11px]">
                   {walletAddress

@@ -124,7 +124,7 @@ export default function SecurityPage() {
       {/* Danger zone */}
       <div className="rounded-2xl border border-rose-500/20 bg-rose-500/5 p-6 space-y-4">
         <h2 className="text-base font-bold text-rose-400 tracking-tight">Danger Zone</h2>
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
           <div>
             <p className="text-sm font-semibold text-slate-200">Delete Account</p>
             <p className="text-xs text-slate-500 mt-0.5">Permanently delete your account and all associated data. This cannot be undone.</p>

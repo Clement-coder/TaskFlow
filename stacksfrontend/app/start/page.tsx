@@ -168,7 +168,7 @@ export default function StartPage() {
             ].map((item) => (
               <div
                 key={item.label}
-                className="rounded-xl border border-white/[0.07] bg-slate-900/40 p-4 text-center"
+                className="rounded-xl border border-white/[0.07] bg-slate-900/40 p-4 text-center hover:border-white/[0.12] transition duration-150"
               >
                 <div className="text-2xl mb-2">{item.icon}</div>
                 <p className="text-xs font-semibold text-slate-200">

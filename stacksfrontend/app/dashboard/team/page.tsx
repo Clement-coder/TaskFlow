@@ -128,7 +128,7 @@ export default function TeamPage() {
               className="rounded-2xl border border-sky-500/20 bg-sky-500/5 p-5 sm:p-6 space-y-4"
             >
               <h3 className="text-sm font-bold text-white tracking-tight">Invite a new member</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3">
                 <input
                   required
                   type="text"

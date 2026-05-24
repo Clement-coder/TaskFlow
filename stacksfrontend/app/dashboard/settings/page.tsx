@@ -223,7 +223,7 @@ export default function SettingsPage() {
           )}
 
           {/* Save button */}
-          <div className="pt-4 border-t border-white/[0.06] flex justify-end">
+          <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between gap-4">
             <button
               onClick={handleSave}
               className={`flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition ${

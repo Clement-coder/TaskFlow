@@ -93,7 +93,7 @@ export default function HelpPage() {
         <h2 className="text-base font-bold text-white mb-4">Frequently Asked Questions</h2>
         <div className="space-y-2">
           {filteredFaqs.map((faq, i) => (
-            <div key={i} className="rounded-2xl border border-white/[0.07] bg-slate-900/60 overflow-hidden">
+            <div key={i} className="rounded-2xl border border-white/[0.07] bg-slate-900/60 overflow-hidden hover:border-white/[0.12] transition duration-150">
               <button
                 onClick={() => setOpenFaq(openFaq === i ? null : i)}
                 className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-white/[0.02] transition"

@@ -88,7 +88,7 @@ export default function WorkspacePage() {
           <Card className="p-5 sm:p-6">
             <CardHeader className="p-0 mb-4">
               <div className="flex items-center justify-between">
-                <CardTitle className="text-lg">Clarity Token-Gating</CardTitle>
+                <CardTitle className="text-lg tracking-tight">Clarity Token-Gating</CardTitle>
                 <Badge variant={tokenGated ? "accent" : "muted"} className="text-[8px] font-black">
                   {tokenGated ? "Gated Active" : "Gating Disabled"}
                 </Badge>

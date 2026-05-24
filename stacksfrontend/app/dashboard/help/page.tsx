@@ -134,7 +134,7 @@ export default function HelpPage() {
           </Link>
           <a
             href="mailto:support@taskflow.xyz"
-            className="flex items-center justify-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition"
+            className="flex items-center justify-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 active:bg-sky-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition duration-150"
           >
             Contact Support
           </a>

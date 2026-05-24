@@ -33,7 +33,7 @@ export default function DashboardLayout({
   return (
     <div className="min-h-screen bg-[#020817] text-slate-100 flex">
       {/* Desktop Sidebar */}
-      <div className="hidden xl:block p-6 pr-0 flex-shrink-0">
+      <div className="hidden xl:block p-5 pr-0 flex-shrink-0">
         <Sidebar className="h-[calc(100vh-48px)] sticky top-6" />
       </div>
 

@@ -141,7 +141,7 @@ export default function DashboardPage() {
           <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5">
             <div className="flex items-center justify-between mb-5">
               <div>
-                <h2 className="text-sm font-semibold text-white">Team Productivity</h2>
+                <h2 className="text-sm font-bold text-white">Team Productivity</h2>
                 <p className="text-xs text-slate-500 mt-0.5">Sprint progress across all active projects</p>
               </div>
               <svg className="w-4 h-4 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

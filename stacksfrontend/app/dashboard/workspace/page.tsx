@@ -78,7 +78,7 @@ export default function WorkspacePage() {
 
       {/* Title */}
       <div>
-        <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">Workspace Settings</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">Workspace</h1>
         <p className="text-sm text-slate-400 mt-1">Configure member privileges, Clarity smart contracts, and Web3 gating.</p>
       </div>
 

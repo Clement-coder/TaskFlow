@@ -262,7 +262,7 @@ export default function DashboardLayout({
             {/* Profile avatar */}
             <div className="flex items-center gap-2.5 pl-2.5 border-l border-white/[0.06]">
               <div className="hidden sm:block text-right">
-                <p className="text-xs font-semibold text-slate-200 leading-none mb-0.5">
+                <p className="text-xs font-semibold text-slate-100 leading-none mb-0.5">
                   {userProfile.name}
                 </p>
                 <p className="text-[10px] text-sky-400 font-bold uppercase tracking-wider leading-none">

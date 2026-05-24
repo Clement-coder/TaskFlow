@@ -200,7 +200,7 @@ export default function TeamPage() {
             <div key={member.id} className="flex flex-col sm:grid sm:grid-cols-[1fr_auto_auto_auto_auto] gap-3 sm:gap-4 px-5 py-4 items-start sm:items-center hover:bg-white/[0.02] transition">
               <div className="flex items-center gap-3">
                 <div className="relative flex-shrink-0">
-                  <div className="w-9 h-9 rounded-full bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center text-xs font-bold text-white">
+                  <div className="w-9 h-9 rounded-full bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center text-xs font-bold text-white ring-2 ring-sky-500/20">
                     {member.avatar}
                   </div>
                   <span className={`absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full border-2 border-slate-900 ${statusColor[member.status]}`} />

@@ -85,7 +85,7 @@ export default function SecurityPage() {
       </div>
 
       {/* Active sessions */}
-      <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 overflow-hidden">
+      <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 overflow-hidden shadow-md">
         <div className="flex items-center justify-between px-6 py-4 border-b border-white/[0.06]">
           <h2 className="text-base font-bold text-white">Active Sessions</h2>
           <button onClick={() => setShowRevokeConfirm(true)} className="text-xs text-rose-400 hover:text-rose-300 transition">

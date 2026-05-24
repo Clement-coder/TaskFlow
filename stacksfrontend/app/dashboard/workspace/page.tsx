@@ -202,7 +202,7 @@ export default function WorkspacePage() {
                 <select
                   value={inviteRole}
                   onChange={(e) => setInviteRole(e.target.value)}
-                  className="rounded-xl bg-slate-950 border border-white/10 px-2 py-2 text-xs text-slate-300 focus:outline-none focus:border-sky-400 transition"
+                  className="rounded-xl bg-slate-950 border border-white/10 px-2 py-2 text-xs text-slate-300 focus:outline-none focus:border-sky-500/50 focus:ring-1 focus:ring-sky-500/20 transition"
                 >
                   <option value="Contributor">Contributor</option>
                   <option value="Developer">Developer</option>

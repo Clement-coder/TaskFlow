@@ -150,7 +150,7 @@ export default function DashboardPage() {
             </div>
             <div className="space-y-3">
               {projects.map((project) => (
-                <div key={project.id} className="rounded-xl border border-white/[0.05] bg-slate-950/40 p-4">
+                <div key={project.id} className="rounded-xl border border-white/[0.05] bg-slate-950/40 p-4 hover:border-white/[0.1] transition duration-150">
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center gap-2.5">
                       <span className="text-sm font-medium text-slate-200">{project.name}</span>

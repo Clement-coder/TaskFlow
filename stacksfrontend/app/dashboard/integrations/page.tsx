@@ -36,7 +36,7 @@ export default function IntegrationsPage() {
     <div className="space-y-7 pb-4">
       <div>
         <h1 className="text-2xl font-bold text-white tracking-tight">Integrations</h1>
-        <p className="text-sm text-slate-400 mt-0.5">Connect your favorite tools to supercharge your workflow</p>
+        <p className="text-sm text-slate-400 mt-1">Connect your favorite tools to supercharge your workflow</p>
       </div>
 
       <div className="grid grid-cols-3 gap-4">

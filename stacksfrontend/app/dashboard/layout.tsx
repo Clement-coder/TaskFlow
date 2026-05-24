@@ -40,7 +40,7 @@ export default function DashboardLayout({
       {/* Mobile Drawer Backdrop */}
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 z-40 bg-black/70 backdrop-blur-md xl:hidden"
+          className="fixed inset-0 z-40 bg-black/75 backdrop-blur-sm xl:hidden"
           onClick={closeMobile}
         />
       )}

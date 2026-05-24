@@ -107,7 +107,7 @@ export default function ProfilePage() {
 
           {/* Wallet */}
           <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 space-y-3 shadow-sm">
-            <h3 className="text-sm font-semibold text-white">Wallet</h3>
+            <h3 className="text-sm font-bold text-white">Wallet</h3>
             {walletConnected && walletAddress ? (
               <div className="space-y-2">
                 <div className="flex items-center gap-2">

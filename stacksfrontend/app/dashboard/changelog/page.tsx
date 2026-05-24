@@ -62,7 +62,7 @@ export default function ChangelogPage() {
             <div key={entry.version} className="sm:pl-8 relative">
               <div className="absolute left-0 top-2 w-3 h-3 rounded-full border-2 border-sky-500/50 bg-sky-500/20 hidden sm:block" />
               <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 overflow-hidden hover:border-white/[0.12] transition duration-200">
-                <div className="flex items-center justify-between px-5 py-4 border-b border-white/[0.06]">
+                <div className="flex items-center justify-between px-5 py-4 border-b border-white/[0.06] bg-slate-950/20">
                   <div className="flex items-center gap-3">
                     <h2 className="text-base font-bold text-white">{entry.version}</h2>
                     {entry.tag && (

@@ -36,7 +36,7 @@ export default function AnalyticsPage() {
   return (
     <div className="space-y-7 pb-4">
       <div>
-        <h1 className="text-2xl font-bold text-white">Analytics</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">Analytics</h1>
         <p className="text-sm text-slate-400 mt-1">Workspace performance and on-chain activity insights</p>
       </div>
 

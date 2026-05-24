@@ -83,7 +83,7 @@ export default function DashboardLayout({
       <div className="flex-1 flex flex-col min-w-0">
         {/* Topbar */}
         <header className="sticky top-0 z-30 border-b border-white/[0.06] bg-[#020817]/95 backdrop-blur-xl px-3 sm:px-4 lg:px-8 h-[56px] flex items-center justify-between gap-2 sm:gap-4">
-          <div className="flex items-center gap-3 min-w-0">
+          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
             {/* Mobile hamburger */}
             <button
               onClick={() => setMobileMenuOpen(true)}

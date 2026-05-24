@@ -78,7 +78,7 @@ export function Sidebar({ className, onNavigate }: { className?: string; onNavig
   return (
     <aside className={cn("hidden xl:flex w-[260px] flex-col gap-2 rounded-2xl border border-white/[0.07] bg-slate-900/60 p-4 shadow-2xl backdrop-blur-xl", className)}>
       {/* Logo */}
-      <Link href="/" onClick={onNavigate} className="flex items-center gap-2.5 px-1 py-1.5 group mb-1">
+      <Link href="/" onClick={onNavigate} className="flex items-center gap-2.5 px-1 py-2 group mb-1">
         <div className="relative flex-shrink-0">
           <div className="absolute inset-0 rounded-xl bg-sky-500/20 blur-sm group-hover:bg-sky-500/30 transition" />
           <Image src="/Taskflowlogo.png" alt="TaskFlow" width={34} height={34} className="relative rounded-xl object-contain" priority />

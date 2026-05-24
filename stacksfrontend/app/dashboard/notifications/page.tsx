@@ -115,7 +115,7 @@ export default function NotificationsPage() {
             onClick={() => setFilter(f)}
             className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition ${
               filter === f
-                ? "bg-sky-500/15 text-sky-300 border border-sky-500/20"
+                ? "bg-sky-500/15 text-sky-300 border border-sky-500/30"
                 : "bg-white/5 text-slate-400 hover:text-slate-200 border border-transparent hover:border-white/10"
             }`}
           >

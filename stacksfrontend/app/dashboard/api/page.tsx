@@ -77,7 +77,7 @@ export default function ApiPage() {
             </div>
             <div className="divide-y divide-white/[0.04]">
               {endpoints.map((ep) => (
-                <div key={ep.path} className="flex flex-col sm:grid sm:grid-cols-[80px_1fr_1fr_80px] gap-2 sm:gap-4 px-5 py-3.5 hover:bg-white/[0.02] transition">
+                <div key={ep.path} className="flex flex-col sm:grid sm:grid-cols-[80px_1fr_1fr_80px] gap-2 sm:gap-4 px-5 py-3.5 hover:bg-white/[0.03] transition duration-150">
                   <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md w-fit ${methodColor[ep.method]}`}>{ep.method}</span>
                   <code className="text-xs font-mono text-slate-300">{ep.path}</code>
                   <p className="text-xs text-slate-500">{ep.desc}</p>

@@ -94,7 +94,7 @@ export default function ProfilePage() {
               <span className="text-3xl font-bold text-white">{userProfile.reputation}</span>
               <span className="text-sm text-slate-500 mb-1">/ {levelProgress.needed} pts</span>
             </div>
-            <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
+            <div className="h-2.5 bg-slate-800 rounded-full overflow-hidden">
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: `${levelProgress.pct}%` }}

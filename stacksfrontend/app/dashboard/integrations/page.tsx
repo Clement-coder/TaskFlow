@@ -79,7 +79,7 @@ export default function IntegrationsPage() {
               </div>
               <p className="text-xs text-slate-500 leading-relaxed flex-1">{item.desc}</p>
               <button onClick={() => toggle(item.id, item.status)} disabled={item.status === "coming-soon"}
-                className={`w-full flex items-center justify-center rounded-xl py-2.5 text-xs font-semibold transition ${item.status === "coming-soon" ? "bg-white/5 text-slate-600 cursor-not-allowed" : isConnected ? "border border-rose-500/20 bg-rose-500/5 hover:bg-rose-500/10 text-rose-400" : "bg-sky-500 hover:bg-sky-400 text-white shadow-lg shadow-sky-500/20"}`}>
+                className={`w-full flex items-center justify-center rounded-xl py-2.5 text-xs font-semibold transition ${item.status === "coming-soon" ? "bg-white/5 text-slate-600 cursor-not-allowed" : isConnected ? "border border-rose-500/20 bg-rose-500/5 hover:bg-rose-500/10 text-rose-400" : "bg-sky-500 hover:bg-sky-400 active:bg-sky-600 text-white shadow-lg shadow-sky-500/20"}`}>
                 {item.status === "coming-soon" ? "Coming Soon" : isConnected ? "Disconnect" : "Connect"}
               </button>
             </div>

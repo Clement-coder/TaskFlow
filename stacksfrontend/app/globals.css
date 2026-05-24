@@ -57,6 +57,8 @@ body {
 /* Ensure inputs and buttons are properly sized on mobile */
 input, textarea, select, button {
   font-family: inherit;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 /* Prevent iOS Safari from zooming on input focus (requires font-size >= 16px) */

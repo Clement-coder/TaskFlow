@@ -6,11 +6,14 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function formatDate(isoString: string) {
+  if (!isoString) return "No date";
+  const d = new Date(isoString);
+  if (isNaN(d.getTime())) return "Invalid date";
   return new Intl.DateTimeFormat("en-US", {
     month: "short",
     day: "numeric",
     year: "numeric",
-  }).format(new Date(isoString));
+  }).format(d);
 }
 
 export function priorityBadge(priority: "low" | "medium" | "high") {

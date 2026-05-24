@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { leaderboard } from "@/data/mock-data";
 import { LeaderboardEntry } from "@/types";
@@ -190,9 +191,11 @@ function LeaderboardRow({
 
         {/* Identity */}
         <div className="flex items-center gap-3 min-w-0">
-          <img
+          <Image
             src={entry.avatar}
             alt={entry.name}
+            width={36}
+            height={36}
             className={cn(
               "w-9 h-9 rounded-full object-cover border-2 flex-shrink-0",
               entry.isCurrentUser ? "border-sky-400/60" : "border-white/10"

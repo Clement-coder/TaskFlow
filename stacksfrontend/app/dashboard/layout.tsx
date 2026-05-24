@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Sidebar } from "@/components/navigation/Sidebar";
 import { useApp } from "@/lib/AppContext";
 import { Badge } from "@/components/ui/badge";
+import { reputationLevel } from "@/lib/utils";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const {
@@ -185,11 +186,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               <div className="text-right hidden sm:block">
                 <p className="text-xs font-bold text-slate-200">{userProfile.name}</p>
                 <p className="text-[10px] text-sky-400 font-extrabold tracking-wider uppercase">
-                  {userProfile.reputation >= 1200
-                    ? "Stellar Status"
-                    : userProfile.reputation >= 700
-                    ? "Advanced"
-                    : "Rising Team"}
+                  {reputationLevel(userProfile.reputation)} Status
                 </p>
               </div>
               <div className="relative group">

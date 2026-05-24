@@ -6,12 +6,15 @@ import { usePathname } from "next/navigation";
 import { useApp } from "@/lib/AppContext";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
+import { leaderboard } from "@/data/mock-data";
 
 export function Sidebar({ className }: { className?: string }) {
   const pathname = usePathname();
   const { projects, tasks, activeWorkspace } = useApp();
 
   const activeTasksCount = tasks.filter((t) => t.status !== "done").length;
+  const currentUserEntry = leaderboard.find((e) => e.isCurrentUser);
+  const userRankBadge = currentUserEntry ? `#${currentUserEntry.rank}` : "-";
 
   const navItems = [
     {
@@ -62,7 +65,7 @@ export function Sidebar({ className }: { className?: string }) {
     {
       label: "Leaderboard",
       href: "/dashboard/leaderboard",
-      badge: "#3",
+      badge: userRankBadge,
       icon: (
         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
           <title>Leaderboard Icon</title>

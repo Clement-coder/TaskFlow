@@ -12,6 +12,8 @@ export default function WorkspacePage() {
     walletConnected,
     addActivityLog,
     workspaces,
+    toggleWorkspacePremium,
+    activeWorkspaceId,
   } = useApp();
 
   const [members, setMembers] = useState([
@@ -23,7 +25,6 @@ export default function WorkspacePage() {
   const [inviteRole, setInviteRole] = useState("Contributor");
   const [showInviteToast, setShowInviteToast] = useState(false);
   const [tokenGated, setTokenGated] = useState(activeWorkspace?.premium || false);
-
   const handleInvite = (e: React.FormEvent) => {
     e.preventDefault();
     if (!inviteName.trim()) return;
@@ -39,9 +40,7 @@ export default function WorkspacePage() {
     if (!walletConnected) return;
     const nextState = !tokenGated;
     setTokenGated(nextState);
-    if (activeWorkspace) {
-      activeWorkspace.premium = nextState;
-    }
+    if (activeWorkspaceId) toggleWorkspacePremium(activeWorkspaceId);
     addActivityLog(
       `Clarity gating contract state ${nextState ? "ACTIVATED" : "DEACTIVATED"} for workspace '${activeWorkspace?.name}'`,
       "contract"

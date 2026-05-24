@@ -29,10 +29,13 @@ interface AppContextType {
   addProject: (name: string, description: string, labels: string[]) => void;
   addTask: (title: string, projectName: string, priority: "low" | "medium" | "high", dueDate: string) => void;
   updateTaskStatus: (id: string, status: "todo" | "in-progress" | "done") => void;
+  deleteTask: (id: string) => void;
+  updateTaskTitle: (id: string, title: string) => void;
   connectWallet: () => void;
   disconnectWallet: () => void;
   addActivityLog: (text: string, type?: "contract" | "system") => void;
   upvoteMilestone: (milestoneId: string) => void;
+  toggleWorkspacePremium: (id: string) => void;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -158,7 +161,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       priority,
       status: "todo",
       dueDate: dueDate || new Date(Date.now() + 7 * 24 * 3600 * 1000).toISOString().split("T")[0],
-      assignee: "Avery",
+      assignee: userProfile.name,
       tags: [priority],
       progress: 0,
     };
@@ -171,13 +174,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const updateTaskStatus = (id: string, status: "todo" | "in-progress" | "done") => {
     const updated = tasks.map((t) => {
       if (t.id === id) {
-        // If transitioning to done, reward reputation points
         if (status === "done" && t.status !== "done") {
           const repGain = t.priority === "high" ? 70 : t.priority === "medium" ? 50 : 30;
           const updatedUser = { ...userProfile, reputation: userProfile.reputation + repGain };
           setUserProfile(updatedUser);
           saveState("tf_user", updatedUser);
-          
           addActivityLog(
             `Minted proof of completion for '${t.title}'. +${repGain} Reputation scored on-chain.`,
             "contract"
@@ -187,7 +188,19 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       }
       return t;
     });
+    setTasks(updated);
+    saveState("tf_tasks", updated);
+  };
 
+  const deleteTask = (id: string) => {
+    const updated = tasks.filter((t) => t.id !== id);
+    setTasks(updated);
+    saveState("tf_tasks", updated);
+    addActivityLog("Task removed from board.", "system");
+  };
+
+  const updateTaskTitle = (id: string, title: string) => {
+    const updated = tasks.map((t) => (t.id === id ? { ...t, title } : t));
     setTasks(updated);
     saveState("tf_tasks", updated);
   };
@@ -243,6 +256,14 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     addActivityLog(`Voted for roadmap feature: ${milestoneId}`, "system");
   };
 
+  const toggleWorkspacePremium = (id: string) => {
+    const updated = workspaces.map((w) =>
+      w.id === id ? { ...w, premium: !w.premium } : w
+    );
+    setWorkspaces(updated);
+    saveState("tf_workspaces", updated);
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -262,10 +283,13 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         addProject,
         addTask,
         updateTaskStatus,
+        deleteTask,
+        updateTaskTitle,
         connectWallet,
         disconnectWallet,
         addActivityLog,
         upvoteMilestone,
+        toggleWorkspacePremium,
       }}
     >
       {children}

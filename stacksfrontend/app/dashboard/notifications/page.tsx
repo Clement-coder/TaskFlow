@@ -129,7 +129,7 @@ export default function NotificationsPage() {
         <AnimatePresence>
           {filtered.length === 0 ? (
             <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-12 text-center">
-              <div className="text-4xl mb-3">🔔</div>
+              <div className="text-5xl mb-4">🔔</div>
               <p className="text-sm font-semibold text-slate-300">No notifications</p>
               <p className="text-xs text-slate-500 mt-1">You're all caught up!</p>
             </div>

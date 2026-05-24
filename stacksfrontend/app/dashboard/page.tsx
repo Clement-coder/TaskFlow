@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { motion, AnimatePresence } from "framer-motion";
 import { formatDate } from "@/lib/utils";
 
+// Dashboard overview page
 export default function DashboardPage() {
   const { tasks, projects, userProfile, activityFeed, addTask } = useApp();
 

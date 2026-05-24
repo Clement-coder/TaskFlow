@@ -82,7 +82,7 @@ export default function AnalyticsPage() {
 
         {/* Priority breakdown */}
         <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 space-y-4">
-          <h2 className="text-sm font-semibold text-white">Priority Distribution</h2>
+          <h2 className="text-sm font-bold text-white">Priority Distribution</h2>
           <div className="space-y-3">
             {priorityBars.map((b) => (
               <div key={b.label}>

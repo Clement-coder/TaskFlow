@@ -37,7 +37,7 @@ export default function ActivityPage() {
           { label: "Today", value: activityFeed.filter((l) => new Date(l.timestamp).toDateString() === new Date().toDateString()).length, color: "text-amber-400" },
         ].map((s) => (
           <div key={s.label} className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-4 text-center">
-            <p className={`text-2xl font-bold ${s.color}`}>{s.value}</p>
+            <p className={`text-2xl font-bold tabular-nums ${s.color}`}>{s.value}</p>
             <p className="text-xs text-slate-500 mt-1">{s.label}</p>
           </div>
         ))}

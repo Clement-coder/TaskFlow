@@ -51,7 +51,7 @@ export default function BillingPage() {
     <div className="space-y-7 pb-4">
       <div>
         <h1 className="text-2xl font-bold text-white">Billing & Plans</h1>
-        <p className="text-sm text-slate-400 mt-0.5">Manage your subscription and payment methods</p>
+        <p className="text-sm text-slate-400 mt-1">Manage your subscription and payment methods</p>
       </div>
 
       {/* Current plan banner */}

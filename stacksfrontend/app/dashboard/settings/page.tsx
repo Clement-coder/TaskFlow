@@ -36,7 +36,7 @@ export default function SettingsPage() {
 
       <div className="flex flex-col lg:flex-row gap-5 lg:gap-6">
         {/* Sidebar nav */}
-        <nav className="lg:w-48 flex-shrink-0">
+        <nav className="lg:w-52 flex-shrink-0">
           <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-2 flex lg:flex-col gap-1 overflow-x-auto lg:overflow-visible">
             {sections.map((s) => (
               <button

@@ -102,7 +102,7 @@ export default function ProductPage() {
   };
 
   return (
-    <StandardPage title="Product" description="Overview of TaskFlow features, smart contracts, and Web3 project management." icon="product">
+    <StandardPage title="Product" description="Overview of TaskFlow features, smart contracts, and Web3 project management.">
       {/* Product Interactive Tabs Grid */}
       <div className="grid gap-8 lg:grid-cols-[260px_1fr] items-start">
         {/* Left selector */}

@@ -65,7 +65,6 @@ export default function RoadmapPage() {
     <StandardPage
       title="Product Roadmap"
       description="Track planned integrations, vote on upcoming features, and suggest new modules."
-      icon="roadmap"
     >
       <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr]">
         {/* Milestones stream */}

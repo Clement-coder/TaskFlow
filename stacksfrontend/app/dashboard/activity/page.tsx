@@ -60,7 +60,7 @@ export default function ActivityPage() {
                     <div className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 ${cfg.bg}`} />
                     <div className="flex-1 min-w-0">
                       <p className="text-sm text-slate-300 leading-relaxed">{log.text}</p>
-                      <p className="text-[11px] text-slate-600 mt-0.5">{formatDate(log.timestamp)}</p>
+                      <p className="text-[11px] text-slate-500 mt-0.5">{formatDate(log.timestamp)}</p>
                     </div>
                     <span className={`text-[10px] font-bold px-2.5 py-0.5 rounded-lg bg-white/5 ${cfg.color} flex-shrink-0`}>
                       {cfg.label}

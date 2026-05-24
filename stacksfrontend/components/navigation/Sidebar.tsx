@@ -117,7 +117,7 @@ export function Sidebar({ className, onNavigate }: { className?: string; onNavig
       </nav>
 
       {/* User card */}
-      <div className="rounded-xl border border-white/[0.07] bg-slate-950/60 p-3 flex items-center gap-3 mt-1">
+      <div className="rounded-xl border border-white/[0.07] bg-slate-950/60 p-3 flex items-center gap-3 mt-2">
         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center text-xs font-bold text-white flex-shrink-0 ring-2 ring-sky-500/20">
           {userProfile.name.split(" ").map((n) => n[0]).join("")}
         </div>

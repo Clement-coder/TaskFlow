@@ -98,7 +98,7 @@ export function Sidebar({ className, onNavigate }: { className?: string; onNavig
 
         <div className="border-t border-white/[0.06] my-2.5" />
 
-        <p className="px-2 mb-1.5 text-[10px] uppercase tracking-widest font-bold text-slate-600">Account</p>
+        <p className="px-2 mb-2 text-[10px] uppercase tracking-[0.15em] font-bold text-slate-500">Account</p>
         {accountLinks.map((item) => <NavLink key={item.href} item={item} />)}
       </nav>
 

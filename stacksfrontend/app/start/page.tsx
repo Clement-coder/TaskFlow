@@ -33,7 +33,7 @@ export default function StartPage() {
     >
       <div className="w-full flex flex-col items-center justify-center">
         <div className="w-full max-w-2xl mx-auto">
-          <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-6 sm:p-8 shadow-2xl w-full">
+          <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-6 sm:p-8 shadow-2xl w-full hover:border-white/[0.12] transition duration-200">
             <AnimatePresence mode="wait">
               {creating ? (
                 <motion.div

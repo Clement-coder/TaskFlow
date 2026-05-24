@@ -69,7 +69,7 @@ export default function SecurityPage() {
       </div>
 
       {/* 2FA */}
-      <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-6 space-y-4">
+      <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 sm:p-6 space-y-4">
         <h2 className="text-base font-bold text-white">Two-Factor Authentication</h2>
         <div className="rounded-xl border border-white/[0.07] bg-slate-950/40 p-4 flex items-center justify-between gap-4">
           <div>

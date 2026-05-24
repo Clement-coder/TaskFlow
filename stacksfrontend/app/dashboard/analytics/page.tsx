@@ -68,7 +68,7 @@ export default function AnalyticsPage() {
               <div key={b.label}>
                 <div className="flex items-center justify-between mb-1.5">
                   <span className="text-xs text-slate-400">{b.label}</span>
-                  <span className="text-xs font-bold text-slate-300">{b.value} <span className="text-slate-600">/ {tasks.length}</span></span>
+                  <span className="text-xs font-bold tabular-nums text-slate-300">{b.value} <span className="text-slate-600">/ {tasks.length}</span></span>
                 </div>
                 <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
                   <motion.div initial={{ width: 0 }} animate={{ width: `${(b.value / b.total) * 100}%` }}

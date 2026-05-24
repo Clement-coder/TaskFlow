@@ -41,7 +41,7 @@ export default function AnalyticsPage() {
       </div>
 
       {/* KPI row */}
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {[
           { label: "Total Tasks", value: tasks.length, color: "text-sky-400", icon: "📋" },
           { label: "Completion Rate", value: `${Math.round((done / total) * 100)}%`, color: "text-emerald-400", icon: "✅" },

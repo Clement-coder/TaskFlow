@@ -55,7 +55,7 @@ export default function DashboardLayout({
           <span className="text-sm font-bold text-white">TaskFlow</span>
           <button
             onClick={closeMobile}
-            aria-label="Close menu"
+            aria-label="Close navigation menu"
             className="rounded-xl bg-white/5 p-2 text-slate-400 hover:text-white transition"
           >
             <svg

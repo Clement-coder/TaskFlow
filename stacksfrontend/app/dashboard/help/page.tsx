@@ -66,7 +66,7 @@ export default function HelpPage() {
           placeholder="Search help articles..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full rounded-2xl bg-slate-900/60 border border-white/[0.07] pl-12 pr-4 py-3.5 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-sky-500/40 transition"
+          className="w-full rounded-2xl bg-slate-900/60 border border-white/[0.07] pl-12 pr-4 py-3.5 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-sky-500/50 focus:ring-1 focus:ring-sky-500/20 transition"
         />
       </div>
 

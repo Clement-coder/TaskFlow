@@ -50,7 +50,7 @@ export default function HelpPage() {
   );
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 pb-4">
       <div>
         <h1 className="text-2xl font-bold text-white">Help & Support</h1>
         <p className="text-sm text-slate-400 mt-0.5">Find answers, guides, and contact support</p>

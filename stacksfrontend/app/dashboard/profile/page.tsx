@@ -56,7 +56,7 @@ export default function ProfilePage() {
           {/* Avatar + name */}
           <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-6 flex flex-col items-center text-center gap-4">
             <div className="relative">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center text-2xl font-bold text-white shadow-xl">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center text-2xl font-bold text-white shadow-xl ring-4 ring-sky-500/20">
                 {userProfile.name.split(" ").map((n) => n[0]).join("")}
               </div>
               <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-emerald-500 border-2 border-slate-900 flex items-center justify-center">

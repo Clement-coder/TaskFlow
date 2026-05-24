@@ -66,7 +66,7 @@ export default function RoadmapPage() {
       title="Product Roadmap"
       description="Track planned integrations, vote on upcoming features, and suggest new modules."
     >
-      <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr]">
+      <div className="grid gap-6 lg:gap-8 lg:grid-cols-[1.4fr_1fr]">
         {/* Milestones stream */}
         <div className="space-y-6">
           {milestones.map((milestone) => (

@@ -61,7 +61,7 @@ export default function RewardsPage() {
       <div className="rounded-2xl border border-sky-500/20 bg-gradient-to-br from-sky-500/10 to-indigo-500/5 p-6 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
         <div className="text-center sm:text-left">
           <p className="text-xs font-bold uppercase tracking-widest text-sky-400 mb-1">Your Balance</p>
-          <p className="text-4xl font-bold text-white">{points.toLocaleString()}</p>
+          <p className="text-4xl font-bold tabular-nums text-white">{points.toLocaleString()}</p>
           <p className="text-sm text-slate-400 mt-1">Reputation Points · <span className="text-sky-400 font-semibold">{level}</span></p>
         </div>
         <div className="flex gap-3">

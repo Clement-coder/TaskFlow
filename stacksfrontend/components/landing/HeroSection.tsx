@@ -12,7 +12,7 @@ export function HeroSection() {
         <div className="absolute top-20 right-0 w-[400px] h-[400px] rounded-full bg-indigo-500/8 blur-[100px]" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl">
+      <div className="relative mx-auto max-w-7xl px-0 sm:px-0">
         <div className="flex flex-col gap-16 lg:flex-row lg:items-center lg:justify-between">
           {/* Left: copy */}
           <motion.div

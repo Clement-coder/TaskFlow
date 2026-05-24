@@ -135,7 +135,7 @@ export default function DashboardPage() {
       </div>
 
       {/* Main grid */}
-      <div className="grid gap-6 lg:grid-cols-[1.5fr_1fr]">
+      <div className="grid gap-6 lg:grid-cols-[1.6fr_1fr]">
         <div className="space-y-6">
           {/* Projects progress */}
           <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5">

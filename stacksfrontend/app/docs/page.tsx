@@ -91,7 +91,7 @@ showConnect({
   };
 
   return (
-    <StandardPage title="Documentation" description="Guides, code snippets, and API sandboxes for TaskFlow." icon="docs">
+    <StandardPage title="Documentation" description="Guides, code snippets, and API sandboxes for TaskFlow.">
       {/* Search Input */}
       <div className="relative mb-8">
         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-500">

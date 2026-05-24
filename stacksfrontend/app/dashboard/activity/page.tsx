@@ -52,7 +52,7 @@ export default function ActivityPage() {
               <div className="flex-1 h-px bg-white/[0.05]" />
               <span className="text-[10px] text-slate-600">{logs.length} events</span>
             </div>
-            <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 divide-y divide-white/[0.04] overflow-hidden">
+            <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 divide-y divide-white/[0.04] overflow-hidden shadow-sm">
               {logs.map((log) => {
                 const cfg = typeConfig[log.type] ?? typeConfig.system;
                 return (

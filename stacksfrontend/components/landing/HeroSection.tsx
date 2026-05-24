@@ -41,7 +41,7 @@ export function HeroSection() {
             <div className="flex flex-col gap-3.5 w-full">
               <Link
                 href="/start"
-                className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 px-6 py-3.5 text-sm font-semibold text-white shadow-xl shadow-sky-500/20 transition duration-200"
+                className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 active:bg-sky-600 px-6 py-3.5 text-sm font-semibold text-white shadow-xl shadow-sky-500/20 transition duration-150"
               >
                 Start free workspace
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>

@@ -55,7 +55,7 @@ export default function SettingsPage() {
         </nav>
 
         {/* Content */}
-        <div className="flex-1 rounded-2xl border border-white/[0.07] bg-slate-900/60 p-6 space-y-6">
+        <div className="flex-1 rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 sm:p-6 space-y-6">
           {activeSection === "account" && (
             <>
               <h2 className="text-base font-bold text-white">Account Settings</h2>

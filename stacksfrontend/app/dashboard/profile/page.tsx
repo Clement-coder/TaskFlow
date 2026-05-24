@@ -131,7 +131,7 @@ export default function ProfilePage() {
         {/* Right: stats + achievements + activity */}
         <div className="space-y-4">
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-3 gap-3 sm:gap-4">
             {[
               { label: "Tasks Done", value: completedTasks, color: "text-emerald-400" },
               { label: "In Progress", value: inProgressTasks, color: "text-amber-400" },

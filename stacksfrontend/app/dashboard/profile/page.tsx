@@ -85,7 +85,7 @@ export default function ProfilePage() {
           </div>
 
           {/* Reputation */}
-          <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 space-y-4">
+          <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 space-y-5">
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-semibold text-white">Reputation</h3>
               <span className="text-xs font-bold text-sky-400 bg-sky-500/10 px-2.5 py-1 rounded-lg">{level}</span>

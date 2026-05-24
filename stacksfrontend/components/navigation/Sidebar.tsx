@@ -232,7 +232,7 @@ export function Sidebar({
       <div className="border-t border-white/[0.06]" />
 
       {/* Main nav */}
-      <nav className="space-y-0.5 flex-1 overflow-y-auto scrollbar-none">
+      <nav className="space-y-0.5 flex-1 overflow-y-auto scrollbar-none pr-0.5">
         <p className="px-2 mb-1.5 mt-1 text-[10px] uppercase tracking-widest font-bold text-slate-600">
           Workspace
         </p>

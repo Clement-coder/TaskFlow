@@ -92,7 +92,7 @@ export default function BillingPage() {
               <div>
                 <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">{plan.name}</p>
                 <div className="flex items-end gap-1 mt-1">
-                  <span className="text-3xl font-bold text-white">{plan.price}</span>
+                  <span className="text-3xl font-bold tabular-nums text-white">{plan.price}</span>
                   <span className="text-xs text-slate-500 mb-1">/{plan.period}</span>
                 </div>
               </div>

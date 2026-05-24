@@ -90,7 +90,7 @@ export default function HelpPage() {
 
       {/* FAQ */}
       <div>
-        <h2 className="text-base font-bold text-white mb-4">Frequently Asked Questions</h2>
+        <h2 className="text-base font-bold text-white tracking-tight mb-4">Frequently Asked Questions</h2>
         <div className="space-y-2">
           {filteredFaqs.map((faq, i) => (
             <div key={i} className="rounded-2xl border border-white/[0.07] bg-slate-900/60 overflow-hidden hover:border-white/[0.12] transition duration-150">

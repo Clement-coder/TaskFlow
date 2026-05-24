@@ -59,7 +59,7 @@ export default function AnalyticsPage() {
         ))}
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-5 lg:gap-6 lg:grid-cols-2">
         {/* Task status breakdown */}
         <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 space-y-4">
           <h2 className="text-sm font-semibold text-white">Task Status Breakdown</h2>

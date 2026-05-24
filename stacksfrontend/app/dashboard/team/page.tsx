@@ -100,7 +100,7 @@ export default function TeamPage() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
         {[
           { label: "Total Members", value: members.length, color: "text-sky-400" },
           { label: "Online Now", value: members.filter((m) => m.status === "online").length, color: "text-emerald-400" },

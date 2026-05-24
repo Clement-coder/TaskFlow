@@ -87,8 +87,8 @@ export default function DashboardLayout({
             {/* Mobile hamburger */}
             <button
               onClick={() => setMobileMenuOpen(true)}
-              aria-label="Open menu"
-              className="xl:hidden p-2 rounded-xl bg-white/5 text-slate-400 hover:text-white transition flex-shrink-0"
+              aria-label="Open navigation menu"
+              className="xl:hidden p-2 rounded-xl bg-white/5 text-slate-400 hover:text-white hover:bg-white/10 transition flex-shrink-0"
             >
               <svg
                 className="w-5 h-5"

@@ -83,7 +83,7 @@ export default function DashboardPage() {
   ];
 
   return (
-    <div className="space-y-6 relative pb-4">
+    <div className="space-y-7 relative pb-4">
       {/* Toast */}
       <AnimatePresence>
         {showToast && (

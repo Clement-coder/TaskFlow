@@ -103,7 +103,7 @@ export default function SecurityPage() {
         )}
         <div className="divide-y divide-white/[0.04]">
           {activeSessions.map((session) => (
-            <div key={session.id} className="flex items-center justify-between px-6 py-4 hover:bg-white/[0.02] transition">
+            <div key={session.id} className="flex items-center justify-between px-6 py-4 hover:bg-white/[0.03] transition duration-150">
               <div className="flex items-center gap-4">
                 <div className={`w-2.5 h-2.5 rounded-full flex-shrink-0 ${session.current ? "bg-emerald-400 animate-pulse" : "bg-slate-600"}`} />
                 <div>

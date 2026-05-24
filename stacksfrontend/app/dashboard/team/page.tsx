@@ -85,7 +85,7 @@ export default function TeamPage() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-white">Team</h1>
+          <h1 className="text-2xl font-bold text-white tracking-tight">Team</h1>
           <p className="text-sm text-slate-400 mt-0.5">Manage members, roles, and permissions</p>
         </div>
         <button

@@ -85,7 +85,7 @@ export default function WorkspacePage() {
       <div className="grid gap-6 lg:gap-8 lg:grid-cols-[1.4fr_1fr]">
         <div className="space-y-8">
           {/* Gating Card */}
-          <Card className="p-6">
+          <Card className="p-5 sm:p-6">
             <CardHeader className="p-0 mb-4">
               <div className="flex items-center justify-between">
                 <CardTitle className="text-lg">Clarity Token-Gating</CardTitle>

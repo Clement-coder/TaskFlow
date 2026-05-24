@@ -82,7 +82,7 @@ export default function WorkspacePage() {
         <p className="text-xs text-slate-400">Configure member privileges, Clarity smart contracts, and Web3 gating.</p>
       </div>
 
-      <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr]">
+      <div className="grid gap-6 lg:gap-8 lg:grid-cols-[1.4fr_1fr]">
         <div className="space-y-8">
           {/* Gating Card */}
           <Card className="p-6">

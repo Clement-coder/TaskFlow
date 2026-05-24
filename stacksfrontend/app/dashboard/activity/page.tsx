@@ -47,7 +47,7 @@ export default function ActivityPage() {
       <div className="space-y-6">
         {Object.entries(grouped).map(([date, logs]) => (
           <div key={date}>
-            <div className="flex items-center gap-3 mb-3">
+            <div className="flex items-center gap-3 mb-4">
               <span className="text-xs font-bold text-slate-500 uppercase tracking-widest">{date}</span>
               <div className="flex-1 h-px bg-white/[0.05]" />
               <span className="text-[10px] text-slate-600">{logs.length} events</span>

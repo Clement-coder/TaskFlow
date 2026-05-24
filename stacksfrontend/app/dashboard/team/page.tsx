@@ -66,7 +66,7 @@ export default function TeamPage() {
   };
 
   return (
-    <div className="space-y-6 pb-4">
+    <div className="space-y-7 pb-4">
       {/* Toast */}
       <AnimatePresence>
         {toast && (

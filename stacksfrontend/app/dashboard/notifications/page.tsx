@@ -87,7 +87,7 @@ export default function NotificationsPage() {
 
   return (
     <div className="space-y-7 pb-4">
-      <div className="flex items-center justify-between flex-wrap gap-3">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
           <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">Notifications</h1>
           <p className="text-sm text-slate-400 mt-0.5">

@@ -17,43 +17,68 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-950 via-black to-slate-900 text-slate-100 flex flex-col justify-between">
-      {/* Premium Header */}
-      <header className="border-b border-white/5 py-4 sticky top-0 bg-slate-950/80 backdrop-blur-md z-40">
-        <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-3 group">
-              <Image
-                src="/Taskflowlogo.png"
-                alt="TaskFlow Logo"
-                width={36}
-                height={36}
-                className="group-hover:scale-105 transition duration-300 object-contain rounded-xl"
-                priority
-              />
-              <span className="text-lg font-bold tracking-tight text-white group-hover:text-sky-300 transition duration-200">
-                TaskFlow
-              </span>
+    <main className="min-h-screen bg-[#020817] text-slate-100 flex flex-col">
+      {/* Navbar */}
+      <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-[#020817]/80 backdrop-blur-xl">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="flex h-16 items-center justify-between">
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-2.5 group">
+              <div className="relative">
+                <div className="absolute inset-0 rounded-xl bg-sky-500/20 blur-md group-hover:bg-sky-500/30 transition" />
+                <Image
+                  src="/Taskflowlogo.png"
+                  alt="TaskFlow"
+                  width={32}
+                  height={32}
+                  className="relative rounded-xl object-contain"
+                  priority
+                />
+              </div>
+              <span className="text-base font-bold text-white tracking-tight">TaskFlow</span>
             </Link>
-            
-            <nav className="hidden gap-8 md:flex items-center">
-              <Link href="/product" className="text-sm font-medium text-slate-400 hover:text-white transition">Product</Link>
-              <Link href="/pricing" className="text-sm font-medium text-slate-400 hover:text-white transition">Pricing</Link>
-              <Link href="/docs" className="text-sm font-medium text-slate-400 hover:text-white transition">Docs</Link>
-              <Link href="/roadmap" className="text-sm font-medium text-slate-400 hover:text-white transition">Roadmap</Link>
+
+            {/* Nav links */}
+            <nav className="hidden md:flex items-center gap-1">
+              {[
+                { href: "/product", label: "Product" },
+                { href: "/pricing", label: "Pricing" },
+                { href: "/docs", label: "Docs" },
+                { href: "/roadmap", label: "Roadmap" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="px-4 py-2 rounded-xl text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 transition duration-150"
+                >
+                  {item.label}
+                </Link>
+              ))}
             </nav>
 
-            <div className="flex items-center gap-4">
-              <Link href="/dashboard" className="relative group overflow-hidden rounded-2xl bg-sky-500 hover:bg-sky-400 px-5 py-2.5 text-xs font-bold text-white shadow-lg shadow-sky-500/10 transition duration-200">
-                <span className="relative z-10">Launch App</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-sky-400 to-indigo-500 opacity-0 group-hover:opacity-100 transition duration-300" />
+            {/* CTA */}
+            <div className="flex items-center gap-3">
+              <Link
+                href="/dashboard"
+                className="hidden sm:inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-300 hover:bg-white/10 hover:text-white transition duration-150"
+              >
+                Sign in
+              </Link>
+              <Link
+                href="/start"
+                className="inline-flex items-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition duration-150"
+              >
+                Get started
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
               </Link>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Landing Blocks */}
+      {/* Page content */}
       <div className="flex-1">
         <HeroSection />
         <FeatureGrid />
@@ -61,18 +86,50 @@ export default function Home() {
         <PricingSection />
       </div>
 
-      {/* Premium Footer */}
-      <footer className="border-t border-white/5 py-8 bg-black/40 text-slate-500">
-        <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <span className="text-xs font-bold text-slate-400">TaskFlow</span>
-            <span className="text-[10px] text-slate-600">•</span>
-            <span className="text-xs">© 2026 TaskFlow. All rights secured on Bitcoin L2.</span>
+      {/* Footer */}
+      <footer className="border-t border-white/[0.06] bg-[#020817]">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-12">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+            <div className="space-y-3">
+              <Link href="/" className="flex items-center gap-2.5">
+                <Image src="/Taskflowlogo.png" alt="TaskFlow" width={28} height={28} className="rounded-lg object-contain" />
+                <span className="text-sm font-bold text-white">TaskFlow</span>
+              </Link>
+              <p className="text-xs text-slate-500 max-w-xs leading-relaxed">
+                The premium decentralized task OS for teams building on Bitcoin L2 and Stacks.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 text-sm">
+              <div className="space-y-3">
+                <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500">Product</p>
+                <div className="space-y-2">
+                  <Link href="/product" className="block text-slate-400 hover:text-white transition">Features</Link>
+                  <Link href="/pricing" className="block text-slate-400 hover:text-white transition">Pricing</Link>
+                  <Link href="/roadmap" className="block text-slate-400 hover:text-white transition">Roadmap</Link>
+                </div>
+              </div>
+              <div className="space-y-3">
+                <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500">Developers</p>
+                <div className="space-y-2">
+                  <Link href="/docs" className="block text-slate-400 hover:text-white transition">Docs</Link>
+                  <Link href="/docs" className="block text-slate-400 hover:text-white transition">API</Link>
+                </div>
+              </div>
+              <div className="space-y-3">
+                <p className="text-[10px] uppercase tracking-widest font-bold text-slate-500">Company</p>
+                <div className="space-y-2">
+                  <Link href="/start" className="block text-slate-400 hover:text-white transition">Get started</Link>
+                  <Link href="/dashboard" className="block text-slate-400 hover:text-white transition">Dashboard</Link>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="flex gap-6 text-xs">
-            <Link href="/docs" className="hover:text-slate-300 transition">API</Link>
-            <Link href="/roadmap" className="hover:text-slate-300 transition">Roadmap</Link>
-            <Link href="/pricing" className="hover:text-slate-300 transition">SaaS Plans</Link>
+          <div className="mt-10 pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p className="text-xs text-slate-600">© 2026 TaskFlow. All rights secured on Bitcoin L2.</p>
+            <div className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="text-xs text-slate-500">All systems operational</span>
+            </div>
           </div>
         </div>
       </footer>

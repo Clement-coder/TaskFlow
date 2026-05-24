@@ -109,7 +109,7 @@ export default function DashboardPage() {
       {/* Page header */}
       <div>
         <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">Overview</h1>
-        <p className="text-sm text-slate-400 mt-0.5">Your workspace at a glance — live from Stacks.</p>
+        <p className="text-sm text-slate-400 mt-1">Your workspace at a glance — live from Stacks.</p>
       </div>
 
       {/* Stats grid */}

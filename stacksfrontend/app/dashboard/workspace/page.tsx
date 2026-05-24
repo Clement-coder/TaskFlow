@@ -164,7 +164,7 @@ export default function WorkspacePage() {
         <div className="space-y-6">
           <Card className="p-6">
             <CardHeader className="p-0 mb-4">
-              <CardTitle className="text-lg">Workspace Members</CardTitle>
+              <CardTitle className="text-lg tracking-tight">Workspace Members</CardTitle>
               <CardDescription>Invite and configure team members roles.</CardDescription>
             </CardHeader>
             

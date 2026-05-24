@@ -114,7 +114,7 @@ export default function ProfilePage() {
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                   <span className="text-xs font-mono text-emerald-300">{walletAddress.slice(0, 10)}…{walletAddress.slice(-6)}</span>
                 </div>
-                <p className="text-sm font-bold text-white">{stxBalance} <span className="text-slate-400 font-normal text-xs">STX</span></p>
+                <p className="text-sm font-bold tabular-nums text-white">{stxBalance} <span className="text-slate-400 font-normal text-xs">STX</span></p>
               </div>
             ) : (
               <button onClick={connectWallet}

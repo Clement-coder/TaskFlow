@@ -31,7 +31,7 @@ export default function StandardPage({
     <div className="min-h-screen bg-[#020817] text-slate-100 flex flex-col">
       {/* Navbar */}
       <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-[#020817]/90 backdrop-blur-xl">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
           <div className="flex h-16 items-center justify-between gap-4">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0">
@@ -45,14 +45,9 @@ export default function StandardPage({
             {/* Desktop nav */}
             <nav className="hidden md:flex items-center gap-1">
               {navLinks.map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  className={cn(
-                    "px-4 py-2 rounded-xl text-sm font-medium transition duration-150",
-                    pathname === l.href ? "text-white bg-white/8" : "text-slate-400 hover:text-white hover:bg-white/5"
-                  )}
-                >
+                <Link key={l.href} href={l.href}
+                  className={cn("px-4 py-2 rounded-xl text-sm font-medium transition duration-150",
+                    pathname === l.href ? "text-white bg-white/[0.08]" : "text-slate-400 hover:text-white hover:bg-white/5")}>
                   {l.label}
                 </Link>
               ))}
@@ -60,7 +55,7 @@ export default function StandardPage({
 
             {/* Right CTAs */}
             <div className="flex items-center gap-2">
-              <Link href="/dashboard" className="hidden sm:inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-300 hover:bg-white/10 hover:text-white transition">
+              <Link href="/dashboard" className="hidden sm:inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-300 hover:bg-white/10 hover:text-white transition duration-150">
                 Dashboard
               </Link>
               <Link href="/start" className="inline-flex items-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 active:bg-sky-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition duration-150">
@@ -70,29 +65,53 @@ export default function StandardPage({
                 </svg>
               </Link>
               {/* Mobile hamburger */}
-              <button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden p-2 rounded-xl bg-white/5 text-slate-400 hover:text-white transition">
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <button
+                onClick={() => setMobileOpen(!mobileOpen)}
+                aria-label="Toggle menu"
+                aria-expanded={mobileOpen}
+                className="md:hidden p-2 rounded-xl bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition duration-150"
+              >
+                <svg className="w-5 h-5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d={mobileOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
                 </svg>
               </button>
             </div>
           </div>
 
-          {/* Mobile menu */}
-          {mobileOpen && (
-            <div className="md:hidden border-t border-white/[0.06] py-3 space-y-1">
+          {/* Mobile menu — absolute dropdown, smooth transition */}
+          <div
+            className={cn(
+              "md:hidden absolute left-0 right-0 top-full z-50",
+              "bg-[#020817]/98 backdrop-blur-xl border-b border-white/[0.06]",
+              "overflow-hidden transition-all duration-300 ease-in-out",
+              mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 pointer-events-none"
+            )}
+          >
+            <nav className="px-4 py-3 space-y-1">
               {navLinks.map((l) => (
                 <Link key={l.href} href={l.href} onClick={() => setMobileOpen(false)}
-                  className="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition">
+                  className={cn(
+                    "flex items-center px-4 py-3 rounded-xl text-sm font-medium transition duration-150",
+                    pathname === l.href ? "bg-sky-500/10 text-sky-300 border border-sky-500/20" : "text-slate-300 hover:text-white hover:bg-white/5"
+                  )}>
                   {l.label}
                 </Link>
               ))}
               <Link href="/dashboard" onClick={() => setMobileOpen(false)}
-                className="block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition">
+                className="flex items-center px-4 py-3 rounded-xl text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition duration-150">
                 Dashboard
               </Link>
-            </div>
-          )}
+              <div className="pt-1 pb-2">
+                <Link href="/start" onClick={() => setMobileOpen(false)}
+                  className="flex items-center justify-center gap-2 w-full rounded-xl bg-sky-500 hover:bg-sky-400 active:bg-sky-600 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition duration-150">
+                  Get started
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
+              </div>
+            </nav>
+          </div>
         </div>
       </header>
 
@@ -120,7 +139,7 @@ export default function StandardPage({
           </div>
           <div className="flex gap-6 text-xs">
             {navLinks.map((l) => (
-              <Link key={l.href} href={l.href} className="text-slate-500 hover:text-slate-300 transition">{l.label}</Link>
+              <Link key={l.href} href={l.href} className="text-slate-500 hover:text-slate-300 transition duration-150">{l.label}</Link>
             ))}
           </div>
         </div>

@@ -5,6 +5,7 @@ import { HeroSection } from "@/components/landing/HeroSection";
 import { FeatureGrid } from "@/components/landing/FeatureGrid";
 import { Testimonials } from "@/components/landing/Testimonials";
 import { PricingSection } from "@/components/landing/PricingSection";
+import LandingNav from "@/components/landing/LandingNav";
 
 export const metadata: Metadata = {
   title: "TaskFlow — Premium Web3 Task OS",
@@ -18,65 +19,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#020817] text-slate-100 flex flex-col">
-      {/* Navbar */}
-      <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-[#020817]/80 backdrop-blur-xl">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="flex h-16 items-center justify-between">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-2.5 group">
-              <div className="relative">
-                <div className="absolute inset-0 rounded-xl bg-sky-500/20 blur-md group-hover:bg-sky-500/30 transition" />
-                <Image
-                  src="/Taskflowlogo.png"
-                  alt="TaskFlow"
-                  width={32}
-                  height={32}
-                  className="relative rounded-xl object-contain"
-                  priority
-                />
-              </div>
-              <span className="text-base font-bold text-white tracking-tight">TaskFlow</span>
-            </Link>
-
-            {/* Nav links */}
-            <nav className="hidden md:flex items-center gap-1">
-              {[
-                { href: "/product", label: "Product" },
-                { href: "/pricing", label: "Pricing" },
-                { href: "/docs", label: "Docs" },
-                { href: "/roadmap", label: "Roadmap" },
-              ].map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="px-4 py-2 rounded-xl text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 transition duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-
-            {/* CTA */}
-            <div className="flex items-center gap-3">
-              <Link
-                href="/dashboard"
-                className="hidden sm:inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-300 hover:bg-white/10 hover:text-white transition duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
-              >
-                Sign in
-              </Link>
-              <Link
-                href="/start"
-                className="inline-flex items-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 active:bg-sky-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300"
-              >
-                Get started
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </header>
+      <LandingNav />
 
       {/* Page content */}
       <div className="flex-1">

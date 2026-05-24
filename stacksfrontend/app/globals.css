@@ -58,6 +58,21 @@ input, textarea, select, button {
   font-family: inherit;
 }
 
+/* Prevent iOS Safari from zooming on input focus (requires font-size >= 16px) */
+@media screen and (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  input[type="number"],
+  input[type="date"],
+  input[type="url"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
 /* Prevent text overflow on small screens */
 .truncate {
   overflow: hidden;

@@ -31,7 +31,7 @@ export default function ProjectsPage() {
   };
 
   return (
-    <div className="space-y-6 relative">
+    <div className="space-y-6 relative pb-4">
       {/* Header bar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>

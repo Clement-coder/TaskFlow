@@ -125,7 +125,7 @@ export default function NotificationsPage() {
       </div>
 
       {/* Notifications list */}
-      <div className="space-y-2">
+      <div className="space-y-2.5">
         <AnimatePresence>
           {filtered.length === 0 ? (
             <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-12 text-center">

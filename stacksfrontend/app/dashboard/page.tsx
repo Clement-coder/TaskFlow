@@ -161,7 +161,7 @@ export default function DashboardPage() {
                         {project.status}
                       </Badge>
                     </div>
-                    <span className="text-xs font-bold text-slate-400">{project.progress}%</span>
+                    <span className="text-xs font-bold tabular-nums text-slate-400">{project.progress}%</span>
                   </div>
                   <div className="h-1.5 bg-slate-800 rounded-full overflow-hidden">
                     <motion.div

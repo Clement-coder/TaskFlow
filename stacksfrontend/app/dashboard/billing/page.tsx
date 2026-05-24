@@ -124,7 +124,7 @@ export default function BillingPage() {
 
       {/* Payment method */}
       <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-6 space-y-4">
-        <h2 className="text-base font-bold text-white">Payment Method</h2>
+        <h2 className="text-base font-bold text-white tracking-tight">Payment Method</h2>
         {walletConnected && walletAddress ? (
           <div className="flex items-center gap-4 rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-4">
             <div className="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center">

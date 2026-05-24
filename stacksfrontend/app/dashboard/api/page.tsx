@@ -49,7 +49,7 @@ export default function ApiPage() {
     <div className="space-y-7 pb-4">
       <div>
         <h1 className="text-2xl font-bold text-white tracking-tight">API</h1>
-        <p className="text-sm text-slate-400 mt-0.5">Manage API keys and explore available endpoints</p>
+        <p className="text-sm text-slate-400 mt-1">Manage API keys and explore available endpoints</p>
       </div>
 
       {/* Tabs */}

@@ -29,7 +29,7 @@ export default function ActivityPage() {
       </div>
 
       {/* Summary */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
         {[
           { label: "Total Events", value: activityFeed.length, color: "text-sky-400" },
           { label: "Contract Calls", value: activityFeed.filter((l) => l.type === "contract").length, color: "text-emerald-400" },

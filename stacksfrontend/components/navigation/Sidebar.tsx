@@ -92,7 +92,7 @@ export function Sidebar({ className, onNavigate }: { className?: string; onNavig
       <div className="border-t border-white/[0.06]" />
 
       {/* Scrollable nav */}
-      <nav className="flex-1 overflow-y-auto scrollbar-none space-y-0.5 pr-0.5">
+      <nav className="flex-1 overflow-y-auto scrollbar-none space-y-0.5 pr-0.5 min-h-0">
         <p className="px-2 mb-1.5 mt-1 text-[10px] uppercase tracking-widest font-bold text-slate-600">Workspace</p>
         {navItems.map((item) => <NavLink key={item.href} item={item} showBadge />)}
 

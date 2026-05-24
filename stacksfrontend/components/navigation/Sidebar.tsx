@@ -106,7 +106,7 @@ export function Sidebar({ className, onNavigate }: { className?: string; onNavig
 
       {/* Resources */}
       <nav className="space-y-0.5">
-        <p className="px-2 mb-1.5 text-[10px] uppercase tracking-widest font-bold text-slate-600">Resources</p>
+        <p className="px-2 mb-2 text-[10px] uppercase tracking-[0.15em] font-bold text-slate-500">Resources</p>
         {resourceLinks.map((item) => (
           <Link key={item.href} href={item.href} onClick={onNavigate}
             className="flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium text-slate-500 hover:text-slate-200 hover:bg-white/5 transition duration-150">

@@ -145,7 +145,7 @@ export default function ProfilePage() {
           </div>
 
           {/* Achievements */}
-          <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5">
+          <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 shadow-sm">
             <h3 className="text-sm font-semibold text-white mb-4">Achievements</h3>
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {achievements.map((a) => (

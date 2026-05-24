@@ -323,7 +323,7 @@ export function Sidebar({
             key={item.href}
             href={item.href}
             onClick={onNavigate}
-            className="flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium text-slate-500 hover:text-slate-300 hover:bg-white/5 transition duration-150"
+            className="flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium text-slate-500 hover:text-slate-200 hover:bg-white/5 transition duration-150"
           >
             <span className="text-slate-600">{item.icon}</span>
             {item.label}

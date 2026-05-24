@@ -169,7 +169,7 @@ export default function ProfilePage() {
                   <div className={`w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 ${log.type === "contract" ? "bg-emerald-400" : "bg-sky-400"}`} />
                   <div>
                     <p className="text-xs text-slate-300 leading-relaxed">{log.text}</p>
-                    <p className="text-[10px] text-slate-600 mt-0.5">{formatDate(log.timestamp)}</p>
+                    <p className="text-[10px] text-slate-500 mt-0.5">{formatDate(log.timestamp)}</p>
                   </div>
                 </div>
               ))}

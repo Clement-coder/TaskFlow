@@ -89,7 +89,7 @@ export function Sidebar({ className, onNavigate }: { className?: string; onNavig
         </div>
       </Link>
 
-      <div className="border-t border-white/[0.06]" />
+      <div className="border-t border-white/[0.06] mt-1" />
 
       {/* Scrollable nav */}
       <nav className="flex-1 overflow-y-auto scrollbar-none space-y-0.5 pr-0.5 min-h-0">

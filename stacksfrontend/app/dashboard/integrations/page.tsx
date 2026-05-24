@@ -66,7 +66,7 @@ export default function IntegrationsPage() {
           const isConnected = connected.includes(item.id);
           const cfg = statusConfig[isConnected ? "connected" : item.status];
           return (
-            <div key={item.id} className={`rounded-2xl border bg-slate-900/60 p-5 flex flex-col gap-4 transition ${isConnected ? "border-emerald-500/20" : "border-white/[0.07] hover:border-white/[0.15] transition duration-200"}`}>
+            <div key={item.id} className={`rounded-2xl border bg-slate-900/60 p-5 flex flex-col gap-4 transition duration-200 ${isConnected ? "border-emerald-500/20" : "border-white/[0.07] hover:border-white/[0.15] transition duration-200"}`}>
               <div className="flex items-start justify-between gap-3">
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">{item.icon}</span>

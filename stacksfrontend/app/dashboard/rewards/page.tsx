@@ -71,7 +71,7 @@ export default function RewardsPage() {
           </div>
           <div className="rounded-xl border border-white/[0.07] bg-slate-900/60 px-4 py-3 text-center">
             <p className="text-xs text-slate-500">Available</p>
-            <p className="text-xl font-bold text-emerald-400 mt-0.5">{rewards.length - claimedIds.length}</p>
+            <p className="text-xl font-bold tabular-nums text-emerald-400 mt-0.5">{rewards.length - claimedIds.length}</p>
           </div>
         </div>
       </div>

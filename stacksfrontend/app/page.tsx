@@ -60,7 +60,7 @@ export default function Home() {
             <div className="flex items-center gap-3">
               <Link
                 href="/dashboard"
-                className="hidden sm:inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-300 hover:bg-white/10 hover:text-white transition duration-150"
+                className="hidden sm:inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-300 hover:bg-white/10 hover:text-white transition duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
               >
                 Sign in
               </Link>

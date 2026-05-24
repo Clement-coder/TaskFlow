@@ -49,7 +49,7 @@ const typeConfig: Record<string, { color: string }> = {
 
 export default function ChangelogPage() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 pb-4">
       <div>
         <h1 className="text-2xl font-bold text-white">Changelog</h1>
         <p className="text-sm text-slate-400 mt-0.5">Release history and feature updates for TaskFlow</p>

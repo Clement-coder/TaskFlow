@@ -114,7 +114,7 @@ export default function HelpPage() {
             </div>
           ))}
           {filteredFaqs.length === 0 && (
-            <p className="text-sm text-slate-500 text-center py-8">No results found for "{search}"</p>
+            <p className="text-sm text-slate-500 text-center py-10">No results found for "{search}"</p>
           )}
         </div>
       </div>

@@ -72,7 +72,7 @@ export default function ApiPage() {
           </div>
 
           <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 overflow-hidden">
-            <div className="hidden sm:grid grid-cols-[80px_1fr_1fr_80px] gap-4 px-5 py-3 border-b border-white/[0.06] text-[10px] uppercase tracking-widest font-bold text-slate-600">
+            <div className="hidden sm:grid grid-cols-[80px_1fr_1fr_80px] gap-4 px-5 py-3 border-b border-white/[0.06] text-[10px] uppercase tracking-[0.12em] font-bold text-slate-500">
               <span>Method</span><span>Endpoint</span><span>Description</span><span className="text-center">Auth</span>
             </div>
             <div className="divide-y divide-white/[0.04]">

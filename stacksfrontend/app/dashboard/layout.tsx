@@ -112,7 +112,7 @@ export default function DashboardLayout({
                 className="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-white/[0.07] bg-white/[0.03] hover:bg-white/[0.07] text-sm font-medium text-slate-300 hover:text-white transition duration-150"
               >
                 <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse flex-shrink-0" />
-                <span className="max-w-[120px] truncate">
+                <span className="max-w-[80px] sm:max-w-[120px] truncate">
                   {activeWorkspace?.name || "Select Workspace"}
                 </span>
                 <svg

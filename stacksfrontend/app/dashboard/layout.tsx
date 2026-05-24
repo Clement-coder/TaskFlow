@@ -200,7 +200,7 @@ export default function DashboardLayout({
           </div>
 
           {/* Right side actions */}
-          <div className="flex items-center gap-2.5 flex-shrink-0">
+          <div className="flex items-center gap-1.5 sm:gap-2.5 flex-shrink-0">
             {/* Celo wallet */}
             <CeloConnectButton />
 

@@ -162,7 +162,7 @@ export default function ProfilePage() {
 
           {/* Recent activity */}
           <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5">
-            <h3 className="text-sm font-semibold text-white mb-4">Recent Activity</h3>
+            <h3 className="text-sm font-bold text-white mb-4">Recent Activity</h3>
             <div className="space-y-2.5 max-h-48 overflow-y-auto pr-1">
               {activityFeed.slice(0, 6).map((log) => (
                 <div key={log.id} className="flex items-start gap-2.5">

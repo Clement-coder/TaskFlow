@@ -34,7 +34,7 @@ export default function SettingsPage() {
         <p className="text-sm text-slate-400 mt-0.5">Manage your account preferences and configurations</p>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-6">
+      <div className="flex flex-col lg:flex-row gap-5 lg:gap-6">
         {/* Sidebar nav */}
         <nav className="lg:w-48 flex-shrink-0">
           <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-2 flex lg:flex-col gap-1 overflow-x-auto lg:overflow-visible">

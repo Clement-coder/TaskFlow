@@ -61,6 +61,11 @@ input, textarea, select, button {
   border-radius: 0;
 }
 
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Prevent iOS Safari from zooming on input focus (requires font-size >= 16px) */
 @media screen and (max-width: 768px) {
   input[type="text"],

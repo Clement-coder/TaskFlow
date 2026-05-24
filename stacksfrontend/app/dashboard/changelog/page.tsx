@@ -61,7 +61,7 @@ export default function ChangelogPage() {
           {entries.map((entry) => (
             <div key={entry.version} className="sm:pl-8 relative">
               <div className="absolute left-0 top-1.5 w-3.5 h-3.5 rounded-full border-2 border-sky-500/40 bg-slate-900 hidden sm:block" />
-              <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 overflow-hidden">
+              <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 overflow-hidden hover:border-white/[0.12] transition duration-200">
                 <div className="flex items-center justify-between px-5 py-4 border-b border-white/[0.06]">
                   <div className="flex items-center gap-3">
                     <h2 className="text-base font-bold text-white">{entry.version}</h2>

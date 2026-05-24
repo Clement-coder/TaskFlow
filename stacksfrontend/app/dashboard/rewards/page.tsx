@@ -53,7 +53,7 @@ export default function RewardsPage() {
   return (
     <div className="space-y-7 pb-4">
       <div>
-        <h1 className="text-2xl font-bold text-white">Rewards</h1>
+        <h1 className="text-2xl font-bold text-white tracking-tight">Rewards</h1>
         <p className="text-sm text-slate-400 mt-0.5">Spend your reputation points on exclusive perks and upgrades</p>
       </div>
 

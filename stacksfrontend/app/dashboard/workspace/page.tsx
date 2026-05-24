@@ -197,7 +197,7 @@ export default function WorkspacePage() {
                   placeholder="Enter full name..."
                   value={inviteName}
                   onChange={(e) => setInviteName(e.target.value)}
-                  className="flex-1 rounded-xl bg-slate-950 border border-white/10 px-3 py-2 text-xs text-white focus:outline-none focus:border-sky-400 transition"
+                  className="flex-1 rounded-xl bg-slate-950 border border-white/10 px-3 py-2 text-xs text-white focus:outline-none focus:border-sky-500/50 focus:ring-1 focus:ring-sky-500/20 transition"
                 />
                 <select
                   value={inviteRole}

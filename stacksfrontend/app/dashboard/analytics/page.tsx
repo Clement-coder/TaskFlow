@@ -37,7 +37,7 @@ export default function AnalyticsPage() {
     <div className="space-y-7 pb-4">
       <div>
         <h1 className="text-2xl font-bold text-white">Analytics</h1>
-        <p className="text-sm text-slate-400 mt-0.5">Workspace performance and on-chain activity insights</p>
+        <p className="text-sm text-slate-400 mt-1">Workspace performance and on-chain activity insights</p>
       </div>
 
       {/* KPI row */}

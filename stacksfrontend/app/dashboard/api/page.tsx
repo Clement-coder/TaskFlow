@@ -104,7 +104,7 @@ export default function ApiPage() {
           )}
           <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 sm:p-6 space-y-4">
             <div className="flex items-center justify-between">
-              <h2 className="text-base font-bold text-white">Live API Key</h2>
+              <h2 className="text-base font-bold text-white tracking-tight">Live API Key</h2>
               <span className="text-[10px] font-bold bg-emerald-500/15 text-emerald-300 px-2.5 py-1 rounded-lg">Active</span>
             </div>
             <div className="flex items-center gap-3 rounded-xl bg-slate-950/60 border border-white/[0.08] px-4 py-3">

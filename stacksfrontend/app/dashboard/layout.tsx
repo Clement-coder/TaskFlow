@@ -270,7 +270,7 @@ export default function DashboardLayout({
                 </p>
               </div>
               <Link href="/dashboard/profile" title="View your profile" className="relative group cursor-pointer">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center text-xs font-bold text-white shadow-md">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center text-xs font-bold text-white shadow-md ring-2 ring-sky-500/20">
                   {userProfile.name
                     .split(" ")
                     .map((n) => n[0])

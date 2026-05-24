@@ -211,7 +211,7 @@ export default function WorkspacePage() {
               </div>
               <button
                 type="submit"
-                className="w-full rounded-xl bg-sky-500 hover:bg-sky-400 py-2.5 text-xs font-bold text-white shadow-lg transition"
+                className="w-full rounded-xl bg-sky-500 hover:bg-sky-400 active:bg-sky-600 py-2.5 text-xs font-bold text-white shadow-lg transition duration-150"
               >
                 Send Workspace Invite
               </button>

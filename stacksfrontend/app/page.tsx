@@ -49,7 +49,7 @@ export default function Home() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="px-4 py-2 rounded-xl text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 transition duration-150"
+                  className="px-4 py-2 rounded-xl text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 transition duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"
                 >
                   {item.label}
                 </Link>

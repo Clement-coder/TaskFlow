@@ -241,7 +241,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Activity feed */}
-        <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 flex flex-col">
+        <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 flex flex-col min-h-0">
           <div className="flex items-center justify-between mb-5">
             <div>
               <h2 className="text-sm font-semibold text-white">Activity Feed</h2>

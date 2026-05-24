@@ -130,7 +130,7 @@ export default function RewardsPage() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.04 }}
-              className={`rounded-2xl border p-5 flex flex-col gap-3 transition ${
+              className={`rounded-2xl border p-5 flex flex-col gap-3 transition duration-200 ${
                 isClaimed
                   ? "border-emerald-500/20 bg-emerald-500/5"
                   : "border-white/[0.07] bg-slate-900/60 hover:border-white/[0.12]"

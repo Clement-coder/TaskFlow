@@ -18,7 +18,7 @@ export default function SecurityPage() {
   const revokeSession = (id: string) => setActiveSessions((prev) => prev.filter((s) => s.current || s.id !== id));
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 pb-4">
       <div>
         <h1 className="text-2xl font-bold text-white">Security</h1>
         <p className="text-sm text-slate-400 mt-0.5">Manage your account security, sessions, and wallet authentication</p>

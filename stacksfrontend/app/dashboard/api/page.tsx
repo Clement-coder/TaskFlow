@@ -46,7 +46,7 @@ export default function ApiPage() {
   };
 
   return (
-    <div className="space-y-8 pb-4">
+    <div className="space-y-7 pb-4">
       <div>
         <h1 className="text-2xl font-bold text-white">API</h1>
         <p className="text-sm text-slate-400 mt-0.5">Manage API keys and explore available endpoints</p>

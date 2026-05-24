@@ -147,7 +147,7 @@ export default function ProfilePage() {
           {/* Achievements */}
           <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5">
             <h3 className="text-sm font-semibold text-white mb-4">Achievements</h3>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {achievements.map((a) => (
                 <div key={a.label} className={`flex items-center gap-3 rounded-xl p-3 border transition ${a.earned ? "border-sky-500/20 bg-sky-500/5" : "border-white/[0.05] bg-slate-950/30 opacity-40"}`}>
                   <span className="text-xl">{a.icon}</span>

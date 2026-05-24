@@ -34,7 +34,7 @@ export function HeroSection() {
               </span>
             </h1>
 
-            <p className="text-lg leading-relaxed text-slate-400">
+            <p className="text-lg leading-relaxed text-slate-400 max-w-lg">
               Manage projects, verify work on-chain, and build reputation — all in one polished workspace powered by Stacks smart contracts.
             </p>
 

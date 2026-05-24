@@ -36,7 +36,7 @@ export default function ProjectsPage() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">Projects</h1>
-          <p className="text-xs text-slate-400">Manage and create active development modules inside this workspace.</p>
+          <p className="text-sm text-slate-400 mt-1">Manage and create active development modules inside this workspace.</p>
         </div>
         <button
           onClick={() => setModalOpen(true)}

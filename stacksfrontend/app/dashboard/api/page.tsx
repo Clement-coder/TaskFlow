@@ -53,7 +53,7 @@ export default function ApiPage() {
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-1 rounded-xl border border-white/[0.07] bg-slate-900/60 p-1 w-fit">
+      <div className="flex gap-1 rounded-xl border border-white/[0.07] bg-slate-900/60 p-1.5 w-fit">
         {(["endpoints", "keys", "docs"] as const).map((tab) => (
           <button key={tab} onClick={() => setActiveTab(tab)}
             className={`px-4 py-2 rounded-lg text-xs font-semibold capitalize transition ${activeTab === tab ? "bg-sky-500/15 text-sky-300 border border-sky-500/20" : "text-slate-400 hover:text-slate-200"}`}>

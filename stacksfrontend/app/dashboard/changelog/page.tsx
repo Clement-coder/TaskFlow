@@ -51,7 +51,7 @@ export default function ChangelogPage() {
   return (
     <div className="space-y-7 pb-4">
       <div>
-        <h1 className="text-2xl font-bold text-white">Changelog</h1>
+        <h1 className="text-2xl font-bold text-white tracking-tight">Changelog</h1>
         <p className="text-sm text-slate-400 mt-0.5">Release history and feature updates for TaskFlow</p>
       </div>
 

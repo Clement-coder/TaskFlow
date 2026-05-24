@@ -75,7 +75,7 @@ export default function TasksPage() {
               </div>
               <div className="space-y-1.5">
                 <h4 className="text-sm font-bold text-white uppercase tracking-wider">Minting Proof on Stacks</h4>
-                <p className="text-xs text-slate-400">Deploying task completion metadata to Clarity block anchor ledger...</p>
+                <p className="text-sm text-slate-400 mt-1">Deploying task completion metadata to Clarity block anchor ledger...</p>
               </div>
             </div>
           </motion.div>

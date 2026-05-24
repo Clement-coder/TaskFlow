@@ -30,7 +30,7 @@ export default function SettingsPage() {
   return (
     <div className="space-y-7 pb-4">
       <div>
-        <h1 className="text-2xl font-bold text-white">Settings</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">Settings</h1>
         <p className="text-sm text-slate-400 mt-0.5">Manage your account preferences and configurations</p>
       </div>
 

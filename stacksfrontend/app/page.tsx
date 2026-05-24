@@ -66,7 +66,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/start"
-                className="inline-flex items-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition duration-150"
+                className="inline-flex items-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 active:bg-sky-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300"
               >
                 Get started
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>

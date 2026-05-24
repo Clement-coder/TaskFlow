@@ -52,7 +52,7 @@ export default function WorkspacePage() {
   }
 
   return (
-    <div className="space-y-8 relative">
+    <div className="space-y-8 relative pb-4">
       {/* Toast Notification */}
       <AnimatePresence>
         {showInviteToast && (

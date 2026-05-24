@@ -27,7 +27,7 @@ export function HeroSection() {
               Built on Stacks · Bitcoin L2
             </div>
 
-            <h1 className="text-5xl font-bold tracking-tight text-white leading-[1.1] sm:text-6xl">
+            <h1 className="text-5xl font-bold tracking-tight text-white leading-[1.08] sm:text-6xl">
               The task OS for{" "}
               <span className="bg-gradient-to-r from-sky-400 to-indigo-400 bg-clip-text text-transparent">
                 Web3 teams

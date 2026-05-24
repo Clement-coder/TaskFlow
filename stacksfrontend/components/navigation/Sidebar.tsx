@@ -351,7 +351,8 @@ export function Sidebar({
         <Link
           href="/dashboard/profile"
           onClick={onNavigate}
-          className="text-slate-600 hover:text-slate-300 transition flex-shrink-0"
+          title="View profile"
+          className="text-slate-600 hover:text-sky-400 transition flex-shrink-0"
         >
           <svg
             className="w-4 h-4"

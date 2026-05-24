@@ -160,7 +160,7 @@ export default function StartPage() {
           </div>
 
           {/* Info cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+          <div className="grid grid-cols-3 gap-3 sm:gap-4 mt-5 sm:mt-6">
             {[
               { icon: "⚡", label: "Instant setup", desc: "Live in seconds" },
               { icon: "🔒", label: "Token gated", desc: "STX-based access" },

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Sidebar } from "@/components/navigation/Sidebar";
 import { useApp } from "@/lib/AppContext";
 import { reputationLevel } from "@/lib/utils";
+import { CeloConnectButton } from "@/components/wallet/CeloConnectButton";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const {
@@ -131,7 +132,10 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           </div>
 
           <div className="flex items-center gap-3">
-            {/* Wallet */}
+            {/* Celo wallet via celo-wallet-connect-sdk */}
+            <CeloConnectButton />
+
+            {/* Stacks/Hiro wallet */}
             {walletConnected ? (
               <div className="flex items-center gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/5 px-3 py-1.5 text-xs font-medium text-emerald-300">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />

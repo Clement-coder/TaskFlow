@@ -186,7 +186,7 @@ export default function DashboardPage() {
                 </svg>
               </div>
               <div>
-                <h2 className="text-sm font-semibold text-white">Quick Add Task</h2>
+                <h2 className="text-sm font-bold text-white">Quick Add Task</h2>
                 <p className="text-xs text-slate-500">Inject a task directly into the board</p>
               </div>
             </div>

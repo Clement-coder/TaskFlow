@@ -13,11 +13,9 @@ export default function SecurityPage() {
   const { walletConnected, walletAddress, connectWallet, disconnectWallet } = useApp();
   const [activeSessions, setActiveSessions] = useState(sessions);
   const [twoFAEnabled, setTwoFAEnabled] = useState(false);
-  const [showRevokeAll, setShowRevokeAll] = useState(false);
+  const [showRevokeConfirm, setShowRevokeConfirm] = useState(false);
 
-  const revokeSession = (id: string) => {
-    setActiveSessions((prev) => prev.filter((s) => s.id === "s1" || s.id !== id));
-  };
+  const revokeSession = (id: string) => setActiveSessions((prev) => prev.filter((s) => s.current || s.id !== id));
 
   return (
     <div className="space-y-8">
@@ -30,7 +28,6 @@ export default function SecurityPage() {
       <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-6 space-y-4">
         <h2 className="text-base font-bold text-white">Wallet Authentication</h2>
         <p className="text-sm text-slate-400">Your Stacks wallet acts as your primary authentication method on TaskFlow.</p>
-
         {walletConnected && walletAddress ? (
           <div className="space-y-3">
             <div className="flex items-center justify-between rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-4">
@@ -38,20 +35,17 @@ export default function SecurityPage() {
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
                 <div>
                   <p className="text-sm font-semibold text-white">Wallet Connected</p>
-                  <p className="text-xs font-mono text-emerald-300 mt-0.5">{walletAddress}</p>
+                  <p className="text-xs font-mono text-emerald-300 mt-0.5 break-all">{walletAddress}</p>
                 </div>
               </div>
-              <button
-                onClick={disconnectWallet}
-                className="rounded-xl border border-rose-500/20 bg-rose-500/5 hover:bg-rose-500/10 px-3 py-1.5 text-xs font-semibold text-rose-400 transition"
-              >
+              <button onClick={disconnectWallet} className="flex-shrink-0 rounded-xl border border-rose-500/20 bg-rose-500/5 hover:bg-rose-500/10 px-3 py-1.5 text-xs font-semibold text-rose-400 transition">
                 Disconnect
               </button>
             </div>
             <div className="rounded-xl border border-white/[0.07] bg-slate-950/40 p-4 flex items-center justify-between gap-4">
               <div>
                 <p className="text-sm font-semibold text-slate-200">Signature Verification</p>
-                <p className="text-xs text-slate-500 mt-0.5">Verify ownership of your wallet address on every login</p>
+                <p className="text-xs text-slate-500 mt-0.5">Verify wallet ownership on every login</p>
               </div>
               <span className="text-[10px] font-bold bg-emerald-500/15 text-emerald-300 px-2.5 py-1 rounded-lg">Enabled</span>
             </div>
@@ -64,10 +58,7 @@ export default function SecurityPage() {
               </svg>
               <p className="text-sm text-amber-300">No wallet connected. Connect your Stacks wallet to enable Web3 authentication.</p>
             </div>
-            <button
-              onClick={connectWallet}
-              className="w-full flex items-center justify-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition"
-            >
+            <button onClick={connectWallet} className="w-full flex items-center justify-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
               </svg>
@@ -85,50 +76,31 @@ export default function SecurityPage() {
             <p className="text-sm font-semibold text-slate-200">Wallet Signature 2FA</p>
             <p className="text-xs text-slate-500 mt-0.5">Require wallet signature on every login for extra security</p>
           </div>
-          <button
-            onClick={() => setTwoFAEnabled(!twoFAEnabled)}
-            disabled={!walletConnected}
-            className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300 flex-shrink-0 disabled:opacity-40 disabled:cursor-not-allowed ${
-              twoFAEnabled ? "bg-sky-500" : "bg-slate-700"
-            }`}
-          >
+          <button onClick={() => setTwoFAEnabled(!twoFAEnabled)} disabled={!walletConnected}
+            className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300 flex-shrink-0 disabled:opacity-40 disabled:cursor-not-allowed ${twoFAEnabled ? "bg-sky-500" : "bg-slate-700"}`}>
             <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-300 ${twoFAEnabled ? "translate-x-6" : "translate-x-1"}`} />
           </button>
         </div>
-        {!walletConnected && (
-          <p className="text-xs text-slate-500">Connect your wallet to enable 2FA.</p>
-        )}
+        {!walletConnected && <p className="text-xs text-slate-500">Connect your wallet to enable 2FA.</p>}
       </div>
 
       {/* Active sessions */}
       <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 overflow-hidden">
         <div className="flex items-center justify-between px-6 py-4 border-b border-white/[0.06]">
           <h2 className="text-base font-bold text-white">Active Sessions</h2>
-          <button
-            onClick={() => setShowRevokeAll(true)}
-            className="text-xs text-rose-400 hover:text-rose-300 transition"
-          >
+          <button onClick={() => setShowRevokeConfirm(true)} className="text-xs text-rose-400 hover:text-rose-300 transition">
             Revoke all others
           </button>
         </div>
-
-        {showRevokeAll && (
+        {showRevokeConfirm && (
           <div className="px-6 py-3 bg-rose-500/5 border-b border-rose-500/20 flex items-center justify-between gap-4">
             <p className="text-xs text-rose-300">This will sign out all other devices. Continue?</p>
-            <div className="flex gap-2">
-              <button
-                onClick={() => { setActiveSessions([sessions[0]]); setShowRevokeAll(false); }}
-                className="text-xs font-semibold text-rose-400 hover:text-rose-300 transition"
-              >
-                Confirm
-              </button>
-              <button onClick={() => setShowRevokeAll(false)} className="text-xs text-slate-500 hover:text-slate-300 transition">
-                Cancel
-              </button>
+            <div className="flex gap-3">
+              <button onClick={() => { setActiveSessions([sessions[0]]); setShowRevokeConfirm(false); }} className="text-xs font-semibold text-rose-400 hover:text-rose-300 transition">Confirm</button>
+              <button onClick={() => setShowRevokeConfirm(false)} className="text-xs text-slate-500 hover:text-slate-300 transition">Cancel</button>
             </div>
           </div>
         )}
-
         <div className="divide-y divide-white/[0.04]">
           {activeSessions.map((session) => (
             <div key={session.id} className="flex items-center justify-between px-6 py-4 hover:bg-white/[0.02] transition">
@@ -142,12 +114,7 @@ export default function SecurityPage() {
               {session.current ? (
                 <span className="text-[10px] font-bold bg-emerald-500/15 text-emerald-300 px-2.5 py-1 rounded-lg">Current</span>
               ) : (
-                <button
-                  onClick={() => revokeSession(session.id)}
-                  className="text-xs text-slate-500 hover:text-rose-400 transition px-2 py-1 rounded-lg hover:bg-rose-500/10"
-                >
-                  Revoke
-                </button>
+                <button onClick={() => revokeSession(session.id)} className="text-xs text-slate-500 hover:text-rose-400 transition px-2 py-1 rounded-lg hover:bg-rose-500/10">Revoke</button>
               )}
             </div>
           ))}
@@ -157,7 +124,7 @@ export default function SecurityPage() {
       {/* Danger zone */}
       <div className="rounded-2xl border border-rose-500/20 bg-rose-500/5 p-6 space-y-4">
         <h2 className="text-base font-bold text-rose-400">Danger Zone</h2>
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <p className="text-sm font-semibold text-slate-200">Delete Account</p>
             <p className="text-xs text-slate-500 mt-0.5">Permanently delete your account and all associated data. This cannot be undone.</p>

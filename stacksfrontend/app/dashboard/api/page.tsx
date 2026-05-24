@@ -134,7 +134,7 @@ export default function ApiPage() {
       {activeTab === "docs" && (
         <div className="space-y-4">
           <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-6 space-y-4">
-            <h2 className="text-base font-bold text-white">Quick Start</h2>
+            <h2 className="text-base font-bold text-white tracking-tight">Quick Start</h2>
             <div className="space-y-3">
               <p className="text-sm text-slate-400">Make your first API request:</p>
               <div className="rounded-xl bg-slate-950 border border-white/[0.06] p-4 overflow-x-auto">

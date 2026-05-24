@@ -38,10 +38,10 @@ export function HeroSection() {
               Manage projects, verify work on-chain, and build reputation — all in one polished workspace powered by Stacks smart contracts.
             </p>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-col gap-3 w-full">
               <Link
                 href="/start"
-                className="inline-flex items-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 px-6 py-3 text-sm font-semibold text-white shadow-xl shadow-sky-500/20 transition duration-200"
+                className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 px-6 py-3.5 text-sm font-semibold text-white shadow-xl shadow-sky-500/20 transition duration-200"
               >
                 Start free workspace
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -50,7 +50,7 @@ export function HeroSection() {
               </Link>
               <Link
                 href="/dashboard"
-                className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-300 hover:bg-white/10 hover:text-white transition duration-200"
+                className="w-full inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-slate-300 hover:bg-white/10 hover:text-white transition duration-200"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />

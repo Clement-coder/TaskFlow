@@ -25,7 +25,7 @@ export default function SecurityPage() {
       </div>
 
       {/* Wallet auth */}
-      <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-6 space-y-4">
+      <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-6 space-y-5">
         <h2 className="text-base font-bold text-white">Wallet Authentication</h2>
         <p className="text-sm text-slate-400">Your Stacks wallet acts as your primary authentication method on TaskFlow.</p>
         {walletConnected && walletAddress ? (

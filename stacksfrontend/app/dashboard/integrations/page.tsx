@@ -39,7 +39,7 @@ export default function IntegrationsPage() {
         <p className="text-sm text-slate-400 mt-1">Connect your favorite tools to supercharge your workflow</p>
       </div>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-3 sm:gap-4">
         {[
           { label: "Connected", value: connected.length, color: "text-emerald-400" },
           { label: "Available", value: integrations.filter((i) => i.status === "available").length, color: "text-sky-400" },

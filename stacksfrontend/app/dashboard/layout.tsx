@@ -269,7 +269,7 @@ export default function DashboardLayout({
                   {reputationLevel(userProfile.reputation)}
                 </p>
               </div>
-              <Link href="/dashboard/profile" className="relative group cursor-pointer">
+              <Link href="/dashboard/profile" title="View your profile" className="relative group cursor-pointer">
                 <div className="w-8 h-8 rounded-full bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center text-xs font-bold text-white shadow-md">
                   {userProfile.name
                     .split(" ")

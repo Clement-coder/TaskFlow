@@ -78,7 +78,7 @@ export default function RewardsPage() {
 
       {/* Milestones */}
       <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 sm:p-6">
-        <h2 className="text-sm font-bold text-white mb-4">Reputation Milestones</h2>
+        <h2 className="text-sm font-bold text-white tracking-tight mb-4">Reputation Milestones</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
           {milestones.map((m) => (
             <div

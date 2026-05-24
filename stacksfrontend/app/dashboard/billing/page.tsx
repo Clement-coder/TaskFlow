@@ -148,7 +148,7 @@ export default function BillingPage() {
       {/* Invoice history */}
       <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 overflow-hidden shadow-md">
         <div className="px-6 py-4 border-b border-white/[0.06]">
-          <h2 className="text-base font-bold text-white">Invoice History</h2>
+          <h2 className="text-base font-bold text-white tracking-tight">Invoice History</h2>
         </div>
         <div className="divide-y divide-white/[0.04]">
           {invoices.map((inv) => (

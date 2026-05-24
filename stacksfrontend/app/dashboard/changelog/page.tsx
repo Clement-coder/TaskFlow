@@ -56,7 +56,7 @@ export default function ChangelogPage() {
       </div>
 
       <div className="relative">
-        <div className="absolute left-[7px] top-2 bottom-2 w-px bg-white/[0.06] hidden sm:block" />
+        <div className="absolute left-[6px] top-2 bottom-2 w-px bg-white/[0.08] hidden sm:block" />
         <div className="space-y-8 pb-4">
           {entries.map((entry) => (
             <div key={entry.version} className="sm:pl-8 relative">

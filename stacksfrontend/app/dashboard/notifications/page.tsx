@@ -86,7 +86,7 @@ export default function NotificationsPage() {
     filter === "all" ? notifications : notifications.filter((n) => n.type === filter);
 
   return (
-    <div className="space-y-6 pb-4">
+    <div className="space-y-7 pb-4">
       <div className="flex items-center justify-between flex-wrap gap-3">
         <div>
           <h1 className="text-2xl font-bold text-white">Notifications</h1>

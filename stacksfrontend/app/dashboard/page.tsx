@@ -197,7 +197,7 @@ export default function DashboardPage() {
                 placeholder="What needs to be done?"
                 value={newTaskTitle}
                 onChange={(e) => setNewTaskTitle(e.target.value)}
-                className="w-full rounded-xl bg-slate-950/60 border border-white/[0.08] px-4 py-2.5 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-sky-500/50 focus:ring-1 focus:ring-sky-500/20 transition"
+                className="w-full rounded-xl bg-slate-950/60 border border-white/[0.08] px-4 py-2.5 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-sky-500/60 focus:ring-2 focus:ring-sky-500/20 transition"
               />
               <div className="grid gap-3 sm:grid-cols-3">
                 <select

@@ -110,7 +110,7 @@ showConnect({
       </div>
 
       {/* Articles Stream */}
-      <div className="space-y-8">
+      <div className="space-y-8 pb-4">
         {filteredArticles.length === 0 ? (
           <div className="text-center py-12 text-slate-500 text-xs">No matching documentation found.</div>
         ) : (

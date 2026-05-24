@@ -82,7 +82,7 @@ export default function DashboardLayout({
       {/* Main content */}
       <div className="flex-1 flex flex-col min-w-0">
         {/* Topbar */}
-        <header className="sticky top-0 z-30 border-b border-white/[0.06] bg-[#020817]/90 backdrop-blur-xl px-4 lg:px-8 h-14 flex items-center justify-between gap-3">
+        <header className="sticky top-0 z-30 border-b border-white/[0.06] bg-[#020817]/90 backdrop-blur-xl px-4 lg:px-8 h-[56px] flex items-center justify-between gap-3">
           <div className="flex items-center gap-3 min-w-0">
             {/* Mobile hamburger */}
             <button

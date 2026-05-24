@@ -119,7 +119,7 @@ export default function ApiPage() {
               </button>
             </div>
             <div className="flex gap-3">
-              <button onClick={handleRegenerate} className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 px-4 py-2 text-xs font-semibold text-slate-300 hover:text-white transition">
+              <button onClick={handleRegenerate} className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 active:bg-white/15 px-4 py-2 text-xs font-semibold text-slate-300 hover:text-white transition duration-150">
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H17" />
                 </svg>

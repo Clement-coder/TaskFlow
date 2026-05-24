@@ -22,7 +22,7 @@ export default function ActivityPage() {
   }, {});
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 pb-4">
       <div>
         <h1 className="text-2xl font-bold text-white">Activity Feed</h1>
         <p className="text-sm text-slate-400 mt-0.5">Real-time log of all workspace events and on-chain actions</p>

@@ -132,7 +132,7 @@ export default function TeamPage() {
                 <input
                   required
                   type="text"
-                  placeholder="Full name *"
+                  placeholder="Full name (required)"
                   value={inviteName}
                   onChange={(e) => setInviteName(e.target.value)}
                   className="rounded-xl bg-slate-950/60 border border-white/10 px-4 py-2.5 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-sky-500/50 transition"

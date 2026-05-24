@@ -152,7 +152,7 @@ export default function BillingPage() {
         </div>
         <div className="divide-y divide-white/[0.04]">
           {invoices.map((inv) => (
-            <div key={inv.id} className="flex items-center justify-between px-6 py-4 hover:bg-white/[0.02] transition">
+            <div key={inv.id} className="flex items-center justify-between px-6 py-4 hover:bg-white/[0.03] transition duration-150">
               <div>
                 <p className="text-sm font-semibold text-slate-200">{inv.id}</p>
                 <p className="text-xs text-slate-500 mt-0.5">{inv.date} · {inv.plan}</p>

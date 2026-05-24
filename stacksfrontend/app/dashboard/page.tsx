@@ -244,7 +244,7 @@ export default function DashboardPage() {
         <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 flex flex-col min-h-0">
           <div className="flex items-center justify-between mb-5">
             <div>
-              <h2 className="text-sm font-semibold text-white">Activity Feed</h2>
+              <h2 className="text-sm font-bold text-white">Activity Feed</h2>
               <p className="text-xs text-slate-500 mt-0.5">Live telemetry from Stacks</p>
             </div>
             <div className="flex items-center gap-1.5 text-[10px] text-emerald-400 font-semibold">

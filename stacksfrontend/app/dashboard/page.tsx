@@ -120,7 +120,7 @@ export default function DashboardPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: idx * 0.06 }}
-            className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 hover:border-white/15 transition duration-300"
+            className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 hover:border-white/[0.15] transition duration-200"
           >
             <div className="flex items-center justify-between mb-4">
               <span className="text-[10px] uppercase tracking-widest font-bold text-slate-500">{s.label}</span>

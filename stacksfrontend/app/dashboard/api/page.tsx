@@ -71,7 +71,7 @@ export default function ApiPage() {
             <p className="text-xs text-amber-300">Base URL: <code className="font-mono bg-amber-500/10 px-1.5 py-0.5 rounded">https://api.taskflow.xyz</code> — All authenticated endpoints require <code className="font-mono bg-amber-500/10 px-1.5 py-0.5 rounded">Authorization: Bearer &lt;api_key&gt;</code></p>
           </div>
 
-          <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 overflow-hidden">
+          <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 overflow-hidden shadow-md">
             <div className="hidden sm:grid grid-cols-[80px_1fr_1fr_80px] gap-4 px-5 py-3 border-b border-white/[0.06] text-[10px] uppercase tracking-[0.12em] font-bold text-slate-500">
               <span>Method</span><span>Endpoint</span><span>Description</span><span className="text-center">Auth</span>
             </div>

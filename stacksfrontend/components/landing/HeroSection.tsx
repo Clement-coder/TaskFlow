@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden px-6 pt-20 pb-28 lg:px-10">
+    <section className="relative overflow-hidden px-4 sm:px-6 pt-16 sm:pt-20 pb-20 sm:pb-28 lg:px-10">
       {/* Background glows */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[600px] rounded-full bg-sky-500/10 blur-[120px]" />

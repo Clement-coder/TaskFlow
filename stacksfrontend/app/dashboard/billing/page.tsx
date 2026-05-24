@@ -78,7 +78,7 @@ export default function BillingPage() {
       {/* Plans */}
       <div>
         <h2 className="text-base font-bold text-white mb-4">Available Plans</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-5">
           {plans.map((plan) => (
             <div
               key={plan.id}

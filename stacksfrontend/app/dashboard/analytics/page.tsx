@@ -127,7 +127,7 @@ export default function AnalyticsPage() {
 
         {/* Activity log summary */}
         <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 space-y-4">
-          <h2 className="text-sm font-semibold text-white">Activity Summary</h2>
+          <h2 className="text-sm font-bold text-white">Activity Summary</h2>
           <div className="grid grid-cols-2 gap-3">
             {[
               { label: "Contract Events", value: contractEvents, color: "text-emerald-400", bg: "bg-emerald-500/10 border-emerald-500/20" },

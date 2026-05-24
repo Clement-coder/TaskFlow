@@ -41,7 +41,7 @@ function StatPill({ label, value }: { label: string; value: string | number }) {
   return (
     <div className="flex flex-col items-center gap-0.5 rounded-xl bg-slate-950/60 border border-white/5 px-3 py-2 min-w-[72px]">
       <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-500">{label}</span>
-      <span className="text-xs font-bold text-slate-200">{value}</span>
+      <span className="text-xs font-bold tabular-nums text-slate-200">{value}</span>
     </div>
   );
 }

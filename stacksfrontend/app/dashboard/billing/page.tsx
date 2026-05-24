@@ -82,7 +82,7 @@ export default function BillingPage() {
           {plans.map((plan) => (
             <div
               key={plan.id}
-              className={`rounded-2xl border ${plan.color} bg-slate-900/60 p-5 flex flex-col gap-4 relative`}
+              className={`rounded-2xl border ${plan.color} bg-slate-900/60 p-5 flex flex-col gap-4 relative hover:bg-slate-900/80 transition duration-200`}
             >
               {plan.badge && (
                 <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 text-[10px] font-bold bg-sky-500 text-white px-3 py-0.5 rounded-full">

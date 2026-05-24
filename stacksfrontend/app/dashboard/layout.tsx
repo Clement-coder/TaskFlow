@@ -47,7 +47,7 @@ export default function DashboardLayout({
 
       {/* Mobile Drawer */}
       <div
-        className={`fixed inset-y-0 left-0 z-50 w-[280px] bg-slate-900 border-r border-white/[0.07] p-5 transform transition-transform duration-300 xl:hidden flex flex-col ${
+        className={`fixed inset-y-0 left-0 z-50 w-[290px] bg-slate-900 border-r border-white/[0.07] p-5 transform transition-transform duration-300 xl:hidden flex flex-col ${
           mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >

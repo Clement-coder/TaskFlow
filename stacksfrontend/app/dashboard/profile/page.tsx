@@ -91,7 +91,7 @@ export default function ProfilePage() {
               <span className="text-xs font-bold text-sky-400 bg-sky-500/10 px-2.5 py-1 rounded-lg">{level}</span>
             </div>
             <div className="flex items-end gap-2">
-              <span className="text-3xl font-bold text-white">{userProfile.reputation}</span>
+              <span className="text-3xl font-bold tabular-nums text-white">{userProfile.reputation}</span>
               <span className="text-sm text-slate-500 mb-1">/ {levelProgress.needed} pts</span>
             </div>
             <div className="h-2.5 bg-slate-800 rounded-full overflow-hidden">

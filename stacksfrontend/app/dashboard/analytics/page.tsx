@@ -102,7 +102,7 @@ export default function AnalyticsPage() {
 
         {/* Project progress */}
         <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 space-y-4">
-          <h2 className="text-sm font-semibold text-white">Project Progress</h2>
+          <h2 className="text-sm font-bold text-white">Project Progress</h2>
           <div className="space-y-3">
             {projects.map((p) => (
               <div key={p.id}>

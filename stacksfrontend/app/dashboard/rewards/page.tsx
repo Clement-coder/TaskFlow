@@ -51,7 +51,7 @@ export default function RewardsPage() {
   const level = reputationLevel(points);
 
   return (
-    <div className="space-y-6 pb-4">
+    <div className="space-y-7 pb-4">
       <div>
         <h1 className="text-2xl font-bold text-white">Rewards</h1>
         <p className="text-sm text-slate-400 mt-0.5">Spend your reputation points on exclusive perks and upgrades</p>

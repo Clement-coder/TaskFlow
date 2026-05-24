@@ -111,7 +111,7 @@ export default function BillingPage() {
                 disabled={plan.current}
                 className={`w-full flex items-center justify-center rounded-xl py-2.5 text-sm font-semibold transition ${
                   plan.current || selectedPlan === plan.id
-                    ? "bg-white/5 text-slate-500 cursor-default border border-white/10"
+                    ? "bg-white/5 text-slate-500 cursor-not-allowed border border-white/10"
                     : "bg-sky-500 hover:bg-sky-400 text-white shadow-lg shadow-sky-500/20"
                 }`}
               >

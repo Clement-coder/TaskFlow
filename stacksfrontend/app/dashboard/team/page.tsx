@@ -215,7 +215,7 @@ export default function TeamPage() {
                   {member.role}
                 </Badge>
               </div>
-              <p className="text-sm font-semibold text-slate-300 sm:text-center">{member.tasks}</p>
+              <p className="text-sm font-semibold tabular-nums text-slate-300 sm:text-center">{member.tasks}</p>
               <p className="text-sm font-semibold text-sky-400 sm:text-center">{member.reputation}</p>
               <div className="sm:text-center">
                 {member.role !== "Owner" && (

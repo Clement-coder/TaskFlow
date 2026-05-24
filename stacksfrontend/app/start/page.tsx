@@ -63,7 +63,7 @@ export default function StartPage() {
                       Deploying Workspace
                     </h4>
                     <p className="text-xs text-slate-500 mt-1">
-                      Setting up smart contract shell on Stacks...
+                      Deploying smart contract shell on Stacks L2...
                     </p>
                   </div>
                 </motion.div>

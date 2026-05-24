@@ -51,7 +51,7 @@ export default function AnalyticsPage() {
           <motion.div key={k.label} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.07 }}
             className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 hover:border-white/[0.12] transition duration-200">
             <div className="flex items-center justify-between mb-3">
-              <span className="text-[10px] uppercase tracking-widest font-bold text-slate-500">{k.label}</span>
+              <span className="text-[10px] uppercase tracking-[0.12em] font-bold text-slate-500">{k.label}</span>
               <span className="text-lg">{k.icon}</span>
             </div>
             <p className={`text-3xl font-bold ${k.color}`}>{k.value}</p>

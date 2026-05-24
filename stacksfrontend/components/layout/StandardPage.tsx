@@ -106,7 +106,7 @@ export default function StandardPage({
 
       {/* Content */}
       <main className="flex-1 w-full">
-        <div className={cn("mx-auto px-4 sm:px-6 lg:px-10 py-10", fullWidth ? "max-w-7xl" : "max-w-5xl")}>
+        <div className={cn("mx-auto px-4 sm:px-6 lg:px-10 py-8 sm:py-10", fullWidth ? "max-w-7xl" : "max-w-5xl")}>
           {children}
         </div>
       </main>

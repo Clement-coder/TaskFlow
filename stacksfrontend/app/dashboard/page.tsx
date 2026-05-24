@@ -282,7 +282,7 @@ export default function DashboardPage() {
                     <div className="flex items-center gap-2 mt-1">
                       <span className="text-[10px] text-slate-500">{formatDate(log.timestamp)}</span>
                       <span className="text-[10px] text-slate-600">·</span>
-                      <span className={`text-[10px] font-bold uppercase tracking-wider ${log.type === "contract" ? "text-emerald-600" : "text-sky-600"}`}>
+                      <span className={`text-[10px] font-bold uppercase tracking-wider ${log.type === "contract" ? "text-emerald-500" : "text-sky-500"}`}>
                         {log.type === "contract" ? "Stacks Tx" : "System"}
                       </span>
                     </div>

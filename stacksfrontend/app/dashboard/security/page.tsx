@@ -58,7 +58,7 @@ export default function SecurityPage() {
               </svg>
               <p className="text-sm text-amber-300">No wallet connected. Connect your Stacks wallet to enable Web3 authentication.</p>
             </div>
-            <button onClick={connectWallet} className="w-full flex items-center justify-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition">
+            <button onClick={connectWallet} className="w-full flex items-center justify-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 active:bg-sky-600 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition duration-150">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
               </svg>

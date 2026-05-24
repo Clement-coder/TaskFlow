@@ -116,7 +116,7 @@ export default function DashboardLayout({
                   {activeWorkspace?.name || "Select Workspace"}
                 </span>
                 <svg
-                  className={`w-3.5 h-3.5 text-slate-500 transition-transform duration-200 flex-shrink-0 ${
+                  className={`w-3.5 h-3.5 text-slate-500 transition-transform duration-300 flex-shrink-0 ${
                     workspaceDropdownOpen ? "rotate-180" : ""
                   }`}
                   fill="none"

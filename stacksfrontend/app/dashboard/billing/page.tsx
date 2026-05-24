@@ -158,7 +158,7 @@ export default function BillingPage() {
                 <p className="text-xs text-slate-500 mt-0.5">{inv.date} · {inv.plan}</p>
               </div>
               <div className="flex items-center gap-4">
-                <span className="text-sm font-bold text-white">{inv.amount}</span>
+                <span className="text-sm font-bold tabular-nums text-white">{inv.amount}</span>
                 <span className="text-[10px] font-bold bg-white/5 text-slate-400 px-2 py-0.5 rounded-lg">{inv.status}</span>
                 <button className="text-xs text-sky-400 hover:text-sky-300 transition">Download</button>
               </div>

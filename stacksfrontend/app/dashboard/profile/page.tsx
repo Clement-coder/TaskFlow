@@ -50,7 +50,7 @@ export default function ProfilePage() {
         </button>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-[1fr_1.6fr]">
+      <div className="grid gap-5 sm:gap-6 lg:grid-cols-[1fr_1.6fr]">
         {/* Left: identity card */}
         <div className="space-y-4">
           {/* Avatar + name */}

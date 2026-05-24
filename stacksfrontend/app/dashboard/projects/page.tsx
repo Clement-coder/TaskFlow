@@ -151,7 +151,7 @@ export default function ProjectsPage() {
                       placeholder="Enter project name..."
                       value={projName}
                       onChange={(e) => setProjName(e.target.value)}
-                      className="w-full rounded-2xl bg-slate-950 border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-sky-400 transition"
+                      className="w-full rounded-2xl bg-slate-950 border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-sky-500/50 focus:ring-1 focus:ring-sky-500/20 transition"
                     />
                   </div>
                   <div className="space-y-1">

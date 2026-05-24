@@ -239,7 +239,7 @@ export default function DashboardLayout({
             ) : (
               <button
                 onClick={connectWallet}
-                className="flex items-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 active:bg-sky-600 px-3 py-1.5 text-xs font-semibold text-white shadow-lg shadow-sky-500/20 transition duration-150"
+                className="flex items-center gap-1.5 rounded-xl bg-sky-500 hover:bg-sky-400 active:bg-sky-600 px-2.5 sm:px-3 py-1.5 text-xs font-semibold text-white shadow-lg shadow-sky-500/20 transition duration-150"
               >
                 <svg
                   className="w-3.5 h-3.5"

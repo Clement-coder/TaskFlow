@@ -56,7 +56,7 @@ export default function TasksPage() {
   ] as const;
 
   return (
-    <div className="space-y-6 relative h-full flex flex-col">
+    <div className="space-y-6 relative flex flex-col pb-4">
       {/* Minting overlay */}
       <AnimatePresence>
         {mintingTaskId && (

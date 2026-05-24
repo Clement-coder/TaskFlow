@@ -58,7 +58,7 @@ export default function RewardsPage() {
       </div>
 
       {/* Points balance */}
-      <div className="rounded-2xl border border-sky-500/20 bg-gradient-to-br from-sky-500/10 to-indigo-500/5 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="rounded-2xl border border-sky-500/20 bg-gradient-to-br from-sky-500/10 to-indigo-500/5 p-6 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
         <div className="text-center sm:text-left">
           <p className="text-xs font-bold uppercase tracking-widest text-sky-400 mb-1">Your Balance</p>
           <p className="text-4xl font-bold text-white">{points.toLocaleString()}</p>

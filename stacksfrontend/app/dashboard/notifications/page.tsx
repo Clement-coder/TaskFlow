@@ -159,7 +159,7 @@ export default function NotificationsPage() {
                           <span className="ml-2 inline-block w-1.5 h-1.5 rounded-full bg-sky-400 align-middle" />
                         )}
                       </p>
-                      <span className="text-[10px] text-slate-600 flex-shrink-0">{formatDate(notif.timestamp)}</span>
+                      <span className="text-[10px] text-slate-500 flex-shrink-0">{formatDate(notif.timestamp)}</span>
                     </div>
                     <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">{notif.body}</p>
                   </div>

@@ -67,7 +67,7 @@ export default function RewardsPage() {
         <div className="flex gap-3">
           <div className="rounded-xl border border-white/[0.07] bg-slate-900/60 px-4 py-3 text-center">
             <p className="text-xs text-slate-500">Claimed</p>
-            <p className="text-xl font-bold text-white mt-0.5">{claimedIds.length}</p>
+            <p className="text-xl font-bold tabular-nums text-white mt-0.5">{claimedIds.length}</p>
           </div>
           <div className="rounded-xl border border-white/[0.07] bg-slate-900/60 px-4 py-3 text-center">
             <p className="text-xs text-slate-500">Available</p>

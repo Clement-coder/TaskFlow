@@ -120,7 +120,7 @@ export default function HelpPage() {
       </div>
 
       {/* Contact */}
-      <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
           <h3 className="text-sm font-bold text-white">Still need help?</h3>
           <p className="text-xs text-slate-400 mt-0.5">Our team is available to assist you with any questions</p>

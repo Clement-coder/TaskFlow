@@ -38,7 +38,7 @@ export function HeroSection() {
               Manage projects, verify work on-chain, and build reputation — all in one polished workspace powered by Stacks smart contracts.
             </p>
 
-            <div className="flex flex-col gap-3 w-full">
+            <div className="flex flex-col gap-3.5 w-full">
               <Link
                 href="/start"
                 className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 px-6 py-3.5 text-sm font-semibold text-white shadow-xl shadow-sky-500/20 transition duration-200"

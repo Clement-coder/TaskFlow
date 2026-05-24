@@ -22,7 +22,7 @@ export function HeroSection() {
             className="max-w-xl space-y-7"
           >
             {/* Pill badge */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/20 bg-sky-500/10 px-4 py-1.5 text-xs font-semibold text-sky-300">
+            <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/25 bg-sky-500/10 px-4 py-1.5 text-xs font-semibold text-sky-300 shadow-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
               Built on Stacks · Bitcoin L2
             </div>

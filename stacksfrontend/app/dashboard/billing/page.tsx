@@ -69,7 +69,7 @@ export default function BillingPage() {
         </div>
         <Link
           href="/pricing"
-          className="flex items-center justify-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition flex-shrink-0"
+          className="flex items-center justify-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-400 active:bg-sky-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition duration-150 flex-shrink-0"
         >
           Upgrade Now
         </Link>

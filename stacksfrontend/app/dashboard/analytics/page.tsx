@@ -54,7 +54,7 @@ export default function AnalyticsPage() {
               <span className="text-[10px] uppercase tracking-[0.12em] font-bold text-slate-500">{k.label}</span>
               <span className="text-lg">{k.icon}</span>
             </div>
-            <p className={`text-3xl font-bold ${k.color}`}>{k.value}</p>
+            <p className={`text-3xl font-bold tabular-nums ${k.color}`}>{k.value}</p>
           </motion.div>
         ))}
       </div>

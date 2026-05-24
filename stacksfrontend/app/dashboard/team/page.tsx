@@ -187,7 +187,7 @@ export default function TeamPage() {
       </div>
 
       {/* Members table */}
-      <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 overflow-hidden">
+      <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 overflow-hidden shadow-sm">
         <div className="hidden sm:grid grid-cols-[1fr_auto_auto_auto_auto] gap-4 px-5 py-3 border-b border-white/[0.06] text-[10px] uppercase tracking-widest font-bold text-slate-600">
           <span>Member</span>
           <span className="text-center">Role</span>

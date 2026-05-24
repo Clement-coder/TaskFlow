@@ -125,7 +125,7 @@ export default function TeamPage() {
           >
             <form
               onSubmit={handleInvite}
-              className="rounded-2xl border border-sky-500/20 bg-sky-500/5 p-6 space-y-4"
+              className="rounded-2xl border border-sky-500/20 bg-sky-500/5 p-5 sm:p-6 space-y-4"
             >
               <h3 className="text-sm font-bold text-white">Invite a new member</h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">

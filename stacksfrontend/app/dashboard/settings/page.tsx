@@ -92,7 +92,7 @@ export default function SettingsPage() {
               <div className="space-y-4">
                 <div>
                   <p className="text-xs font-semibold text-slate-400 mb-3">Theme</p>
-                  <div className="grid grid-cols-3 gap-3">
+                  <div className="grid grid-cols-3 gap-3 sm:gap-4">
                     {["dark", "darker", "midnight"].map((t) => (
                       <button
                         key={t}

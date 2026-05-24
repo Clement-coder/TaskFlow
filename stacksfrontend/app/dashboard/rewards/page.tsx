@@ -142,7 +142,7 @@ export default function RewardsPage() {
                 <p className="text-xs text-slate-500 mt-1 leading-relaxed">{reward.desc}</p>
               </div>
               <div className="flex items-center justify-between gap-2">
-                <span className={`text-xs font-bold ${canAfford || isClaimed ? "text-sky-400" : "text-slate-600"}`}>
+                <span className={`text-xs font-bold tabular-nums ${canAfford || isClaimed ? "text-sky-400" : "text-slate-600"}`}>
                   {reward.cost.toLocaleString()} pts
                 </span>
                 <button

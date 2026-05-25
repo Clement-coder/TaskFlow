@@ -6,6 +6,7 @@ import { Sidebar } from "@/components/navigation/Sidebar";
 import { useApp } from "@/lib/AppContext";
 import { reputationLevel } from "@/lib/utils";
 import { CeloConnectButton } from "@/components/wallet/CeloConnectButton";
+import { MiniPayConnectButton } from "@/components/wallet/MiniPayConnectButton";
 
 export default function DashboardLayout({
   children,
@@ -51,8 +52,7 @@ export default function DashboardLayout({
           mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between mb-6">
-          <span className="text-sm font-bold text-white">TaskFlow</span>
+        <div className="flex items-center justify-end mb-6">
           <button
             onClick={closeMobile}
             aria-label="Close navigation menu"
@@ -203,6 +203,7 @@ export default function DashboardLayout({
           {/* Right side actions */}
           <div className="flex items-center gap-1.5 sm:gap-2.5 flex-shrink-0">
             {/* Celo wallet */}
+            <MiniPayConnectButton />
             <CeloConnectButton />
 
             {/* Stacks/Hiro wallet — always visible */}

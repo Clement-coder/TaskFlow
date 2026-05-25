@@ -2,8 +2,13 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useApp } from "@/lib/AppContext";
 
 export function HeroSection() {
+  const { userProfile, tasks, stxBalance } = useApp();
+  const completedTasks = tasks.filter((task) => task.status === "done").length;
+  const recentTasks = tasks.slice(0, 3);
+
   return (
     <section className="relative overflow-hidden px-4 sm:px-6 pt-16 sm:pt-20 pb-20 sm:pb-28 lg:px-10">
       {/* Background glows */}
@@ -95,9 +100,9 @@ export function HeroSection() {
                 {/* Stats row */}
                 <div className="grid grid-cols-3 gap-3">
                   {[
-                    { label: "Reputation", value: "860", color: "text-sky-400", icon: "⚡" },
-                    { label: "Tasks Done", value: "24", color: "text-emerald-400", icon: "✓" },
-                    { label: "STX Balance", value: "450", color: "text-purple-400", icon: "◈" },
+                    { label: "Reputation", value: userProfile.reputation, color: "text-sky-400", icon: "⚡" },
+                    { label: "Tasks Done", value: completedTasks, color: "text-emerald-400", icon: "✓" },
+                    { label: "STX Balance", value: stxBalance, color: "text-purple-400", icon: "◈" },
                   ].map((s) => (
                     <div key={s.label} className="rounded-xl bg-slate-950/60 border border-white/5 p-3">
                       <div className="flex items-center justify-between mb-1.5">
@@ -111,19 +116,15 @@ export function HeroSection() {
 
                 {/* Task cards */}
                 <div className="space-y-2">
-                  {[
-                    { title: "Draft on-chain task proof contract", project: "Reputation engine", priority: "high", status: "in-progress" },
-                    { title: "Enable Hiro Wallet auth flow", project: "TaskFlow Core", priority: "high", status: "todo" },
-                    { title: "Design premium dashboard visuals", project: "TaskFlow Core", priority: "medium", status: "todo" },
-                  ].map((task) => (
+                  {recentTasks.map((task) => (
                     <div key={task.title} className="flex items-center gap-3 rounded-xl bg-slate-950/40 border border-white/5 px-3 py-2.5">
-                      <div className={`w-2 h-2 rounded-full flex-shrink-0 ${task.status === "in-progress" ? "bg-amber-400" : "bg-slate-600"}`} />
+                      <div className={`w-2 h-2 rounded-full flex-shrink-0 ${task.status === "in-progress" ? "bg-amber-400" : task.status === "done" ? "bg-emerald-400" : "bg-slate-600"}`} />
                       <div className="flex-1 min-w-0">
                         <p className="text-xs font-medium text-slate-200 truncate">{task.title}</p>
                         <p className="text-[10px] text-slate-500">{task.project}</p>
                       </div>
                       <span className={`text-[9px] font-bold uppercase px-2 py-0.5 rounded-md ${
-                        task.priority === "high" ? "bg-fuchsia-500/15 text-fuchsia-300" : "bg-amber-500/15 text-amber-300"
+                        task.priority === "high" ? "bg-fuchsia-500/15 text-fuchsia-300" : task.priority === "medium" ? "bg-amber-500/15 text-amber-300" : "bg-emerald-500/15 text-emerald-300"
                       }`}>{task.priority}</span>
                     </div>
                   ))}

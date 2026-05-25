@@ -51,19 +51,22 @@ export interface LeaderboardEntry {
   handle: string;
   avatar: string;
   totalScore: number;
-  github: {
-    stacksCommits: number;
-    otherCommits: number;
+  tasks: {
+    completed: number;
+    inProgress: number;
+    highPriority: number;
   };
-  onchain: {
-    feesGeneratedMicroStx: number;
-    uniqueCallers: number;
-    contractDeployments: number;
-    transactions: number;
+  projects: {
+    contributed: number;
+    launched: number;
   };
-  npm: {
-    packageDownloads: number;
-    packages: number;
+  reputation: {
+    points: number;
+    level: string;
+  };
+  rewards: {
+    earned: number;
+    streakDays: number;
   };
   isCurrentUser?: boolean;
 }

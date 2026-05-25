@@ -7,7 +7,7 @@ const tiers = [
     period: "forever",
     description: "For individuals exploring Web3 workflows and on-chain task tracking.",
     features: [
-      { icon: "✓", text: "Hiro Wallet authentication" },
+      { icon: "✓", text: "Celo Wallet authentication" },
       { icon: "✓", text: "Up to 3 projects" },
       { icon: "✓", text: "Task proof snapshots" },
       { icon: "✓", text: "Basic reputation scoring" },
@@ -41,7 +41,7 @@ const tiers = [
       { icon: "✓", text: "NFT badge minting" },
       { icon: "✓", text: "Workspace access policies" },
       { icon: "✓", text: "Analytics API access" },
-      { icon: "✓", text: "Custom Clarity contracts" },
+      { icon: "✓", text: "Custom Solidity contracts" },
       { icon: "✓", text: "Dedicated support" },
     ],
     cta: "Contact sales",

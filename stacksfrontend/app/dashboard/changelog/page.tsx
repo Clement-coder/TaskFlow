@@ -14,7 +14,7 @@ const entries = [
   ]},
   { version: "v2.3.0", date: "May 10, 2026", tag: "Stable", tagColor: "bg-sky-500/15 text-sky-300", changes: [
     { type: "feat", text: "Celo wallet integration with live balance display" },
-    { type: "feat", text: "Token gating via Clarity smart contracts in workspace settings" },
+    { type: "feat", text: "Token gating via Celo smart contracts in workspace settings" },
     { type: "feat", text: "On-chain reputation minting when tasks are marked complete" },
     { type: "fix", text: "Mobile sidebar drawer now closes on navigation" },
     { type: "perf", text: "Reduced bundle size by lazy-loading dashboard charts" },
@@ -33,8 +33,8 @@ const entries = [
   ]},
   { version: "v2.0.0", date: "Mar 15, 2026", tag: "Major", tagColor: "bg-purple-500/15 text-purple-300", changes: [
     { type: "feat", text: "Complete rewrite with Next.js 16 and Tailwind CSS v4" },
-    { type: "feat", text: "Stacks L2 wallet integration via Hiro Wallet" },
-    { type: "feat", text: "Decentralized workspace creation with Clarity smart contracts" },
+    { type: "feat", text: "Celo wallet integration" },
+    { type: "feat", text: "Decentralized workspace creation with Celo smart contracts" },
     { type: "feat", text: "Profile page with on-chain reputation and achievement badges" },
   ]},
 ];

@@ -9,7 +9,7 @@ import LandingNav from "@/components/landing/LandingNav";
 
 export const metadata: Metadata = {
   title: "TaskFlow — Premium Web3 Task OS",
-  description: "The next-generation decentralized project management platform built on Stacks L2.",
+  description: "The next-generation decentralized project management platform built on Celo.",
   other: {
     "talentapp:project_verification":
       "44dad16503de4ec34a02690a4eff3b17cda597b190e68125f0aa51cc4505b4c0a6dbfce2c04bd8d6524b5e6d92c8c206dc8739c088dac483ba7a45a4671491fb",
@@ -39,7 +39,7 @@ export default function Home() {
                 <span className="text-sm font-bold text-white">TaskFlow</span>
               </Link>
               <p className="text-xs text-slate-500 max-w-xs leading-relaxed">
-                The premium decentralized task OS for teams building on Bitcoin L2 and Stacks.
+                The premium decentralized task OS for teams building on Celo and EVM.
               </p>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 text-sm">
@@ -68,7 +68,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-10 pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p className="text-xs text-slate-600">© 2026 TaskFlow. All rights secured on Bitcoin L2.</p>
+            <p className="text-xs text-slate-600">© 2026 TaskFlow. All rights secured on Celo.</p>
             <div className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
               <span className="text-xs text-slate-500">All systems operational</span>

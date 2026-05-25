@@ -42,7 +42,7 @@ export default function WorkspacePage() {
     setTokenGated(nextState);
     if (activeWorkspaceId) toggleWorkspacePremium(activeWorkspaceId);
     addActivityLog(
-      `Clarity gating contract state ${nextState ? "ACTIVATED" : "DEACTIVATED"} for workspace '${activeWorkspace?.name}'`,
+      `Celo gating contract state ${nextState ? "ACTIVATED" : "DEACTIVATED"} for workspace '${activeWorkspace?.name}'`,
       "contract"
     );
   };
@@ -79,7 +79,7 @@ export default function WorkspacePage() {
       {/* Title */}
       <div>
         <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">Workspace</h1>
-        <p className="text-sm text-slate-400 mt-1">Configure member privileges, Clarity smart contracts, and Web3 gating.</p>
+        <p className="text-sm text-slate-400 mt-1">Configure member privileges, Celo smart contracts, and Web3 gating.</p>
       </div>
 
       <div className="grid gap-6 lg:gap-8 lg:grid-cols-[1.4fr_1fr]">
@@ -88,13 +88,13 @@ export default function WorkspacePage() {
           <Card className="p-5 sm:p-6">
             <CardHeader className="p-0 mb-4">
               <div className="flex items-center justify-between">
-                <CardTitle className="text-lg tracking-tight">Clarity Token-Gating</CardTitle>
+                <CardTitle className="text-lg tracking-tight">Celo Token-Gating</CardTitle>
                 <Badge variant={tokenGated ? "accent" : "muted"} className="text-[8px] font-black">
                   {tokenGated ? "Gated Active" : "Gating Disabled"}
                 </Badge>
               </div>
               <CardDescription>
-                Restrict workspace access and sprint updates to users holding a designated STX token threshold.
+                Restrict workspace access and sprint updates to users holding a designated CELO token threshold.
               </CardDescription>
             </CardHeader>
 
@@ -110,16 +110,16 @@ export default function WorkspacePage() {
                   <div className="space-y-1">
                     <p className="text-xs font-bold text-slate-200">Wallet connection required</p>
                     <p className="text-[10px] text-slate-400">
-                      You must connect your Stacks wallet in the top header to configure token-gating permissions.
+                      You must connect your Celo wallet in the top header to configure token-gating permissions.
                     </p>
                   </div>
                 </div>
               ) : (
                 <div className="rounded-2xl border border-white/5 bg-slate-950/40 p-5 flex items-center justify-between gap-4">
                   <div className="space-y-1">
-                    <p className="text-xs font-bold text-slate-200">Clarity Smart Gating (STX balance &gt; 100)</p>
+                    <p className="text-xs font-bold text-slate-200">Celo Smart Gating (CELO balance &gt; 100)</p>
                     <p className="text-[10px] text-slate-500">
-                      Require users to verify a signature proving they hold at least 100 STX on-chain.
+                      Require users to verify a signature proving they hold at least 100 CELO on-chain.
                     </p>
                   </div>
                   
@@ -144,17 +144,17 @@ export default function WorkspacePage() {
           {/* Smart Contract Parameters */}
           <Card>
             <CardHeader>
-              <CardTitle>Clarity smart contracts</CardTitle>
+              <CardTitle>Celo smart contracts</CardTitle>
               <CardDescription>On-chain parameters tracking proof-of-work minting nodes.</CardDescription>
             </CardHeader>
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="rounded-2xl bg-slate-950/60 border border-white/5 p-4 space-y-1">
                 <p className="text-[9px] uppercase tracking-wider font-extrabold text-slate-500">Reputation Contract</p>
-                <p className="text-xs font-mono text-sky-400 truncate">ST2J...proof-of-work-v1</p>
+                <p className="text-xs font-mono text-sky-400 truncate">0x71C7...proof-of-work-v1</p>
               </div>
               <div className="rounded-2xl bg-slate-950/60 border border-white/5 p-4 space-y-1">
                 <p className="text-[9px] uppercase tracking-wider font-extrabold text-slate-500">Estimated Tx Cost</p>
-                <p className="text-xs font-semibold text-slate-300">0.00018 STX (~$0.0004)</p>
+                <p className="text-xs font-semibold text-slate-300">0.00018 CELO (~$0.0001)</p>
               </div>
             </div>
           </Card>

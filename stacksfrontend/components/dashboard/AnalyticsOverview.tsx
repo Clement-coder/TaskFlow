@@ -22,7 +22,7 @@ export function AnalyticsOverview() {
           <div className="rounded-[30px] bg-slate-950/70 p-6">
             <p className="text-sm uppercase tracking-[0.25em] text-sky-300/80">Reputation score</p>
             <p className="mt-4 text-5xl font-semibold text-white">{userProfile.reputation}</p>
-            <p className="mt-3 text-sm leading-6 text-slate-400">Progress toward Stellar status on Stacks.</p>
+            <p className="mt-3 text-sm leading-6 text-slate-400">Progress toward Stellar status on Celo.</p>
           </div>
           <div className="rounded-[30px] bg-slate-950/70 p-6">
             <p className="text-sm uppercase tracking-[0.25em] text-sky-300/80">Completed tasks</p>

@@ -5,6 +5,7 @@ import { useApp } from "@/lib/AppContext";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { priorityBadge } from "@/lib/utils";
+import { getIcon } from "@/lib/iconMap";
 
 export default function AnalyticsPage() {
   const { tasks, projects, userProfile, activityFeed } = useApp();
@@ -43,16 +44,18 @@ export default function AnalyticsPage() {
       {/* KPI row */}
       <div className="grid gap-3 sm:gap-4 grid-cols-2 lg:grid-cols-4">
         {[
-          { label: "Total Tasks", value: tasks.length, color: "text-sky-400", icon: "📋" },
-          { label: "Completion Rate", value: `${Math.round((done / total) * 100)}%`, color: "text-emerald-400", icon: "✅" },
-          { label: "Reputation", value: userProfile.reputation, color: "text-purple-400", icon: "⚡" },
-          { label: "On-Chain Events", value: contractEvents, color: "text-amber-400", icon: "🔗" },
+          { label: "Total Tasks", value: tasks.length, color: "text-sky-400", iconName: "clipboard" },
+          { label: "Completion Rate", value: `${Math.round((done / total) * 100)}%`, color: "text-emerald-400", iconName: "check-circle" },
+          { label: "Reputation", value: userProfile.reputation, color: "text-purple-400", iconName: "zap" },
+          { label: "On-Chain Events", value: contractEvents, color: "text-amber-400", iconName: "link" },
         ].map((k, i) => (
           <motion.div key={k.label} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.07 }}
             className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 hover:border-white/[0.12] transition duration-200">
             <div className="flex items-center justify-between mb-3">
               <span className="text-[10px] uppercase tracking-[0.12em] font-bold text-slate-500">{k.label}</span>
-              <span className="text-lg">{k.icon}</span>
+              <span className="flex">
+                {React.createElement(getIcon(k.iconName), { className: `w-4 h-4 ${k.color}` })}
+              </span>
             </div>
             <p className={`text-3xl font-bold tabular-nums ${k.color}`}>{k.value}</p>
           </motion.div>

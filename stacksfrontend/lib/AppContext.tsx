@@ -19,7 +19,7 @@ interface AppContextType {
   tasks: Task[];
   walletConnected: boolean;
   walletAddress: string | null;
-  stxBalance: number;
+  celoBalance: number;
   activityFeed: ActivityLog[];
   roadmapUpvotes: Record<string, number>;
   activeWorkspace: Workspace | undefined;
@@ -48,17 +48,17 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [tasks, setTasks] = useState<Task[]>(initialTasks);
   const [walletConnected, setWalletConnected] = useState<boolean>(false);
   const [walletAddress, setWalletAddress] = useState<string | null>(null);
-  const [stxBalance, setStxBalance] = useState<number>(0);
+  const [celoBalance, setCeloBalance] = useState<number>(0);
   const [activityFeed, setActivityFeed] = useState<ActivityLog[]>([
     {
       id: "act_1",
-      text: "Workspace 'TaskFlow Core' initialized on Stacks.",
+      text: "Workspace 'TaskFlow Core' initialized on Celo.",
       type: "system",
       timestamp: new Date(Date.now() - 3600000 * 2).toISOString(),
     },
     {
       id: "act_2",
-      text: "Smart contract 'proof-of-work-v1' deployed successfully.",
+      text: "Smart contract 'proof-of-work-v1' deployed successfully on Celo.",
       type: "contract",
       timestamp: new Date(Date.now() - 3600000 * 1.5).toISOString(),
     }
@@ -94,7 +94,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         const wallet = JSON.parse(storedWallet);
         setWalletConnected(wallet.connected);
         setWalletAddress(wallet.address);
-        setStxBalance(wallet.stxBalance);
+        setCeloBalance(wallet.celoBalance);
       }
     }
   }, []);
@@ -206,15 +206,15 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   };
 
   const connectWallet = () => {
-    const simulatedAddress = "SP2J4QF4VY9VQHJZQXF8E5W6D02WXJ4V32QXZ2G0Z";
+    const simulatedAddress = "0x71C7656EC7ab88b098defB751B7401B5f6d8976F";
     const wallet = {
       connected: true,
       address: simulatedAddress,
-      stxBalance: 450,
+      celoBalance: 450,
     };
     setWalletConnected(true);
     setWalletAddress(simulatedAddress);
-    setStxBalance(450);
+    setCeloBalance(450);
     saveState("tf_wallet", wallet);
     addActivityLog(`Wallet connected: ${simulatedAddress.slice(0, 6)}...${simulatedAddress.slice(-4)}`, "system");
   };
@@ -223,11 +223,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     const wallet = {
       connected: false,
       address: null,
-      stxBalance: 0,
+      celoBalance: 0,
     };
     setWalletConnected(false);
     setWalletAddress(null);
-    setStxBalance(0);
+    setCeloBalance(0);
     saveState("tf_wallet", wallet);
     addActivityLog("Wallet disconnected", "system");
   };
@@ -274,7 +274,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         tasks,
         walletConnected,
         walletAddress,
-        stxBalance,
+        celoBalance,
         activityFeed,
         roadmapUpvotes,
         activeWorkspace,

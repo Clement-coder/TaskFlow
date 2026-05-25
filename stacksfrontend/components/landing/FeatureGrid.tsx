@@ -9,7 +9,7 @@ const features = [
     bg: "bg-emerald-500/10 border-emerald-500/20",
     label: "On-Chain Proof",
     title: "Trustless proof of completion",
-    description: "Every completed task mints a cryptographic proof on Stacks. Immutable, verifiable, and permanently tied to your wallet identity.",
+    description: "Every completed task mints a cryptographic proof on Celo. Immutable, verifiable, and permanently tied to your wallet identity.",
   },
   {
     icon: (
@@ -33,7 +33,7 @@ const features = [
     bg: "bg-purple-500/10 border-purple-500/20",
     label: "Wallet-Native",
     title: "Wallet-first collaboration",
-    description: "Authenticate with Hiro Wallet, assign tasks across token-gated workspaces, and manage permissions entirely on-chain.",
+    description: "Authenticate with Celo Wallet, assign tasks across token-gated workspaces, and manage permissions entirely on-chain.",
   },
   {
     icon: (
@@ -45,7 +45,7 @@ const features = [
     bg: "bg-amber-500/10 border-amber-500/20",
     label: "Reputation",
     title: "On-chain reputation engine",
-    description: "Earn reputation points for every verified task. Your score is minted on Stacks L2 and visible across the entire ecosystem.",
+    description: "Earn reputation points for every verified task. Your score is minted on Celo and visible across the entire ecosystem.",
   },
   {
     icon: (
@@ -57,7 +57,7 @@ const features = [
     bg: "bg-rose-500/10 border-rose-500/20",
     label: "Teams",
     title: "Token-gated workspaces",
-    description: "Restrict access to private boards using Clarity smart contracts. Only wallets meeting your STX threshold can join.",
+    description: "Restrict access to private boards using Solidity smart contracts. Only wallets meeting your CELO threshold can join.",
   },
   {
     icon: (

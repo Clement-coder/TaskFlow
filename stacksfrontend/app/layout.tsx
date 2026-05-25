@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "TaskFlow — Premium Web3 Task OS",
   description:
-    "The next-generation decentralized project management platform built on Stacks L2.",
+    "The next-generation decentralized project management platform built on Celo.",
 };
 
 export const viewport: Viewport = {

@@ -20,7 +20,7 @@ export default function PricingPage() {
       priceYearly: 0,
       features: [
         "Standard task sprint boards",
-        "Basic Stacks wallet connect integration",
+        "Basic Celo wallet connect integration",
         "Single workspace setup",
         "Local performance tracking",
       ],
@@ -34,7 +34,7 @@ export default function PricingPage() {
       priceYearly: 19,
       features: [
         "Advanced Kanban status dashboards",
-        "Simulated Clarity contract task gating",
+        "Simulated Celo contract task gating",
         "Dynamic reputation scores and status tiers",
         "Interactive analytics and smart audit logging",
         "Unlimited simulated workspaces",

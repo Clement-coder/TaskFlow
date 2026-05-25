@@ -20,7 +20,7 @@ export default function DashboardLayout({
     selectWorkspace,
     walletConnected,
     walletAddress,
-    stxBalance,
+    celoBalance,
     connectWallet,
     disconnectWallet,
     activeWorkspace,
@@ -206,7 +206,7 @@ export default function DashboardLayout({
             <MiniPayConnectButton />
             <CeloConnectButton />
 
-            {/* Stacks/Hiro wallet — always visible */}
+            {/* Celo wallet — always visible */}
             {walletConnected ? (
               <div className="flex items-center gap-1.5 sm:gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/5 px-2 sm:px-3 py-1.5 text-xs font-medium text-emerald-300">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
@@ -216,7 +216,7 @@ export default function DashboardLayout({
                     : ""}
                 </span>
                 <span className="font-bold text-emerald-300 hidden sm:inline">
-                  {stxBalance} STX
+                  {celoBalance} CELO
                 </span>
                 <button
                   onClick={disconnectWallet}
@@ -287,7 +287,7 @@ export default function DashboardLayout({
                     {userProfile.reputation} pts
                   </p>
                   <p className="mt-1">
-                    Complete tasks to earn more reputation on Stacks L2.
+                    Complete tasks to earn more reputation on Celo.
                   </p>
                 </div>
               </Link>

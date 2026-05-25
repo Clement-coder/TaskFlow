@@ -133,14 +133,14 @@ export default function BillingPage() {
               </svg>
             </div>
             <div>
-              <p className="text-sm font-semibold text-white">Stacks Wallet Connected</p>
+              <p className="text-sm font-semibold text-white">Celo Wallet Connected</p>
               <p className="text-xs font-mono text-emerald-300 mt-0.5">{walletAddress.slice(0, 12)}…{walletAddress.slice(-6)}</p>
             </div>
             <span className="ml-auto text-[10px] font-bold bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-lg">Active</span>
           </div>
         ) : (
           <div className="rounded-xl border border-amber-500/20 bg-amber-500/5 p-4 text-sm text-amber-300">
-            Connect your Stacks wallet to enable STX-based payments.
+            Connect your Celo wallet to enable CELO-based payments.
           </div>
         )}
       </div>

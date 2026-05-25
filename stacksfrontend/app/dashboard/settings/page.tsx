@@ -159,7 +159,7 @@ export default function SettingsPage() {
                 <div className="rounded-xl border border-white/[0.07] bg-slate-950/40 p-5 space-y-3">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-sm font-semibold text-slate-200">Stacks Wallet</p>
+                      <p className="text-sm font-semibold text-slate-200">Celo Wallet</p>
                       <p className="text-xs text-slate-500 mt-0.5">
                         {walletConnected && walletAddress
                           ? `${walletAddress.slice(0, 10)}…${walletAddress.slice(-6)}`
@@ -197,7 +197,7 @@ export default function SettingsPage() {
               <div className="space-y-3">
                 {[
                   { name: "GitHub", desc: "Link commits to tasks automatically", status: "available" },
-                  { name: "Hiro Wallet", desc: "Stacks L2 wallet integration", status: "connected" },
+                  { name: "Celo Wallet", desc: "Celo wallet integration", status: "connected" },
                   { name: "Celo Network", desc: "EVM-compatible wallet support", status: "available" },
                   { name: "Supabase", desc: "Real-time database sync", status: "coming-soon" },
                   { name: "Slack", desc: "Task notifications in Slack", status: "coming-soon" },

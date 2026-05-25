@@ -24,32 +24,33 @@ export default function DocsPage() {
 
   const articles: Article[] = [
     {
-      title: "Hiro Wallet Connection",
+      title: "Celo Wallet Connection",
       category: "SDK Auth",
-      desc: "Connect your application to Stacks using the connect SDK to authenticate users and request transaction signatures.",
-      codeBlock: `import { showConnect } from "@stacks/connect";
+      desc: "Connect your application to Celo using the viem/wagmi SDK to authenticate users and request transaction signatures.",
+      codeBlock: `import { createWalletClient, custom } from "viem";
+import { celo } from "viem/chains";
 
-showConnect({
-  appDetails: {
-    name: "TaskFlow",
-    icon: "https://taskflow.so/logo.png"
-  },
-  onFinish: (session) => {
-    console.log("Connected", session.userSession.loadUserData());
-  }
-});`,
+const client = createWalletClient({
+  chain: celo,
+  transport: custom(window.ethereum)
+});
+
+const [address] = await client.requestAddresses();
+console.log("Connected", address);`,
     },
     {
       title: "Minting Proof-of-Work Contracts",
-      category: "Clarity Contracts",
-      desc: "Mint an on-chain cryptographic proof of task completion by anchoring a Clarity contract call.",
-      codeBlock: `(define-public (mint-proof (task-id (string-ascii 32)) (title (string-utf8 80)) (rep-points uint))
-  (begin
-    (asserts! (is-eq tx-sender contract-owner) (err u403))
-    (nft-mint? task-proof task-id tx-sender)
-    (ok true)
-  )
-)`,
+      category: "Celo Contracts",
+      desc: "Mint an on-chain cryptographic proof of task completion by calling a Celo Solidity contract.",
+      codeBlock: `// Solidity (Celo)
+function mintProof(
+  uint256 taskId,
+  string memory title,
+  uint256 repPoints
+) external onlyOwner {
+  _mint(msg.sender, taskId);
+  emit ProofMinted(taskId, title, repPoints);
+}`,
     },
     {
       title: "Fetch Active Sprints",

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import StandardPage from "@/components/layout/StandardPage";
 import { Badge } from "@/components/ui/badge";
 import { motion, AnimatePresence } from "framer-motion";
+import { getIcon } from "@/lib/iconMap";
 
 type TabId = "kanban" | "proofs" | "gating" | "reputation";
 
@@ -11,10 +12,10 @@ export default function ProductPage() {
   const [activeTab, setActiveTab] = useState<TabId>("kanban");
 
   const tabs = [
-    { id: "kanban", label: "Task Boards", icon: "📋" },
-    { id: "proofs", label: "Clarity Proofs", icon: "🔒" },
-    { id: "gating", label: "Token Gating", icon: "🔑" },
-    { id: "reputation", label: "On-Chain Rep", icon: "🏆" },
+    { id: "kanban", label: "Task Boards", iconName: "clipboard" },
+    { id: "proofs", label: "Celo Proofs", iconName: "shield" },
+    { id: "gating", label: "Token Gating", iconName: "lock" },
+    { id: "reputation", label: "On-Chain Rep", iconName: "trophy" },
   ] as const;
 
   const getTabContent = (id: TabId) => {
@@ -47,7 +48,7 @@ export default function ProductPage() {
           <div className="space-y-4">
             <h4 className="text-lg font-bold text-white">Bitcoin-Anchored Task Verification</h4>
             <p className="text-sm text-slate-400 leading-relaxed">
-              When sprint items are marked done, TaskFlow compiles the cryptographic proof of work and signs it on Stacks L2 using state-of-the-art Clarity smart contracts.
+              When sprint items are marked done, TaskFlow compiles the cryptographic proof of work and signs it on Celo using state-of-the-art Solidity smart contracts.
             </p>
             <div className="rounded-2xl border border-white/5 bg-slate-950 p-4 space-y-2">
               <div className="flex items-center gap-2">
@@ -55,7 +56,7 @@ export default function ProductPage() {
                 <span className="text-[10px] font-mono text-emerald-400">tx-verified: 0x93fac8...a210</span>
               </div>
               <p className="text-[10px] font-mono text-slate-500 leading-relaxed">
-                (contract-call? .proof-of-work mint-proof u104 "Enable Hiro Wallet auth flow" u70)
+                (proofOfWork.mintProof(104, "Enable Celo Wallet auth flow", 70))
               </p>
             </div>
           </div>
@@ -63,14 +64,14 @@ export default function ProductPage() {
       case "gating":
         return (
           <div className="space-y-4">
-            <h4 className="text-lg font-bold text-white">Hiro Native Token Gating</h4>
+            <h4 className="text-lg font-bold text-white">Celo Native Token Gating</h4>
             <p className="text-sm text-slate-400 leading-relaxed">
-              Restructure workspaces with token gating. Require members to authenticate with their Hiro wallet and prove ownership of specific NFTs or a STX balance of at least 100 to access sensitive task sprint records.
+              Restructure workspaces with token gating. Require members to authenticate with their Celo wallet and prove ownership of specific NFTs or a CELO balance of at least 100 to access sensitive task sprint records.
             </p>
             <div className="rounded-2xl border border-white/5 bg-slate-950 p-4 flex justify-between items-center text-xs text-slate-300">
               <span>Token Gated Status</span>
               <span className="text-sky-300 font-bold bg-sky-500/15 border border-sky-500/30 px-3 py-1 rounded-full">
-                Locked: STX &gt;= 100
+                Locked: CELO &gt;= 100
               </span>
             </div>
           </div>
@@ -80,7 +81,7 @@ export default function ProductPage() {
           <div className="space-y-4">
             <h4 className="text-lg font-bold text-white">Dynamic Cryptographic Reputation</h4>
             <p className="text-sm text-slate-400 leading-relaxed">
-              Ditch outdated performance metrics. Earn reputation points minted directly on Stacks as a proof of performance. Unlock levels (Foundational, Rising, Advanced, Stellar) visible across all decentralized networks.
+              Ditch outdated performance metrics. Earn reputation points minted directly on Celo as a proof of performance. Unlock levels (Foundational, Rising, Advanced, Stellar) visible across all decentralized networks.
             </p>
             <div className="rounded-2xl border border-white/5 bg-slate-950 p-4 flex items-center justify-between text-xs text-slate-300">
               <div className="flex items-center gap-3">
@@ -117,7 +118,9 @@ export default function ProductPage() {
                   : "border-transparent bg-transparent text-slate-400 hover:border-white/5 hover:bg-white/5 hover:text-slate-200"
               }`}
             >
-              <span className="text-sm">{tab.icon}</span>
+              <span className="flex">
+                {React.createElement(getIcon(tab.iconName), { className: "w-4 h-4" })}
+              </span>
               <span>{tab.label}</span>
             </button>
           ))}

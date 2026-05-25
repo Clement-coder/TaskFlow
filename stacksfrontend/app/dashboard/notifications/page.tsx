@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { formatDate } from "@/lib/utils";
+import { Bell } from "lucide-react";
 
 type NotifType = "task" | "contract" | "system" | "reward";
 
@@ -18,10 +19,10 @@ interface Notification {
 const initialNotifications: Notification[] = [
   { id: "n1", type: "contract", title: "Proof minted on-chain", body: "Task 'Deploy reputation contract' was verified. +70 reputation earned.", timestamp: new Date(Date.now() - 1000 * 60 * 5).toISOString(), read: false },
   { id: "n2", type: "task", title: "Task assigned to you", body: "You were assigned 'Design premium dashboard visuals' in TaskFlow Core.", timestamp: new Date(Date.now() - 1000 * 60 * 30).toISOString(), read: false },
-  { id: "n3", type: "reward", title: "Achievement unlocked 🏆", body: "You earned the 'On a Roll' badge for completing 5 tasks!", timestamp: new Date(Date.now() - 1000 * 60 * 60).toISOString(), read: false },
+  { id: "n3", type: "reward", title: "Achievement unlocked", body: "You earned the 'On a Roll' badge for completing 5 tasks!", timestamp: new Date(Date.now() - 1000 * 60 * 60).toISOString(), read: false },
   { id: "n4", type: "system", title: "Workspace updated", body: "Token gating was activated for 'TaskFlow Core' workspace.", timestamp: new Date(Date.now() - 1000 * 60 * 120).toISOString(), read: true },
-  { id: "n5", type: "task", title: "Task deadline approaching", body: "'Enable Hiro Wallet auth flow' is due in 2 days.", timestamp: new Date(Date.now() - 1000 * 60 * 180).toISOString(), read: true },
-  { id: "n6", type: "contract", title: "Smart contract deployed", body: "proof-of-work-v1 contract is live on Stacks mainnet.", timestamp: new Date(Date.now() - 1000 * 60 * 60 * 5).toISOString(), read: true },
+  { id: "n5", type: "task", title: "Task deadline approaching", body: "'Enable Celo Wallet auth flow' is due in 2 days.", timestamp: new Date(Date.now() - 1000 * 60 * 180).toISOString(), read: true },
+  { id: "n6", type: "contract", title: "Smart contract deployed", body: "proof-of-work-v1 contract is live on Celo mainnet.", timestamp: new Date(Date.now() - 1000 * 60 * 60 * 5).toISOString(), read: true },
   { id: "n7", type: "system", title: "New member joined", body: "Mira Vance joined your workspace as Developer.", timestamp: new Date(Date.now() - 1000 * 60 * 60 * 8).toISOString(), read: true },
   { id: "n8", type: "reward", title: "Reputation milestone", body: "You crossed 800 reputation points! You're now Advanced level.", timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24).toISOString(), read: true },
 ];
@@ -129,7 +130,9 @@ export default function NotificationsPage() {
         <AnimatePresence>
           {filtered.length === 0 ? (
             <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-12 text-center">
-              <div className="text-5xl mb-4">🔔</div>
+              <div className="text-5xl mb-4 flex items-center justify-center">
+                <Bell className="w-12 h-12 text-slate-400" />
+              </div>
               <p className="text-sm font-bold text-slate-200">No notifications</p>
               <p className="text-xs text-slate-500 mt-1">You're all caught up!</p>
             </div>

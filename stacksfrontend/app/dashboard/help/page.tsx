@@ -2,15 +2,16 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { getIcon } from "@/lib/iconMap";
 
 const faqs = [
   {
-    q: "How do I connect my Stacks wallet?",
-    a: "Click the 'Connect Wallet' button in the top navigation bar. You'll need the Hiro Wallet browser extension installed. Once connected, your STX balance and address will appear in the header.",
+    q: "How do I connect my Celo wallet?",
+    a: "Click the 'Connect Wallet' button in the top navigation bar. You'll need a Celo-compatible wallet like MetaMask or MiniPay. Once connected, your CELO balance and address will appear in the header.",
   },
   {
     q: "What is token gating?",
-    a: "Token gating restricts workspace access to users who hold a minimum amount of STX tokens. You can enable this in Workspace Settings under 'Clarity Token-Gating'.",
+    a: "Token gating restricts workspace access to users who hold a minimum amount of CELO tokens. You can enable this in Workspace Settings under 'Celo Token-Gating'. ",
   },
   {
     q: "How is reputation calculated?",
@@ -26,17 +27,17 @@ const faqs = [
   },
   {
     q: "What blockchains are supported?",
-    a: "TaskFlow currently supports Stacks (Bitcoin L2) for reputation and task verification, and Celo for additional payment options.",
+    a: "TaskFlow is fully built on Celo for reputation, task verification, and payments.",
   },
 ];
 
 const guides = [
-  { icon: "🚀", title: "Getting Started", desc: "Set up your first workspace and invite your team", href: "/docs" },
-  { icon: "🔗", title: "Wallet Integration", desc: "Connect Hiro or Celo wallet to unlock Web3 features", href: "/docs" },
-  { icon: "📋", title: "Task Management", desc: "Create, assign, and track tasks with on-chain proofs", href: "/docs" },
-  { icon: "🏆", title: "Reputation System", desc: "Understand how reputation points are earned and used", href: "/docs" },
-  { icon: "⚙️", title: "Smart Contracts", desc: "Configure Clarity contracts for your workspace", href: "/docs" },
-  { icon: "📊", title: "Analytics Guide", desc: "Interpret your team's performance metrics", href: "/docs" },
+  { iconName: "rocket", title: "Getting Started", desc: "Set up your first workspace and invite your team", href: "/docs" },
+  { iconName: "link", title: "Wallet Integration", desc: "Connect Celo or MiniPay wallet to unlock Web3 features", href: "/docs" },
+  { iconName: "clipboard", title: "Task Management", desc: "Create, assign, and track tasks with on-chain proofs", href: "/docs" },
+  { iconName: "trophy", title: "Reputation System", desc: "Understand how reputation points are earned and used", href: "/docs" },
+  { iconName: "settings", title: "Smart Contracts", desc: "Configure Celo smart contracts for your workspace", href: "/docs" },
+  { iconName: "bar-chart-3", title: "Analytics Guide", desc: "Interpret your team's performance metrics", href: "/docs" },
 ];
 
 export default function HelpPage() {
@@ -80,7 +81,9 @@ export default function HelpPage() {
               href={g.href}
               className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 hover:border-sky-500/30 hover:bg-sky-500/5 transition group"
             >
-              <div className="text-2xl mb-3">{g.icon}</div>
+              <div className="mb-3 flex">
+                {React.createElement(getIcon(g.iconName), { className: "w-6 h-6 text-sky-400" })}
+              </div>
               <p className="text-sm font-semibold text-slate-200 group-hover:text-white transition">{g.title}</p>
               <p className="text-xs text-slate-500 mt-1 leading-relaxed">{g.desc}</p>
             </Link>

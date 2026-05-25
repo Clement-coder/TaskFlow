@@ -4,10 +4,11 @@ import React, { useState } from "react";
 import { useApp } from "@/lib/AppContext";
 import { motion } from "framer-motion";
 import { reputationLevel } from "@/lib/utils";
+import { getIcon } from "@/lib/iconMap";
 
 interface Reward {
   id: string;
-  icon: string;
+  iconName: string;
   title: string;
   desc: string;
   cost: number;
@@ -16,23 +17,23 @@ interface Reward {
 }
 
 const rewards: Reward[] = [
-  { id: "r1", icon: "🥇", title: "Gold Contributor Badge", desc: "Display a gold badge on your profile permanently.", cost: 200, category: "badge", claimed: false },
-  { id: "r2", icon: "⚡", title: "2x Reputation Boost", desc: "Double your reputation gains for 7 days.", cost: 350, category: "boost", claimed: false },
-  { id: "r3", icon: "🔓", title: "Pro Workspace Access", desc: "Unlock Pro workspace features for 30 days.", cost: 500, category: "access", claimed: false },
-  { id: "r4", icon: "🎨", title: "Custom Avatar Frame", desc: "Exclusive animated frame for your profile avatar.", cost: 150, category: "badge", claimed: false },
-  { id: "r5", icon: "🚀", title: "Priority Task Queue", desc: "Your tasks get priority visibility in the board.", cost: 250, category: "boost", claimed: false },
-  { id: "r6", icon: "🏛️", title: "DAO Voting Rights", desc: "Participate in TaskFlow governance votes.", cost: 800, category: "access", claimed: false },
-  { id: "r7", icon: "💎", title: "Diamond Status", desc: "Exclusive diamond tier status on leaderboard.", cost: 1000, category: "badge", claimed: false },
-  { id: "r8", icon: "🔥", title: "Streak Shield", desc: "Protect your task streak for 3 days.", cost: 100, category: "boost", claimed: false },
+  { id: "r1", iconName: "medal", title: "Gold Contributor Badge", desc: "Display a gold badge on your profile permanently.", cost: 200, category: "badge", claimed: false },
+  { id: "r2", iconName: "zap", title: "2x Reputation Boost", desc: "Double your reputation gains for 7 days.", cost: 350, category: "boost", claimed: false },
+  { id: "r3", iconName: "unlock", title: "Pro Workspace Access", desc: "Unlock Pro workspace features for 30 days.", cost: 500, category: "access", claimed: false },
+  { id: "r4", iconName: "palette", title: "Custom Avatar Frame", desc: "Exclusive animated frame for your profile avatar.", cost: 150, category: "badge", claimed: false },
+  { id: "r5", iconName: "rocket", title: "Priority Task Queue", desc: "Your tasks get priority visibility in the board.", cost: 250, category: "boost", claimed: false },
+  { id: "r6", iconName: "building-2", title: "DAO Voting Rights", desc: "Participate in TaskFlow governance votes.", cost: 800, category: "access", claimed: false },
+  { id: "r7", iconName: "gem", title: "Diamond Status", desc: "Exclusive diamond tier status on leaderboard.", cost: 1000, category: "badge", claimed: false },
+  { id: "r8", iconName: "flame", title: "Streak Shield", desc: "Protect your task streak for 3 days.", cost: 100, category: "boost", claimed: false },
 ];
 
 const milestones = [
-  { pts: 100, label: "Newcomer", icon: "🌱", earned: true },
-  { pts: 300, label: "Contributor", icon: "⚡", earned: true },
-  { pts: 700, label: "Advanced", icon: "🔥", earned: true },
-  { pts: 1200, label: "Stellar", icon: "⭐", earned: false },
-  { pts: 2000, label: "Legend", icon: "💎", earned: false },
-  { pts: 5000, label: "Mythic", icon: "🏛️", earned: false },
+  { pts: 100, label: "Newcomer", iconName: "sprout", earned: true },
+  { pts: 300, label: "Contributor", iconName: "zap", earned: true },
+  { pts: 700, label: "Advanced", iconName: "flame", earned: true },
+  { pts: 1200, label: "Stellar", iconName: "star", earned: false },
+  { pts: 2000, label: "Legend", iconName: "gem", earned: false },
+  { pts: 5000, label: "Mythic", iconName: "crown", earned: false },
 ];
 
 export default function RewardsPage() {
@@ -89,7 +90,9 @@ export default function RewardsPage() {
                   : "border-white/[0.05] bg-slate-950/30 opacity-50"
               }`}
             >
-              <div className="text-2xl mb-1">{m.icon}</div>
+              <div className="text-2xl mb-1 flex items-center">
+                {React.createElement(getIcon(m.iconName), { className: "w-6 h-6 mx-auto" })}
+              </div>
               <p className="text-xs font-semibold text-slate-200">{m.label}</p>
               <p className="text-[10px] text-slate-500 mt-0.5">{m.pts.toLocaleString()} pts</p>
               {m.earned && (
@@ -136,7 +139,9 @@ export default function RewardsPage() {
                   : "border-white/[0.07] bg-slate-900/60 hover:border-white/[0.12]"
               }`}
             >
-              <div className="text-3xl">{reward.icon}</div>
+              <div className="text-3xl flex items-center">
+                {React.createElement(getIcon(reward.iconName), { className: "w-8 h-8 text-sky-400" })}
+              </div>
               <div className="flex-1">
                 <p className="text-sm font-bold text-white">{reward.title}</p>
                 <p className="text-xs text-slate-500 mt-1 leading-relaxed">{reward.desc}</p>
@@ -156,7 +161,13 @@ export default function RewardsPage() {
                       : "bg-slate-800 text-slate-600 cursor-not-allowed"
                   }`}
                 >
-                  {isClaimed ? "✓ Claimed" : canAfford ? "Claim" : "Need more pts"}
+                  {isClaimed ? (
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                  ) : canAfford ? (
+                    "Claim"
+                  ) : (
+                    "Need more pts"
+                  )}
                 </button>
               </div>
             </motion.div>

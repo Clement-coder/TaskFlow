@@ -35,7 +35,7 @@ export default function DashboardPage() {
     {
       label: "Reputation",
       value: userProfile.reputation,
-      desc: "Minted on Stacks L2",
+      desc: "Minted on Celo",
       color: "text-sky-400",
       bg: "bg-sky-500/10 border-sky-500/20",
       icon: (
@@ -109,7 +109,7 @@ export default function DashboardPage() {
       {/* Page header */}
       <div>
         <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">Overview</h1>
-        <p className="text-sm text-slate-400 mt-1 leading-relaxed">Your workspace at a glance — live from Stacks.</p>
+        <p className="text-sm text-slate-400 mt-1 leading-relaxed">Your workspace at a glance — live from Celo.</p>
       </div>
 
       {/* Stats grid */}
@@ -245,7 +245,7 @@ export default function DashboardPage() {
           <div className="flex items-center justify-between mb-5">
             <div>
               <h2 className="text-sm font-bold text-white">Activity Feed</h2>
-              <p className="text-xs text-slate-500 mt-0.5">Live telemetry from Stacks</p>
+              <p className="text-xs text-slate-500 mt-0.5">Live telemetry from Celo</p>
             </div>
             <div className="flex items-center gap-1.5 text-[10px] text-emerald-400 font-semibold">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
@@ -283,7 +283,7 @@ export default function DashboardPage() {
                       <span className="text-[10px] text-slate-500">{formatDate(log.timestamp)}</span>
                       <span className="text-[10px] text-slate-600">·</span>
                       <span className={`text-[10px] font-bold uppercase tracking-wider ${log.type === "contract" ? "text-emerald-500" : "text-sky-500"}`}>
-                        {log.type === "contract" ? "Stacks Tx" : "System"}
+                        {log.type === "contract" ? "Celo Tx" : "System"}
                       </span>
                     </div>
                   </div>

@@ -1,16 +1,17 @@
 "use client";
 
 import React, { useState } from "react";
+import { getIcon } from "@/lib/iconMap";
 
 const integrations = [
-  { id: "github", name: "GitHub", desc: "Link commits and PRs to tasks. Sync repo activity with your workspace.", icon: "🐙", status: "available", category: "Development" },
-  { id: "hiro", name: "Hiro Wallet", desc: "Stacks L2 wallet for on-chain reputation minting and smart contract interactions.", icon: "🔗", status: "connected", category: "Web3" },
-  { id: "celo", name: "Celo Network", desc: "EVM-compatible wallet support for CELO and cUSD payments.", icon: "🌿", status: "available", category: "Web3" },
-  { id: "supabase", name: "Supabase", desc: "Real-time database sync for collaborative task updates across your team.", icon: "⚡", status: "coming-soon", category: "Database" },
-  { id: "slack", name: "Slack", desc: "Receive task notifications, deadline reminders, and on-chain events in Slack.", icon: "💬", status: "coming-soon", category: "Communication" },
-  { id: "discord", name: "Discord", desc: "Post workspace activity and reputation milestones to your Discord server.", icon: "🎮", status: "coming-soon", category: "Communication" },
-  { id: "linear", name: "Linear", desc: "Sync issues and sprints between Linear and TaskFlow boards.", icon: "📐", status: "coming-soon", category: "Development" },
-  { id: "notion", name: "Notion", desc: "Export task summaries and project reports to Notion pages.", icon: "📝", status: "coming-soon", category: "Productivity" },
+  { id: "github", name: "GitHub", desc: "Link commits and PRs to tasks. Sync repo activity with your workspace.", iconName: "github", status: "available", category: "Development" },
+  { id: "celo", name: "Celo Wallet", desc: "Celo wallet for on-chain reputation minting and smart contract interactions.", iconName: "link", status: "connected", category: "Web3" },
+  { id: "celo", name: "Celo Network", desc: "EVM-compatible wallet support for CELO and cUSD payments.", iconName: "leaf", status: "available", category: "Web3" },
+  { id: "supabase", name: "Supabase", desc: "Real-time database sync for collaborative task updates across your team.", iconName: "zap", status: "coming-soon", category: "Database" },
+  { id: "slack", name: "Slack", desc: "Receive task notifications, deadline reminders, and on-chain events in Slack.", iconName: "message-circle", status: "coming-soon", category: "Communication" },
+  { id: "discord", name: "Discord", desc: "Post workspace activity and reputation milestones to your Discord server.", iconName: "gamepad-2", status: "coming-soon", category: "Communication" },
+  { id: "linear", name: "Linear", desc: "Sync issues and sprints between Linear and TaskFlow boards.", iconName: "grid-3x3", status: "coming-soon", category: "Development" },
+  { id: "notion", name: "Notion", desc: "Export task summaries and project reports to Notion pages.", iconName: "file-text", status: "coming-soon", category: "Productivity" },
 ];
 
 const statusConfig: Record<string, { label: string; color: string }> = {
@@ -23,7 +24,7 @@ const categories = ["All", "Web3", "Development", "Communication", "Database", "
 
 export default function IntegrationsPage() {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [connected, setConnected] = useState<string[]>(["hiro"]);
+  const [connected, setConnected] = useState<string[]>(["celo"]);
 
   const filtered = activeCategory === "All" ? integrations : integrations.filter((i) => i.category === activeCategory);
 
@@ -69,7 +70,9 @@ export default function IntegrationsPage() {
             <div key={item.id} className={`rounded-2xl border bg-slate-900/60 p-5 flex flex-col gap-4 transition duration-200 ${isConnected ? "border-emerald-500/20" : "border-white/[0.07] hover:border-white/[0.15] transition duration-200"}`}>
               <div className="flex items-start justify-between gap-3">
                 <div className="flex items-center gap-3">
-                  <span className="text-2xl">{item.icon}</span>
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    {React.createElement(getIcon(item.iconName), { className: "w-6 h-6" })}
+                  </div>
                   <div>
                     <p className="text-sm font-bold text-slate-200">{item.name}</p>
                     <p className="text-[10px] text-slate-600 uppercase tracking-wider font-semibold">{item.category}</p>

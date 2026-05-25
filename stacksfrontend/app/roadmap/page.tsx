@@ -24,13 +24,13 @@ export default function RoadmapPage() {
       id: "q2-1",
       quarter: "Q2 2026",
       title: "On-Chain Task Proofs",
-      desc: "Implement Clarity smart contract signatures for verifying task completion directly on Bitcoin L2.",
+      desc: "Implement Solidity smart contract signatures for verifying task completion directly on Celo.",
       status: "In Development",
     },
     {
       id: "q2-2",
       quarter: "Q2 2026",
-      title: "Hiro Connect Integration",
+      title: "Celo Wallet Integration",
       desc: "Allow secure wallet-native workspace gating, credential validation, and reputation queries.",
       status: "In Development",
     },
@@ -114,7 +114,7 @@ export default function RoadmapPage() {
         <Card className="p-6 h-fit">
           <CardHeader className="p-0 mb-4">
             <CardTitle className="text-lg">Propose Feature</CardTitle>
-            <CardDescription>Submit feature suggestions directly to the Stacks DAO pipeline.</CardDescription>
+            <CardDescription>Submit feature suggestions directly to the Celo DAO pipeline.</CardDescription>
           </CardHeader>
 
           {feedbackSuccess ? (

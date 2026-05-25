@@ -6,6 +6,7 @@ import { useApp } from "@/lib/AppContext";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { getIcon } from "@/lib/iconMap";
 
 export default function StartPage() {
   const { addWorkspace } = useApp();
@@ -63,7 +64,7 @@ export default function StartPage() {
                       Deploying Workspace
                     </h4>
                     <p className="text-xs text-slate-500 mt-1">
-                      Deploying smart contract shell on Stacks L2...
+                      Deploying smart contract shell on Celo...
                     </p>
                   </div>
                 </motion.div>
@@ -109,7 +110,7 @@ export default function StartPage() {
                         Enable Token Gating
                       </p>
                       <p className="text-xs text-slate-500 mt-0.5">
-                        Restrict access to members holding STX tokens.
+                        Restrict access to members holding CELO tokens.
                       </p>
                     </div>
                     <button
@@ -162,15 +163,17 @@ export default function StartPage() {
           {/* Info cards */}
           <div className="grid grid-cols-3 gap-3 sm:gap-4 mt-5 sm:mt-6">
             {[
-              { icon: "⚡", label: "Instant setup", desc: "Live in seconds" },
-              { icon: "🔒", label: "Token gated", desc: "STX-based access" },
-              { icon: "🏆", label: "Earn rep", desc: "On-chain proofs" },
+              { iconName: "zap", label: "Instant setup", desc: "Live in seconds" },
+              { iconName: "shield", label: "Token gated", desc: "CELO-based access" },
+              { iconName: "trophy", label: "Earn rep", desc: "On-chain proofs" },
             ].map((item) => (
               <div
                 key={item.label}
                 className="rounded-xl border border-white/[0.07] bg-slate-900/40 p-4 text-center hover:border-white/[0.12] transition duration-150"
               >
-                <div className="text-2xl mb-2">{item.icon}</div>
+                <div className="mb-2 flex justify-center">
+                  {React.createElement(getIcon(item.iconName), { className: "w-5 h-5 text-sky-400" })}
+                </div>
                 <p className="text-xs font-semibold text-slate-200">
                   {item.label}
                 </p>

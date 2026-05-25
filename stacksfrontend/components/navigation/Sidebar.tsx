@@ -77,7 +77,7 @@ export function Sidebar({ className, onNavigate, mobile = false }: { className?:
     "/dashboard/workspace": activeWorkspace?.premium ? "Pro" : "Free",
     "/dashboard/analytics": "New",
     "/dashboard/notifications": "3",
-    "/dashboard/rewards": "🏆",
+    "/dashboard/rewards": "trophy",
     "/dashboard/activity": "Live",
   };
 

@@ -7,7 +7,7 @@ export const currentUser: UserProfile = {
   avatar: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=256&q=80",
   reputation: 860,
   role: "owner",
-  walletAddress: "SP2J4QF4VY9VQHJZQXF8E5W6D02WXJ4V32QXZ2G0Z",
+  walletAddress: "0x71C7656EC7ab88b098defB751B7401B5f6d8976F",
 };
 
 export const workspaces: Workspace[] = [
@@ -30,11 +30,11 @@ export const workspaces: Workspace[] = [
 export const projects: Project[] = [
   {
     id: "project_1",
-    name: "Stacks DAO launch",
+    name: "Celo DAO launch",
     status: "active",
     progress: 78,
     dueDate: "2026-07-12",
-    description: "Complete the Stacks DAO launch plan and token gating flows.",
+    description: "Complete the Celo DAO launch plan and token gating flows.",
     labels: ["Blockchain", "Launch", "Stake"],
   },
   {
@@ -66,7 +66,7 @@ export const tasks: Task[] = [
     status: "in-progress",
     dueDate: "2026-05-24",
     assignee: "Avery",
-    tags: ["clarity", "blocks"],
+    tags: ["solidity", "blocks"],
     progress: 45,
   },
   {
@@ -82,7 +82,7 @@ export const tasks: Task[] = [
   },
   {
     id: "task_03",
-    title: "Enable Hiro Wallet auth flow",
+    title: "Enable Celo Wallet auth flow",
     project: "TaskFlow Core",
     priority: "high",
     status: "todo",
@@ -142,7 +142,7 @@ export const leaderboard: LeaderboardEntry[] = [
   {
     rank: 4,
     name: "Priya Nair",
-    handle: "@priya_stacks",
+    handle: "@priya_celo",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=256&q=80",
     totalScore: 6320,
     tasks: { completed: 84, inProgress: 4, highPriority: 18 },

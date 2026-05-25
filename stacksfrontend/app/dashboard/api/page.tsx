@@ -12,7 +12,7 @@ const endpoints = [
   { method: "POST", path: "/api/v1/projects", desc: "Create a new project", auth: true },
   { method: "GET", path: "/api/v1/profile", desc: "Get current user profile and reputation", auth: true },
   { method: "GET", path: "/api/v1/leaderboard", desc: "Get global leaderboard rankings", auth: false },
-  { method: "POST", path: "/api/v1/reputation/mint", desc: "Mint reputation proof on Stacks L2", auth: true },
+  { method: "POST", path: "/api/v1/reputation/mint", desc: "Mint reputation proof on Celo", auth: true },
   { method: "GET", path: "/api/v1/workspace", desc: "Get active workspace details", auth: true },
 ];
 
@@ -99,7 +99,7 @@ export default function ApiPage() {
         <div className="space-y-6">
           {!walletConnected && (
             <div className="rounded-xl border border-amber-500/20 bg-amber-500/5 p-4 text-sm text-amber-300">
-              Connect your Stacks wallet to generate and manage API keys.
+              Connect your Celo wallet to generate and manage API keys.
             </div>
           )}
           <div className="rounded-2xl border border-white/[0.07] bg-slate-900/60 p-5 sm:p-6 space-y-4">

@@ -3,9 +3,10 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useApp } from "@/lib/AppContext";
+import { Zap, CheckCircle, Coins } from "lucide-react";
 
 export function HeroSection() {
-  const { userProfile, tasks, stxBalance } = useApp();
+  const { userProfile, tasks, celoBalance } = useApp();
   const completedTasks = tasks.filter((task) => task.status === "done").length;
   const recentTasks = tasks.slice(0, 3);
 
@@ -29,7 +30,7 @@ export function HeroSection() {
             {/* Pill badge */}
             <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/25 bg-sky-500/10 px-4 py-1.5 text-xs font-semibold text-sky-300 shadow-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
-              Built on Stacks · Bitcoin L2
+              Built on Celo · EVM L1
             </div>
 
             <h1 className="text-5xl font-bold tracking-tight text-white leading-[1.08] sm:text-6xl">
@@ -40,7 +41,7 @@ export function HeroSection() {
             </h1>
 
             <p className="text-lg leading-relaxed text-slate-400 max-w-lg">
-              Manage projects, verify work on-chain, and build reputation — all in one polished workspace powered by Stacks smart contracts.
+              Manage projects, verify work on-chain, and build reputation — all in one polished workspace powered by Celo smart contracts.
             </p>
 
             <div className="flex flex-col gap-3.5 w-full">
@@ -100,14 +101,14 @@ export function HeroSection() {
                 {/* Stats row */}
                 <div className="grid grid-cols-3 gap-3">
                   {[
-                    { label: "Reputation", value: userProfile.reputation, color: "text-sky-400", icon: "⚡" },
-                    { label: "Tasks Done", value: completedTasks, color: "text-emerald-400", icon: "✓" },
-                    { label: "STX Balance", value: stxBalance, color: "text-purple-400", icon: "◈" },
+                    { label: "Reputation", value: userProfile.reputation, color: "text-sky-400", Icon: Zap },
+                    { label: "Tasks Done", value: completedTasks, color: "text-emerald-400", Icon: CheckCircle },
+                    { label: "CELO Balance", value: celoBalance, color: "text-purple-400", Icon: Coins },
                   ].map((s) => (
                     <div key={s.label} className="rounded-xl bg-slate-950/60 border border-white/5 p-3">
                       <div className="flex items-center justify-between mb-1.5">
                         <span className="text-[9px] uppercase tracking-wider text-slate-500 font-bold">{s.label}</span>
-                        <span className={`text-xs ${s.color}`}>{s.icon}</span>
+                        <s.Icon className={`w-4 h-4 ${s.color}`} />
                       </div>
                       <p className={`text-xl font-bold ${s.color}`}>{s.value}</p>
                     </div>
@@ -138,7 +139,7 @@ export function HeroSection() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-[10px] font-semibold text-emerald-300">Proof minted on Stacks</p>
+                    <p className="text-[10px] font-semibold text-emerald-300">Proof minted on Celo</p>
                     <p className="text-[9px] text-slate-500">+70 reputation · task_04 verified on-chain</p>
                   </div>
                 </div>
@@ -156,7 +157,7 @@ export function HeroSection() {
         >
           <p className="text-xs uppercase tracking-widest text-slate-600 font-bold">Trusted by teams building on</p>
           <div className="flex flex-wrap items-center justify-center gap-8">
-            {["Stacks", "Bitcoin L2", "Hiro Wallet", "Clarity VM", "Supabase"].map((name) => (
+            {["Celo", "EVM", "MiniPay", "Solidity", "Supabase"].map((name) => (
               <span key={name} className="text-sm font-semibold text-slate-600 hover:text-slate-400 transition">{name}</span>
             ))}
           </div>

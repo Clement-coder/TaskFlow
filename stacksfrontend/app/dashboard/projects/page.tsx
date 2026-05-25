@@ -168,7 +168,7 @@ export default function ProjectsPage() {
                     <label className="text-[10px] uppercase tracking-wider font-extrabold text-slate-500">Labels (comma-separated)</label>
                     <input
                       type="text"
-                      placeholder="e.g. DeFi, Clarity, Frontend"
+                      placeholder="e.g. DeFi, Celo, Frontend"
                       value={projLabels}
                       onChange={(e) => setProjLabels(e.target.value)}
                       className="w-full rounded-2xl bg-slate-950 border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-sky-400 transition"

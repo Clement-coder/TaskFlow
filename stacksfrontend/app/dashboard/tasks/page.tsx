@@ -74,8 +74,8 @@ export default function TasksPage() {
                 </svg>
               </div>
               <div className="space-y-1.5">
-                <h4 className="text-sm font-bold text-white uppercase tracking-wider">Minting Proof on Stacks</h4>
-                <p className="text-sm text-slate-400 mt-1">Deploying task completion metadata to Clarity block anchor ledger...</p>
+                <h4 className="text-sm font-bold text-white uppercase tracking-wider">Minting Proof on Celo</h4>
+                <p className="text-sm text-slate-400 mt-1">Deploying task completion metadata to Celo block anchor ledger...</p>
               </div>
             </div>
           </motion.div>

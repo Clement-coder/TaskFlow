@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { reputationLevel, formatDate } from "@/lib/utils";
 
 export default function ProfilePage() {
-  const { userProfile, tasks, projects, activityFeed, walletConnected, walletAddress, stxBalance, connectWallet } = useApp();
+  const { userProfile, tasks, projects, activityFeed, walletConnected, walletAddress, celoBalance, connectWallet } = useApp();
   const [editMode, setEditMode] = useState(false);
   const [displayName, setDisplayName] = useState(userProfile.name);
 
@@ -114,7 +114,7 @@ export default function ProfilePage() {
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                   <span className="text-xs font-mono text-emerald-300">{walletAddress.slice(0, 10)}…{walletAddress.slice(-6)}</span>
                 </div>
-                <p className="text-sm font-bold tabular-nums text-white">{stxBalance} <span className="text-slate-400 font-normal text-xs">STX</span></p>
+                <p className="text-sm font-bold tabular-nums text-white">{celoBalance} <span className="text-slate-400 font-normal text-xs">CELO</span></p>
               </div>
             ) : (
               <button onClick={connectWallet}

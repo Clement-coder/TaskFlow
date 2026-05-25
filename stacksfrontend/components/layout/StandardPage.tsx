@@ -135,7 +135,7 @@ export default function StandardPage({
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-6 sm:py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <Image src="/Taskflowlogo.png" alt="TaskFlow" width={20} height={20} className="rounded-md object-contain" />
-            <span className="text-xs text-slate-500">© 2026 TaskFlow. All rights secured on Bitcoin L2.</span>
+            <span className="text-xs text-slate-500">© 2026 TaskFlow. All rights secured on Celo.</span>
           </div>
           <div className="flex gap-6 text-xs">
             {navLinks.map((l) => (

@@ -39,7 +39,7 @@ export function HiroConnectButton() {
 
   return (
     <Button onClick={handleConnect} disabled={connecting} variant="secondary" size="lg" className="w-full md:w-auto">
-      {connecting ? "Connecting…" : "Connect with Hiro Wallet"}
+      {connecting ? "Connecting…" : "Connect Celo Wallet"}
     </Button>
   );
 }

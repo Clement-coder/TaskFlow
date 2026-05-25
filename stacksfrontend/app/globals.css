@@ -10,6 +10,16 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --radius: 0px;
+  --radius-xs: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-4xl: 0px;
+  --radius-full: 0px;
 }
 
 html {
@@ -44,7 +54,7 @@ body {
 
 *::-webkit-scrollbar-thumb {
   background: rgba(148, 163, 184, 0.15);
-  border-radius: 99px;
+  border-radius: 0px;
 }
 
 .scrollbar-none {

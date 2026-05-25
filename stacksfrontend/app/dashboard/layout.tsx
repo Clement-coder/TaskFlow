@@ -74,7 +74,8 @@ export default function DashboardLayout({
           </button>
         </div>
         <Sidebar
-          className="flex w-full border-none bg-transparent p-0 shadow-none backdrop-blur-none"
+          mobile
+          className="border-none bg-transparent shadow-none backdrop-blur-none rounded-none"
           onNavigate={closeMobile}
         />
       </div>

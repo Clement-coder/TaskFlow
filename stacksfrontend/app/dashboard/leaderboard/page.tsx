@@ -282,3 +282,4 @@ function LeaderboardRow({
 /* leaderboard update 5 */
 /* leaderboard update 6 */
 /* leaderboard update 7 */
+/* leaderboard update 8 */
